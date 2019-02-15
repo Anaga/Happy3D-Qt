@@ -265,21 +265,21 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_4">
+        <widget class="QLineEdit" name="lineEdit_Cub_LayerDist">
          <property name="text">
           <string>50</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_5">
+        <widget class="QLineEdit" name="lineEdit_Cub_HatchingDist">
          <property name="text">
           <string>50</string>
          </property>
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButton_Cub_ScanLayer">
          <property name="text">
           <string>Scan one layer</string>
          </property>
@@ -295,7 +295,7 @@
        <item row="4" column="0" colspan="2">
         <widget class="QPushButton" name="pushButton_3">
          <property name="text">
-          <string>Stip Cube</string>
+          <string>Stop cube</string>
          </property>
         </widget>
        </item>
@@ -326,7 +326,7 @@
      <item row="1" column="0" colspan="2">
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Recoater move distamce: um</string>
+        <string>Recoater move distamce: um  .</string>
        </property>
       </widget>
      </item>
@@ -423,16 +423,16 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pushButton_GasCp_On">
        <property name="text">
-        <string>PushButton</string>
+        <string>Gas on</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="pushButton_GasCp_Of">
        <property name="text">
-        <string>PushButton</string>
+        <string>Gas off</string>
        </property>
       </widget>
      </item>
@@ -451,58 +451,58 @@
      <string>Main</string>
     </property>
     <layout class="QGridLayout" name="gridLayout_8">
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_20">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_21">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="pushButton_22">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
+     <item row="2" column="0" colspan="2">
+      <widget class="QTextBrowser" name="textBrowser"/>
      </item>
      <item row="0" column="3">
       <widget class="QPushButton" name="pushButton_23">
        <property name="text">
-        <string>PushButton</string>
+        <string>Stop</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2" colspan="2">
+      <widget class="QTextBrowser" name="textBrowser_2"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_21">
+       <property name="text">
+        <string>Pause</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QPushButton" name="pushButton_26">
+       <property name="text">
+        <string>Transfer</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
       <widget class="QPushButton" name="pushButton_24">
        <property name="text">
-        <string>PushButton</string>
+        <string>Gcode run</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_20">
+       <property name="text">
+        <string>Start</string>
        </property>
       </widget>
      </item>
      <item row="1" column="3">
       <widget class="QPushButton" name="pushButton_25">
        <property name="text">
-        <string>PushButton</string>
+        <string>Run transfercode</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="0" colspan="2">
-      <widget class="QTextBrowser" name="textBrowser"/>
-     </item>
-     <item row="2" column="2" colspan="2">
-      <widget class="QTextBrowser" name="textBrowser_2"/>
-     </item>
-     <item row="1" column="1" colspan="2">
-      <widget class="QPushButton" name="pushButton_26">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_22">
        <property name="text">
-        <string>PushButton</string>
+        <string>Continue</string>
        </property>
       </widget>
      </item>
@@ -511,9 +511,9 @@
    <widget class="QGroupBox" name="groupBox_PusherControl">
     <property name="geometry">
      <rect>
-      <x>690</x>
+      <x>680</x>
       <y>340</y>
-      <width>131</width>
+      <width>141</width>
       <height>251</height>
      </rect>
     </property>
@@ -524,35 +524,35 @@
      <item>
       <widget class="QPushButton" name="pushButton_15">
        <property name="text">
-        <string>PushButton</string>
+        <string>Pull</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_19">
        <property name="text">
-        <string>PushButton</string>
+        <string>Tiny pull</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_16">
        <property name="text">
-        <string>PushButton</string>
+        <string>Hold</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_17">
        <property name="text">
-        <string>PushButton</string>
+        <string>Tiny push</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_18">
        <property name="text">
-        <string>PushButton</string>
+        <string>Push</string>
        </property>
       </widget>
      </item>
@@ -563,7 +563,7 @@
      <rect>
       <x>460</x>
       <y>490</y>
-      <width>201</width>
+      <width>211</width>
       <height>101</height>
      </rect>
     </property>
@@ -574,21 +574,21 @@
      <item row="0" column="1">
       <widget class="QPushButton" name="pushButton_13">
        <property name="text">
-        <string>PushButton</string>
+        <string>CCW rotation</string>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
       <widget class="QPushButton" name="pushButton_12">
        <property name="text">
-        <string>PushButton</string>
+        <string>CW rotation</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0" colspan="2">
       <widget class="QPushButton" name="pushButton_14">
        <property name="text">
-        <string>PushButton</string>
+        <string>Stop</string>
        </property>
       </widget>
      </item>
@@ -599,7 +599,7 @@
      <rect>
       <x>460</x>
       <y>340</y>
-      <width>201</width>
+      <width>211</width>
       <height>141</height>
      </rect>
     </property>
@@ -607,45 +607,45 @@
      <string>Recoater Control</string>
     </property>
     <layout class="QGridLayout" name="gridLayout_6">
-     <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton_9">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_6">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="pushButton_7">
        <property name="text">
-        <string>PushButton</string>
+        <string>Rigth up</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
       <widget class="QPushButton" name="pushButton_8">
        <property name="text">
-        <string>PushButton</string>
+        <string>Left down</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string>Rigth down</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>Left up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
       <widget class="QPushButton" name="pushButton_10">
        <property name="text">
-        <string>PushButton</string>
+        <string>Recoater secuense</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
+     <item row="3" column="0" colspan="2">
       <widget class="QPushButton" name="pushButton_11">
        <property name="text">
-        <string>PushButton</string>
+        <string>Recoater without press</string>
        </property>
       </widget>
      </item>
@@ -658,7 +658,7 @@
      <x>0</x>
      <y>0</y>
      <width>835</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
