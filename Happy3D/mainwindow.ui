@@ -251,14 +251,14 @@
      <item>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="label_Cub_LayDist">
          <property name="text">
           <string>Layer Distance, μm</string>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="label_Cub_HatcDist">
          <property name="text">
           <string>Hatching Distance, μm</string>
          </property>
@@ -286,14 +286,14 @@
         </widget>
        </item>
        <item row="3" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="pushButton_Cub_AutoStart">
          <property name="text">
           <string>Autostart cube</string>
          </property>
         </widget>
        </item>
        <item row="4" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButton_Cub_Stop">
          <property name="text">
           <string>Stop cube</string>
          </property>
@@ -316,94 +316,115 @@
      <string>Motor Control</string>
     </property>
     <layout class="QGridLayout" name="gridLayout_9">
-     <item row="0" column="3">
-      <widget class="QPushButton" name="pushButton_28">
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_MotC_HorSpeed">
+       <property name="text">
+        <string>Set speed, um/s</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="label_MotC_VerSpeed">
+       <property name="text">
+        <string>Set speed</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="pushButton_MotC_Rigth">
        <property name="text">
         <string>Rigth</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0" colspan="2">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="label_MotC_HorDist">
        <property name="text">
-        <string>Recoater move distamce: um  .</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QLineEdit" name="lineEdit_2">
-       <property name="text">
-        <string>1300</string>
+        <string>Recoater move distance</string>
        </property>
       </widget>
      </item>
      <item row="3" column="2">
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="lineEdit_MotC_VertSpeed">
        <property name="text">
         <string>150</string>
        </property>
       </widget>
      </item>
      <item row="5" column="2">
-      <widget class="QLineEdit" name="lineEdit_6">
+      <widget class="QLineEdit" name="lineEdit_MotC_VertDist">
        <property name="text">
         <string>25</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="5">
-      <widget class="QPushButton" name="pushButton_27">
-       <property name="text">
-        <string>Left</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="text">
-        <string>1600</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0" colspan="6">
-      <widget class="Line" name="line">
+     <item row="2" column="0" colspan="7">
+      <widget class="Line" name="line_MotC_VerSpeed">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="lineEdit_MotC_HorSpeed">
+       <property name="text">
+        <string>1600</string>
+       </property>
+      </widget>
+     </item>
      <item row="5" column="0" colspan="2">
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="label_MotC_VerDisrt">
        <property name="text">
-        <string>Lifting move distance: um</string>
+        <string>Lifting move distance</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0" colspan="2">
-      <widget class="QLabel" name="label_3">
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="lineEdit_MotC_HorDist">
        <property name="text">
-        <string>Set speed, um/s</string>
+        <string>1300</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="0" colspan="2">
-      <widget class="QLabel" name="label">
+     <item row="0" column="3">
+      <widget class="QPushButton" name="pushButton_MotC_Left">
        <property name="text">
-        <string>Set speed, um/s</string>
+        <string>Left</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="3" colspan="3">
-      <widget class="QPushButton" name="pushButton_30">
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_MotC_HorDistUnit">
+       <property name="text">
+        <string>um</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QPushButton" name="pushButton_MotC_Up">
+       <property name="text">
+        <string>Up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QPushButton" name="pushButton_MotC__Down">
        <property name="text">
         <string>Down</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="3" colspan="3">
-      <widget class="QPushButton" name="pushButton_29">
+     <item row="5" column="3">
+      <widget class="QLabel" name="label_MotC_VerDistUnit">
        <property name="text">
-        <string>Up</string>
+        <string>um</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="label_MotC_VerSpeedUnit">
+       <property name="text">
+        <string>um/s</string>
        </property>
       </widget>
      </item>
@@ -452,55 +473,55 @@
     </property>
     <layout class="QGridLayout" name="gridLayout_8">
      <item row="2" column="0" colspan="2">
-      <widget class="QTextBrowser" name="textBrowser"/>
+      <widget class="QTextBrowser" name="textBrowser_Main_Orig"/>
      </item>
      <item row="0" column="3">
-      <widget class="QPushButton" name="pushButton_23">
+      <widget class="QPushButton" name="pushButton_Main_Stop">
        <property name="text">
         <string>Stop</string>
        </property>
       </widget>
      </item>
      <item row="2" column="2" colspan="2">
-      <widget class="QTextBrowser" name="textBrowser_2"/>
+      <widget class="QTextBrowser" name="textBrowser_Main_Trans"/>
      </item>
      <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_21">
+      <widget class="QPushButton" name="pushButton_Main_Pause">
        <property name="text">
         <string>Pause</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1" colspan="2">
-      <widget class="QPushButton" name="pushButton_26">
+      <widget class="QPushButton" name="pushButton_Main_Transfer">
        <property name="text">
         <string>Transfer</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_24">
+      <widget class="QPushButton" name="pushButton_Main_GcodeRun">
        <property name="text">
         <string>Gcode run</string>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_20">
+      <widget class="QPushButton" name="pushButton_Main_Start">
        <property name="text">
         <string>Start</string>
        </property>
       </widget>
      </item>
      <item row="1" column="3">
-      <widget class="QPushButton" name="pushButton_25">
+      <widget class="QPushButton" name="pushButton_Main_RunTrans">
        <property name="text">
         <string>Run transfercode</string>
        </property>
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="pushButton_22">
+      <widget class="QPushButton" name="pushButton_Main_Cont">
        <property name="text">
         <string>Continue</string>
        </property>
@@ -522,35 +543,35 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QPushButton" name="pushButton_15">
+      <widget class="QPushButton" name="pushButton_PushC_Pull">
        <property name="text">
         <string>Pull</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_19">
+      <widget class="QPushButton" name="pushButton_PushC_TPull">
        <property name="text">
         <string>Tiny pull</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_16">
+      <widget class="QPushButton" name="pushButton_PushC_Hold">
        <property name="text">
         <string>Hold</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_17">
+      <widget class="QPushButton" name="pushButton_PushC_TPush">
        <property name="text">
         <string>Tiny push</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_18">
+      <widget class="QPushButton" name="pushButton_PushC_Push">
        <property name="text">
         <string>Push</string>
        </property>
@@ -572,21 +593,21 @@
     </property>
     <layout class="QGridLayout" name="gridLayout_7">
      <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_13">
+      <widget class="QPushButton" name="pushButton_GasCir_CCWRot">
        <property name="text">
         <string>CCW rotation</string>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="pushButton_GasCir_CWRot">
        <property name="text">
         <string>CW rotation</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0" colspan="2">
-      <widget class="QPushButton" name="pushButton_14">
+      <widget class="QPushButton" name="pushButton_GasCir_Stop">
        <property name="text">
         <string>Stop</string>
        </property>
@@ -608,42 +629,42 @@
     </property>
     <layout class="QGridLayout" name="gridLayout_6">
      <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="pushButton_RecC_RigthUp">
        <property name="text">
         <string>Rigth up</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="pushButton_RecC_LeftDown">
        <property name="text">
         <string>Left down</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="pushButton_RecC_RifgthDown">
        <property name="text">
         <string>Rigth down</string>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="pushButton_RecC_LeftUp">
        <property name="text">
         <string>Left up</string>
        </property>
       </widget>
      </item>
      <item row="2" column="0" colspan="2">
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="pushButton_RecC_Sec">
        <property name="text">
         <string>Recoater secuense</string>
        </property>
       </widget>
      </item>
      <item row="3" column="0" colspan="2">
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="pushButton_RecC_NoPress">
        <property name="text">
         <string>Recoater without press</string>
        </property>
