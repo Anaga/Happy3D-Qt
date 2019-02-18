@@ -19,6 +19,8 @@ public:
 private slots:
     void on_pushButton_Com_Refresh_clicked();
 
+    void on_pushButton_Com_Connect_clicked();
+
 private:
     Ui::MainWindow *ui;
 

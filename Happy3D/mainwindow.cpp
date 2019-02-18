@@ -27,3 +27,15 @@ void MainWindow::on_pushButton_Com_Refresh_clicked()
         }
     }
 }
+
+void MainWindow::on_pushButton_Com_Connect_clicked()
+{
+    QString qsPortName = ui->comboBox_Com_Select->currentText();
+    QString qsTemp = "%1 %2";
+    if (pCommObj->OpenConnection(qsPortName)){
+        qsTemp = qsTemp.arg(qsPortName).arg("is open");
+    } else {
+        qsTemp = qsTemp.arg(qsPortName).arg("not open");
+    }
+    ui->label_Com_Status->setText(qsTemp);
+}

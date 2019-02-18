@@ -2,13 +2,14 @@
 
 Communicaton::Communicaton(QObject *parent) : QObject(parent)
 {
-    qslRet.clear();
+    qslPortList.clear();
 
 }
 
 QStringList Communicaton::GetInfo()
 {
-    qslRet.clear();
+    qDebug() << __PRETTY_FUNCTION__;
+    qslPortList.clear();
     const auto serialPortInfos = QSerialPortInfo::availablePorts();
 
     qDebug() << "Total number of ports available: " << serialPortInfos.count() ;
@@ -22,7 +23,7 @@ QStringList Communicaton::GetInfo()
         description = serialPortInfo.description();
         manufacturer = serialPortInfo.manufacturer();
         serialNumber = serialPortInfo.serialNumber();
-        qslRet.append(serialPortInfo.portName());
+        qslPortList.append(serialPortInfo.portName());
         qDebug() << endl
             << "Port: " << serialPortInfo.portName() << endl
             << "Location: " << serialPortInfo.systemLocation() << endl
@@ -37,5 +38,38 @@ QStringList Communicaton::GetInfo()
                                           : blankString) << endl
             << "Busy: " << (serialPortInfo.isBusy() ? "Yes" : "No") << endl;
     }
-    return qslRet;
+    return qslPortList;
+}
+
+bool Communicaton::OpenConnection(QString portName)
+{
+    qDebug() << __PRETTY_FUNCTION__;
+    if (!qslPortList.contains(portName)){
+        qDebug() << "Can't open port "<< portName << " not in Port list";
+        return false;
+    }
+    comPort.setPortName(portName);
+    comPort.setBaudRate(115200);
+    if (comPort.open(QIODevice::ReadWrite | QIODevice::Text)){
+        qDebug() << "Open port "<< portName << " with BaudRate(115200)";
+        return true;
+    }
+    qDebug() << "Can't open port "<< portName;
+    return false;
+}
+
+bool Communicaton::CloseConnection(QString portName)
+{
+    if (!qslPortList.contains(portName)){
+        qDebug() << "Can't close port "<< portName << " not in Port list";
+        return false;
+    }
+    comPort.setPortName(portName);
+    if (comPort.isOpen()){
+        qDebug() << "Close port "<< portName;
+        comPort.close();
+        return true;
+    }
+    qDebug() << "Can't close port "<< portName;
+    return false;
 }

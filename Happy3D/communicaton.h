@@ -17,10 +17,13 @@ public:
 signals:
 
 private:
-    QStringList qslRet;
+    QStringList qslPortList;
+    QSerialPort comPort;
 
 public slots:
     QStringList GetInfo();
+    bool OpenConnection(QString portName);
+    bool CloseConnection(QString portName);
 };
 
 #endif // COMMUNICATON_H
