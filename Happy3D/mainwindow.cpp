@@ -6,9 +6,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    pCommObj = new Communicaton();
+    on_pushButton_Com_Refresh_clicked();
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_pushButton_Com_Refresh_clicked()
+{
+    ui->comboBox_Com_Select->clear();
+    QStringList portList;
+    portList = pCommObj->GetInfo();
+    if (portList.size()>0) {
+        for (auto port :  portList) {
+            ui->comboBox_Com_Select->addItem(port);
+        }
+    }
 }
