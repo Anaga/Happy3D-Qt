@@ -27,11 +27,15 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    communicaton.cpp
+    communicaton.cpp \
+    lasercontrol.cpp \
+    presscontrol.cpp
 
 HEADERS += \
         mainwindow.h \
-    communicaton.h
+    communicaton.h \
+    lasercontrol.h \
+    presscontrol.h
 
 FORMS += \
         mainwindow.ui
