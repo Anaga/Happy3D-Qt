@@ -12,6 +12,8 @@ Update all buttons names and labels, reorder button in logical positions.
 
 Screenshot of current version (cc5721d) 
 
+Привет от Романа-Кармана!
+
 
 
 ![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV3.png)
