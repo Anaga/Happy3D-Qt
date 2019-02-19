@@ -16,4 +16,6 @@ Screenshot of current version (cc5721d)
 
 
 
-![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV3.png)
+Update screnshot
+
+![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV4.png)
