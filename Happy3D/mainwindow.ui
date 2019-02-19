@@ -691,7 +691,7 @@
    </property>
    <widget class="QMenu" name="menuWelcome_to_version_1_0_0">
     <property name="title">
-     <string>Welcome to version 1.0.0</string>
+     <string>Welcome to version 1.0.1</string>
     </property>
    </widget>
    <addaction name="menuWelcome_to_version_1_0_0"/>

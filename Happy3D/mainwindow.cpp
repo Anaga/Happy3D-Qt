@@ -54,12 +54,14 @@ bool MainWindow::inputCheck(QString text)
      */
     bool bOk = false;
     qreal fVal;
+    QString qsTemp = "Can't convert %1 to Double!";
 
     fVal = text.toDouble(&bOk);
     if (!bOk){
+        qsTemp = qsTemp.arg(text);
         QMessageBox msgBox;
         msgBox.setIcon(QMessageBox::Warning);
-        msgBox.setText("Can't convert this to Double!");
+        msgBox.setText(qsTemp);
         msgBox.exec();
     }
     qDebug() << "fVal is " << fVal;
