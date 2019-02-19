@@ -14,8 +14,8 @@ public:
 signals:
 
 public slots:
-    void movePlate(bool direction, qreal distance, qreal speed);
-    void moveWiper(bool direction, qreal distance, qreal speed);
+    QString movePlate(bool direction, qreal distance, qreal speed);
+    QString moveWiper(bool direction, qreal distance, qreal speed);
 };
 
 #endif // LASERCONTROL_H

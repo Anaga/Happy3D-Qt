@@ -2,7 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDialog>
+#include <QMessageBox>
 #include "communicaton.h"
+#include "lasercontrol.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,13 +21,21 @@ public:
 
 private slots:
     void on_pushButton_Com_Refresh_clicked();
-
     void on_pushButton_Com_Connect_clicked();
+
+    bool inputCheck(QString text);
+
+    void on_lineEdit_ProC_PD_textEdited(const QString &arg1);
+
+    void on_lineEdit_ProC_ExT_textEdited(const QString &arg1);
+
+    void on_lineEdit_Proc_LasPow_textEdited(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;
 
     Communicaton *pCommObj;
+    LaserControl *pLaserObj;
 };
 
 #endif // MAINWINDOW_H
