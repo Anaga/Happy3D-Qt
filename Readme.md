@@ -14,4 +14,4 @@ Screenshot of current version (cc5721d)
 
 
 
-![](C:\Users\Aleksandr Boborev\Documents\Git\Zann\Happy3D-Qt\Img\ScrinshotV3.png)
+![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV3.png)
