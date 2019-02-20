@@ -6,16 +6,14 @@ This is a Qt port of original Happy3D SW
 
 Author on this SW - Aleksandr Bobyrev
 
-SW date: 14.02.2019
+SW date: 20.02.2019
 
 Update all buttons names and labels, reorder button in logical positions.
 
-Screenshot of current version (cc5721d) 
+Screenshot of current version (20ef650) 
 
-Привет от Романа-Кармана!
+Update screenshot, version 1.0.2
 
+![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV1.0.2.png)
 
-
-Update screnshot
-
-![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV4.png)
+![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
