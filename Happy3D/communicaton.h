@@ -19,7 +19,14 @@ class Communicaton : public QObject
 public:
     explicit Communicaton(QObject *parent = nullptr);
 
+private slots:
+    void handleReadyRead();
+    void handleTimeout();
+    void handleError(QSerialPort::SerialPortError error);
+    void getData();
+
 signals:
+    void readDataFromCom(QByteArray data);
 
 private:
     QStringList m_portList;
@@ -29,6 +36,10 @@ private:
     QTextStream m_standardOutput;
     qint64 m_bytesWritten = 0;
     QTimer m_timer;
+
+    QSerialPort *m_serialPort = nullptr;
+    QByteArray m_readData;
+
 
 public slots:
     QStringList GetInfo();

@@ -3,7 +3,55 @@
 Communicaton::Communicaton(QObject *parent) : QObject(parent)
 {
     m_portList.clear();
+   // connect(m_serialPort, &QSerialPort::readyRead, this, &Communicaton::handleReadyRead);
+    connect(m_serialPort, &QSerialPort::errorOccurred, this, &Communicaton::handleError);
+    connect(&m_timer, &QTimer::timeout, this, &Communicaton::handleTimeout);
 
+    connect(&comPort, SIGNAL( readyRead() ), this, SLOT( getData() ) );
+
+    //m_timer.start(5000);
+
+}
+
+
+void Communicaton::handleReadyRead()
+{
+    //qDebug() << "New data!";
+    m_readData.append(m_serialPort->readAll());
+    if (!m_timer.isActive())
+        m_timer.start(500);
+}
+
+void Communicaton::handleTimeout()
+{
+    if (!m_readData.isEmpty()) {
+         //qDebug() << QObject::tr("Data successfully received from port %1")
+         //                   .arg(m_serialPort->portName());
+
+         qDebug() << m_readData << endl;
+         emit readDataFromCom(m_readData);
+         m_readData.clear();
+    }
+
+
+}
+
+void Communicaton::handleError(QSerialPort::SerialPortError serialPortError)
+{
+    if (serialPortError == QSerialPort::ReadError) {
+         qDebug() << QObject::tr("An I/O error occurred while reading "
+                                        "the data from port %1, error: %2")
+                            .arg(m_serialPort->portName())
+                            .arg(m_serialPort->errorString())
+                         << endl;
+    }
+}
+
+void Communicaton::getData()
+{
+    m_readData.append(m_serialPort->readAll());
+    if (!m_timer.isActive())
+        m_timer.start(100);
 }
 
 QStringList Communicaton::GetInfo()
@@ -44,14 +92,33 @@ QStringList Communicaton::GetInfo()
 bool Communicaton::OpenConnection(QString portName)
 {
     qDebug() << __PRETTY_FUNCTION__;
+    QString qsTemp = "Failed to open port %1, error: %2";
+
+/*
+    QSerialPort serialPort;
+    const QString serialPortName = portName;
+    serialPort.setPortName(serialPortName);
+    serialPort.setBaudRate(QSerialPort::Baud9600);
+
+    if (!serialPort.open(QIODevice::ReadWrite)) {
+        qsTemp = qsTemp.arg(serialPortName)
+                       .arg(serialPort.errorString());
+        qDebug() << qsTemp;
+        return false;
+    }
+    qDebug() << "Open port "<< portName << " with Baud9600";
+    return true;
+*/
     if (!m_portList.contains(portName)){
         qDebug() << "Can't open port "<< portName << " not in Port list";
         return false;
     }
     comPort.setPortName(portName);
     comPort.setBaudRate(115200);
-    if (comPort.open(QIODevice::ReadWrite | QIODevice::Text)){
+    comPort.setBaudRate(9600);
+    if (comPort.open(QIODevice::ReadWrite)){
         qDebug() << "Open port "<< portName << " with BaudRate(115200)";
+        m_serialPort = &comPort;
         return true;
     }
     qDebug() << "Can't open port "<< portName;

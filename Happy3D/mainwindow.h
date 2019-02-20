@@ -31,6 +31,10 @@ private slots:
 
     void on_lineEdit_Proc_LasPow_textEdited(const QString &arg1);
 
+    void on_pushButton_Com_Disconnect_clicked();
+
+    void getDataFromCom(const QByteArray &arg1);
+
 private:
     Ui::MainWindow *ui;
 

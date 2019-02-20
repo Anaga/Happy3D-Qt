@@ -163,29 +163,40 @@
      <string>Communication</string>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="1" column="1">
-      <widget class="QComboBox" name="comboBox_Com_Select"/>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_Com_Connect">
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_Com_Status">
        <property name="text">
-        <string>Connect</string>
+        <string/>
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
+     <item row="1" column="0">
       <widget class="QPushButton" name="pushButton_Com_Refresh">
        <property name="text">
         <string>Refresh ports</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_Com_Status">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
+     <item row="1" column="2">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="pushButton_Com_Disconnect">
+         <property name="text">
+          <string>Disconnect</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Com_Connect">
+         <property name="text">
+          <string>Connect</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="2">
+      <widget class="QComboBox" name="comboBox_Com_Select"/>
      </item>
     </layout>
    </widget>
@@ -699,12 +710,12 @@
      <x>0</x>
      <y>0</y>
      <width>835</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuWelcome_to_version_1_0_0">
     <property name="title">
-     <string>Welcome to version 1.0.1</string>
+     <string>Welcome to version 1.0.2</string>
     </property>
    </widget>
    <addaction name="menuWelcome_to_version_1_0_0"/>

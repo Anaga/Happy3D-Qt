@@ -8,6 +8,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     pCommObj = new Communicaton();
     on_pushButton_Com_Refresh_clicked();
+    ui->pushButton_Com_Disconnect->setVisible(false);
+
+    connect( pCommObj, SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromCom(const QByteArray)));
 
     pLaserObj = new LaserControl;
 
@@ -36,8 +39,12 @@ void MainWindow::on_pushButton_Com_Connect_clicked()
     QString qsTemp = "%1 %2";
     if (pCommObj->OpenConnection(qsPortName)){
         qsTemp = qsTemp.arg(qsPortName).arg("is open");
+        ui->pushButton_Com_Disconnect->setVisible(true);
+        ui->pushButton_Com_Connect->setVisible(false);
+        //ui->pushButton_Com_Connect->setText("Disconnect");
     } else {
         qsTemp = qsTemp.arg(qsPortName).arg("not open");
+       // ui->pushButton_Com_Connect->setText("Connect");
     }
     ui->label_Com_Status->setText(qsTemp);
 }
@@ -88,4 +95,28 @@ void MainWindow::on_lineEdit_Proc_LasPow_textEdited(const QString &arg1)
     if (!inputCheck(arg1)) {
         ui->lineEdit_Proc_LasPow->clear();
     }
+}
+
+void MainWindow::on_pushButton_Com_Disconnect_clicked()
+{
+    QString qsPortName = ui->comboBox_Com_Select->currentText();
+    QString qsTemp = "%1 %2";
+    if (pCommObj->CloseConnection(qsPortName)){
+        qsTemp = qsTemp.arg(qsPortName).arg("is closed");
+        ui->pushButton_Com_Disconnect->setVisible(false);
+        ui->pushButton_Com_Connect->setVisible(true);
+        //ui->pushButton_Com_Connect->setText("Disconnect");
+    } else {
+        qsTemp = qsTemp.arg(qsPortName).arg("not closed");
+       // ui->pushButton_Com_Connect->setText("Connect");
+    }
+    ui->label_Com_Status->setText(qsTemp);
+}
+
+void MainWindow::getDataFromCom(const QByteArray &arg1)
+{
+   // qDebug() << __PRETTY_FUNCTION__;
+    QString qsTemp(arg1);
+    qsTemp = qsTemp.trimmed();
+    ui->textBrowser_Main_Trans->append(qsTemp);
 }
