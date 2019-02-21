@@ -17,3 +17,5 @@ Update screenshot, version 1.0.2
 ![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV1.0.2.png)
 
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
+
+Testing the GitKraken under linux. Roman.
