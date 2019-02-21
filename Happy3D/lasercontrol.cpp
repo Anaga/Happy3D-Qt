@@ -30,3 +30,13 @@ QString LaserControl::moveWiper(bool direction, qreal distance, qreal speed)
     qDebug() << "commandRow " << commandRow;
     return commandRow;
 }
+
+QString LaserControl::stopLaser()
+{
+    return "#pow=0";
+}
+
+QString LaserControl::stopMotor()
+{
+    return "#my=0";
+}

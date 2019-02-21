@@ -114,10 +114,14 @@ bool Communicaton::OpenConnection(QString portName)
         return false;
     }
     comPort.setPortName(portName);
-    comPort.setBaudRate(115200);
-    comPort.setBaudRate(9600);
+    comPort.setBaudRate(QSerialPort::Baud115200);
+    comPort.setDataBits(QSerialPort::Data8);
+    comPort.setParity(QSerialPort::NoParity);
+    comPort.setStopBits(QSerialPort::OneStop);
+    comPort.setFlowControl(QSerialPort::SoftwareControl);
+    //comPort.setBaudRate(9600);
     if (comPort.open(QIODevice::ReadWrite)){
-        qDebug() << "Open port "<< portName << " with BaudRate(115200)";
+        qDebug() << "Open port "<< portName << " with BaudRate" << comPort.baudRate() ;
         m_serialPort = &comPort;
         return true;
     }

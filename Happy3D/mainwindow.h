@@ -35,6 +35,10 @@ private slots:
 
     void getDataFromCom(const QByteArray &arg1);
 
+    void on_pushButton_ProC_StopLaser_clicked();
+
+    void on_pushButton_ProcC_StopMotor_clicked();
+
 private:
     Ui::MainWindow *ui;
 

@@ -16,6 +16,9 @@ signals:
 public slots:
     QString movePlate(bool direction, qreal distance, qreal speed);
     QString moveWiper(bool direction, qreal distance, qreal speed);
+    QString stopLaser();
+    QString stopMotor();
+
 };
 
 #endif // LASERCONTROL_H

@@ -120,3 +120,19 @@ void MainWindow::getDataFromCom(const QByteArray &arg1)
     qsTemp = qsTemp.trimmed();
     ui->textBrowser_Main_Trans->append(qsTemp);
 }
+
+void MainWindow::on_pushButton_ProC_StopLaser_clicked()
+{
+    QString qsTemp = pLaserObj->stopLaser();
+    QString qsPortName = ui->comboBox_Com_Select->currentText();
+    qDebug() << "We will send to laser this row:" << qsTemp;
+    pCommObj->SendCommand(qsPortName, qsTemp);
+}
+
+void MainWindow::on_pushButton_ProcC_StopMotor_clicked()
+{
+    QString qsTemp = pLaserObj->stopMotor();
+    QString qsPortName = ui->comboBox_Com_Select->currentText();
+    qDebug() << "We will send to laser this row:" << qsTemp;
+    pCommObj->SendCommand(qsPortName, qsTemp);
+}
