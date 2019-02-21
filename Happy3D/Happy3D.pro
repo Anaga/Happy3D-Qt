@@ -35,7 +35,8 @@ HEADERS += \
         mainwindow.h \
     communicaton.h \
     lasercontrol.h \
-    presscontrol.h
+    presscontrol.h \
+    types.h
 
 FORMS += \
         mainwindow.ui

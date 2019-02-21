@@ -5,20 +5,21 @@ LaserControl::LaserControl(QObject *parent) : QObject(parent)
 
 }
 
-QString LaserControl::movePlate(bool direction, qreal distance, qreal speed)
+QString LaserControl::movePlate(MoveDirection direction, long distance, long speed)
 {
     qDebug() << __PRETTY_FUNCTION__;
     QString commandRow = "#mx = %1,%2,%3";
-    if (direction) {
+    if (direction==Up) {
         commandRow = commandRow.arg(1).arg(distance).arg(speed);
-    }else {
+    }
+    if (direction==Down) {
         commandRow = commandRow.arg(2).arg(distance).arg(speed);
     }
     qDebug() << "commandRow " << commandRow;
     return commandRow;
 }
 
-QString LaserControl::moveWiper(bool direction, qreal distance, qreal speed)
+QString LaserControl::moveWiper(MoveDirection direction, long distance, long speed)
 {
     qDebug() << __PRETTY_FUNCTION__;
     QString commandRow = "#my = %1,%2,%3";

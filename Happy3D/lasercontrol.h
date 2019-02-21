@@ -4,6 +4,7 @@
 #include <QObject>
 #include "communicaton.h"
 #include <QFloat16>
+#include "types.h"
 
 class LaserControl : public QObject
 {
@@ -14,8 +15,8 @@ public:
 signals:
 
 public slots:
-    QString movePlate(bool direction, qreal distance, qreal speed);
-    QString moveWiper(bool direction, qreal distance, qreal speed);
+    QString movePlate(MoveDirection direction, long distance, long speed);
+    QString moveWiper(MoveDirection direction, long distance, long speed);
     QString stopLaser();
     QString stopMotor();
 
