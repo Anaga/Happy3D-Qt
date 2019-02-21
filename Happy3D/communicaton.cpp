@@ -94,21 +94,6 @@ bool Communicaton::OpenConnection(QString portName)
     qDebug() << __PRETTY_FUNCTION__;
     QString qsTemp = "Failed to open port %1, error: %2";
 
-/*
-    QSerialPort serialPort;
-    const QString serialPortName = portName;
-    serialPort.setPortName(serialPortName);
-    serialPort.setBaudRate(QSerialPort::Baud9600);
-
-    if (!serialPort.open(QIODevice::ReadWrite)) {
-        qsTemp = qsTemp.arg(serialPortName)
-                       .arg(serialPort.errorString());
-        qDebug() << qsTemp;
-        return false;
-    }
-    qDebug() << "Open port "<< portName << " with Baud9600";
-    return true;
-*/
     if (!m_portList.contains(portName)){
         qDebug() << "Can't open port "<< portName << " not in Port list";
         return false;
@@ -129,29 +114,25 @@ bool Communicaton::OpenConnection(QString portName)
     return false;
 }
 
-bool Communicaton::CloseConnection(QString portName)
+bool Communicaton::CloseConnection()
 {
     qDebug() << __PRETTY_FUNCTION__;
-    if (!m_portList.contains(portName)){
-        qDebug() << "Can't close port "<< portName << " not in Port list";
-        return false;
-    }
-    comPort.setPortName(portName);
+
     if (comPort.isOpen()){
-        qDebug() << "Close port "<< portName;
+        qDebug() << "Close port "<< comPort.portName();
         comPort.close();
         return true;
     }
-    qDebug() << "Can't close port "<< portName;
+    qDebug() << "Can't close port "<< comPort.portName();
     return false;
 }
 
-bool Communicaton::SendCommand(QString portName, QString command)
+bool Communicaton::SendCommand(QString command)
 {
     qDebug() << __PRETTY_FUNCTION__;
-    comPort.setPortName(portName);
+    qsTemp = comPort.portName();
     if (!comPort.isOpen()){
-        qDebug() << "Can't send command"<<command <<"to port"<< portName << ", port not open";
+        qDebug() << "Can't send command"<<command <<"to port"<< qsTemp << ", port not open";
         return false;
     }
 
@@ -159,13 +140,13 @@ bool Communicaton::SendCommand(QString portName, QString command)
     const qint64 bytesWritten = comPort.write(m_writeData);
 
     if (bytesWritten == -1) {
-        qDebug() << "Failed to write the data to port "<< portName << "error: "<< comPort.errorString();
+        qDebug() << "Failed to write the data to port "<< qsTemp << "error: "<< comPort.errorString();
         return false;
     } else if (bytesWritten != m_writeData.size()) {
-        qDebug() << "Failed to write all the data to port "<< portName << "error: "<< comPort.errorString();
+        qDebug() << "Failed to write all the data to port "<< qsTemp << "error: "<< comPort.errorString();
         return false;
     }
 
-    qDebug() << "Command"<<command <<" successfully sent to port "<< portName;
+    qDebug() << "Command"<<command <<" successfully sent to port "<<qsTemp;
     return true;
 }

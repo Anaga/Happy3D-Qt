@@ -8,7 +8,6 @@
 #include "lasercontrol.h"
 
 
-
 namespace Ui {
 class MainWindow;
 }
@@ -24,11 +23,10 @@ public:
 private slots:
     bool inputCheck(QString text, CheckType type);
     void getDataFromCom(const QByteArray &arg1);
+    void motorsMove(MoveDirection dir);
 
     /* UI handlers */
-    void on_pushButton_Com_Refresh_clicked();
-    void on_pushButton_Com_Connect_clicked();
-    void on_pushButton_Com_Disconnect_clicked();    
+    void on_pushButton_Com_Refresh_clicked(); 
     void on_pushButton_ProC_StopLaser_clicked();
     void on_pushButton_ProcC_StopMotor_clicked();
 
@@ -52,7 +50,9 @@ private slots:
 
     void on_pushButton_MotC_Up_clicked();
 
-    void on_pushButton_MotC__Down_clicked();
+    void on_pushButton_MotC_Down_clicked();
+
+    void on_pushButton_Com_Las_OC_clicked(bool checked);
 
 private:
     Ui::MainWindow *ui;

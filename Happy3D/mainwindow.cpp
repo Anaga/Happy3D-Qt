@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     pCommObj = new Communicaton();
     on_pushButton_Com_Refresh_clicked();
-    ui->pushButton_Com_Disconnect->setVisible(false);
 
     connect( pCommObj, SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromCom(const QByteArray)));
 
@@ -23,31 +22,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_Com_Refresh_clicked()
 {
-    ui->comboBox_Com_Select->clear();
+    ui->comboBox_Com_Laser_Select->clear();
+    ui->comboBox_Com_Press_Select->clear();
     QStringList portList;
     portList = pCommObj->GetInfo();
     if (portList.size()>0) {
         for (auto port :  portList) {
-            ui->comboBox_Com_Select->addItem(port);
+            ui->comboBox_Com_Laser_Select->addItem(port);
+            ui->comboBox_Com_Press_Select->addItem(port);
         }
     }
 }
 
-void MainWindow::on_pushButton_Com_Connect_clicked()
-{
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
-    QString qsTemp = "%1 %2";
-    if (pCommObj->OpenConnection(qsPortName)){
-        qsTemp = qsTemp.arg(qsPortName).arg("is open");
-        ui->pushButton_Com_Disconnect->setVisible(true);
-        ui->pushButton_Com_Connect->setVisible(false);
-        //ui->pushButton_Com_Connect->setText("Disconnect");
-    } else {
-        qsTemp = qsTemp.arg(qsPortName).arg("not open");
-        // ui->pushButton_Com_Connect->setText("Connect");
-    }
-    ui->label_Com_Status->setText(qsTemp);
-}
 
 bool MainWindow::inputCheck(QString text, CheckType type)
 {
@@ -72,7 +58,6 @@ bool MainWindow::inputCheck(QString text, CheckType type)
         fVal = text.toDouble(&bOk);
         qsTemp = qsTemp.arg("Double");
     }
-
 
     if (!bOk){
         qsTemp = qsTemp.arg(text);
@@ -111,21 +96,6 @@ void MainWindow::on_lineEdit_Proc_LasPow_textEdited(const QString &arg1)
     }
 }
 
-void MainWindow::on_pushButton_Com_Disconnect_clicked()
-{
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
-    QString qsTemp = "%1 %2";
-    if (pCommObj->CloseConnection(qsPortName)){
-        qsTemp = qsTemp.arg(qsPortName).arg("is closed");
-        ui->pushButton_Com_Disconnect->setVisible(false);
-        ui->pushButton_Com_Connect->setVisible(true);
-        //ui->pushButton_Com_Connect->setText("Disconnect");
-    } else {
-        qsTemp = qsTemp.arg(qsPortName).arg("not closed");
-        // ui->pushButton_Com_Connect->setText("Connect");
-    }
-    ui->label_Com_Status->setText(qsTemp);
-}
 
 void MainWindow::getDataFromCom(const QByteArray &arg1)
 {
@@ -135,20 +105,37 @@ void MainWindow::getDataFromCom(const QByteArray &arg1)
     ui->textBrowser_Main_Trans->append(qsTemp);
 }
 
+void MainWindow::motorsMove(MoveDirection dir)
+{
+    long speed =0;
+    long dist =0;
+    QString command;
+    if ((dir==Left) || (dir==Right)) {
+        speed = ui->lineEdit_MotC_HorSpeed->text().toLong();
+        dist =  ui->lineEdit_MotC_HorDist->text().toLong();
+    }
+
+    if ((dir==Up) || (dir==Down)) {
+        speed = ui->lineEdit_MotC_VertDist->text().toLong();
+        dist =  ui->lineEdit_MotC_VertDist->text().toLong();
+    }
+    command = pLaserObj->moveMotors(dir,dist,speed);
+    qDebug() << "We will send to laser this row:" << command;
+    pCommObj->SendCommand(command);
+}
+
 void MainWindow::on_pushButton_ProC_StopLaser_clicked()
 {
     QString qsTemp = pLaserObj->stopLaser();
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
     qDebug() << "We will send to laser this row:" << qsTemp;
-    pCommObj->SendCommand(qsPortName, qsTemp);
+    pCommObj->SendCommand(qsTemp);
 }
 
 void MainWindow::on_pushButton_ProcC_StopMotor_clicked()
 {
     QString qsTemp = pLaserObj->stopMotor();
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
     qDebug() << "We will send to laser this row:" << qsTemp;
-    pCommObj->SendCommand(qsPortName, qsTemp);
+    pCommObj->SendCommand(qsTemp);
 }
 
 void MainWindow::on_lineEdit_Cub_LayerDist_textEdited(const QString &arg1)
@@ -227,48 +214,43 @@ void MainWindow::on_lineEdit_MotC_VertDist_textEdited(const QString &arg1)
 
 void MainWindow::on_pushButton_MotC_Left_clicked()
 {
-    long speed =0;
-    long dist =0;
-    speed = ui->lineEdit_MotC_HorSpeed->text().toLong();
-    dist =  ui->lineEdit_MotC_HorDist->text().toLong();
-    QString command = pLaserObj->moveWiper(Left,dist,speed);
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
-    qDebug() << "We will send to laser this row:" << command;
-    pCommObj->SendCommand(qsPortName, command);
+    motorsMove(Left);
 }
 
 void MainWindow::on_pushButton_MotC_Rigth_clicked()
 {
-    long speed =0;
-    long dist =0;
-    speed = ui->lineEdit_MotC_HorSpeed->text().toLong();
-    dist =  ui->lineEdit_MotC_HorDist->text().toLong();
-    QString command = pLaserObj->moveWiper(Right,dist,speed);
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
-    qDebug() << "We will send to laser this row:" << command;
-    pCommObj->SendCommand(qsPortName, command);
+    motorsMove(Right);
 }
 
 void MainWindow::on_pushButton_MotC_Up_clicked()
 {
-    long speed =0;
-    long dist =0;
-    speed = ui->lineEdit_MotC_VertDist->text().toLong();
-    dist =  ui->lineEdit_MotC_VertDist->text().toLong();
-    QString command = pLaserObj->movePlate(Up,dist,speed);
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
-    qDebug() << "We will send to laser this row:" << command;
-    pCommObj->SendCommand(qsPortName, command);
+    motorsMove(Up);
 }
 
-void MainWindow::on_pushButton_MotC__Down_clicked()
+void MainWindow::on_pushButton_MotC_Down_clicked()
 {
-    long speed =0;
-    long dist =0;
-    speed = ui->lineEdit_MotC_VertDist->text().toLong();
-    dist =  ui->lineEdit_MotC_VertDist->text().toLong();
-    QString command = pLaserObj->movePlate(Down,dist,speed);
-    QString qsPortName = ui->comboBox_Com_Select->currentText();
-    qDebug() << "We will send to laser this row:" << command;
-    pCommObj->SendCommand(qsPortName, command);
+    motorsMove(Down);
+}
+
+void MainWindow::on_pushButton_Com_Las_OC_clicked(bool checked)
+{
+    QString qsPortName = ui->comboBox_Com_Laser_Select->currentText();
+    QString qsTemp = "Laser port %1";
+
+    if (checked){
+        if (pCommObj->OpenConnection(qsPortName)){
+            qsTemp = qsTemp.arg("is open");
+            ui->pushButton_Com_Las_OC->setText("Close");
+        } else {
+            qsTemp = qsTemp.arg("not open");
+        }
+    } else {
+        if (pCommObj->CloseConnection()){
+            qsTemp = qsTemp.arg("is closed");
+            ui->pushButton_Com_Las_OC->setText("Open");
+        } else {
+            qsTemp = qsTemp.arg("not closed");
+        }
+    }
+    ui->label_Com_Las_Status->setText(qsTemp);
 }

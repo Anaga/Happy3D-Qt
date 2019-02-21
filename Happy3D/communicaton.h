@@ -40,12 +40,14 @@ private:
     QSerialPort *m_serialPort = nullptr;
     QByteArray m_readData;
 
+    QString qsTemp;
+
 
 public slots:
     QStringList GetInfo();
     bool OpenConnection(QString portName);
-    bool CloseConnection(QString portName);
-    bool SendCommand(QString portName, QString command);
+    bool CloseConnection();
+    bool SendCommand(QString command);
 };
 
 #endif // COMMUNICATON_H

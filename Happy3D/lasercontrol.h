@@ -15,8 +15,7 @@ public:
 signals:
 
 public slots:
-    QString movePlate(MoveDirection direction, long distance, long speed);
-    QString moveWiper(MoveDirection direction, long distance, long speed);
+    QString moveMotors(MoveDirection direction, long distance, long speed);
     QString stopLaser();
     QString stopMotor();
 
