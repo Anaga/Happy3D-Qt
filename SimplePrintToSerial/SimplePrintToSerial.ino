@@ -1,11 +1,12 @@
-int inByte = 0;         // incoming serial byte
-String incomingCommand;
-
+String incomingCommand;// incoming serial command
+int dotCounter = 0;
 void setup() {
   Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
+  Serial.println("Start up");
+  Serial.println("Waiting connection"); // send an initial string
   establishContact();  // send a byte to establish contact until receiver responds
 }
 
@@ -50,7 +51,12 @@ void commandParser(String command){
 
 void establishContact() {
   while (Serial.available() <= 0) {
-    Serial.println("Waiting connection");   // send an initial string
-    delay(700);
+    dotCounter++;
+    if (dotCounter>80) {
+      dotCounter=0;
+      Serial.println();
+    }
+    Serial.print(".");
+    delay(500);
   }
 }
