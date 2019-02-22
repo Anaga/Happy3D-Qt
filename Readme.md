@@ -19,3 +19,5 @@ Update screenshot, version 1.0.2
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
 
 Testing the GitKraken under linux. Roman.
+
+Testing the GitKraken under linux-2. From 3D printer PC. Roman.
