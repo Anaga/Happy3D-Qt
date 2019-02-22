@@ -22,7 +22,8 @@ public:
 
 private slots:
     bool inputCheck(QString text, CheckType type);
-    void getDataFromCom(const QByteArray &arg1);
+    void getDataFromPresCom(const QByteArray &arg1);
+    void getDataFromLaserCom(const QByteArray &arg1);
     void motorsMove(MoveDirection dir);
 
     /* UI handlers */
@@ -45,19 +46,24 @@ private slots:
     void on_lineEdit_MotC_VertDist_textEdited(const QString &arg1);
 
     void on_pushButton_MotC_Left_clicked();
-
     void on_pushButton_MotC_Rigth_clicked();
-
     void on_pushButton_MotC_Up_clicked();
-
     void on_pushButton_MotC_Down_clicked();
 
     void on_pushButton_Com_Las_OC_clicked(bool checked);
 
+    void on_pushButton_Com_Pres_OC_clicked(bool checked);
+
+    void on_pushButton_OxSC_Start_clicked();
+
+    void on_pushButton__OxSC_Stop_clicked();
+
 private:
     Ui::MainWindow *ui;
 
-    Communicaton *pCommObj;
+    Communicaton *pComLaserObj;
+    Communicaton *pComPresObj;
+
     LaserControl *pLaserObj;
 };
 

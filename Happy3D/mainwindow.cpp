@@ -6,11 +6,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    pCommObj = new Communicaton();
+    pComLaserObj = new Communicaton();
+    pComPresObj = new Communicaton();
     on_pushButton_Com_Refresh_clicked();
 
-    connect( pCommObj, SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromCom(const QByteArray)));
-
+    connect( pComLaserObj, SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromLaserCom(const QByteArray)));
+    connect( pComPresObj,  SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromPresCom(const QByteArray)));
     pLaserObj = new LaserControl;
 
 }
@@ -25,7 +26,9 @@ void MainWindow::on_pushButton_Com_Refresh_clicked()
     ui->comboBox_Com_Laser_Select->clear();
     ui->comboBox_Com_Press_Select->clear();
     QStringList portList;
-    portList = pCommObj->GetInfo();
+    pComPresObj->GetInfo();
+    portList = pComLaserObj->GetInfo();
+
     if (portList.size()>0) {
         for (auto port :  portList) {
             ui->comboBox_Com_Laser_Select->addItem(port);
@@ -96,8 +99,22 @@ void MainWindow::on_lineEdit_Proc_LasPow_textEdited(const QString &arg1)
     }
 }
 
+void MainWindow::getDataFromPresCom(const QByteArray &arg1)
+{
+    // qDebug() << __PRETTY_FUNCTION__;
+    QString qsTemp(arg1);
+    qsTemp = qsTemp.trimmed();
+    if (qsTemp.contains("Oxygen value:")){
+        qsTemp= qsTemp.replace("\r\n", ":");
+        QStringList qslOx = qsTemp.split(":");
+        double oxVal = qslOx.at(1).toDouble();
+        ui->lineEdit_OxSC_OxVal->setText(QString::number(oxVal));
+        return;
+    }
+    ui->textBrowser_Main_Orig->append(qsTemp);
+}
 
-void MainWindow::getDataFromCom(const QByteArray &arg1)
+void MainWindow::getDataFromLaserCom(const QByteArray &arg1)
 {
     // qDebug() << __PRETTY_FUNCTION__;
     QString qsTemp(arg1);
@@ -121,21 +138,21 @@ void MainWindow::motorsMove(MoveDirection dir)
     }
     command = pLaserObj->moveMotors(dir,dist,speed);
     qDebug() << "We will send to laser this row:" << command;
-    pCommObj->SendCommand(command);
+    pComLaserObj->SendCommand(command);
 }
 
 void MainWindow::on_pushButton_ProC_StopLaser_clicked()
 {
     QString qsTemp = pLaserObj->stopLaser();
     qDebug() << "We will send to laser this row:" << qsTemp;
-    pCommObj->SendCommand(qsTemp);
+    pComLaserObj->SendCommand(qsTemp);
 }
 
 void MainWindow::on_pushButton_ProcC_StopMotor_clicked()
 {
     QString qsTemp = pLaserObj->stopMotor();
     qDebug() << "We will send to laser this row:" << qsTemp;
-    pCommObj->SendCommand(qsTemp);
+    pComLaserObj->SendCommand(qsTemp);
 }
 
 void MainWindow::on_lineEdit_Cub_LayerDist_textEdited(const QString &arg1)
@@ -238,14 +255,14 @@ void MainWindow::on_pushButton_Com_Las_OC_clicked(bool checked)
     QString qsTemp = "Laser port %1";
 
     if (checked){
-        if (pCommObj->OpenConnection(qsPortName)){
+        if (pComLaserObj->OpenConnection(qsPortName)){
             qsTemp = qsTemp.arg("is open");
             ui->pushButton_Com_Las_OC->setText("Close");
         } else {
             qsTemp = qsTemp.arg("not open");
         }
     } else {
-        if (pCommObj->CloseConnection()){
+        if (pComLaserObj->CloseConnection()){
             qsTemp = qsTemp.arg("is closed");
             ui->pushButton_Com_Las_OC->setText("Open");
         } else {
@@ -253,4 +270,37 @@ void MainWindow::on_pushButton_Com_Las_OC_clicked(bool checked)
         }
     }
     ui->label_Com_Las_Status->setText(qsTemp);
+}
+
+void MainWindow::on_pushButton_Com_Pres_OC_clicked(bool checked)
+{
+    QString qsPortName = ui->comboBox_Com_Press_Select->currentText();
+    QString qsTemp = "Press port %1";
+
+    if (checked){
+        if (pComPresObj->OpenConnection(qsPortName)){
+            qsTemp = qsTemp.arg("is open");
+            ui->pushButton_Com_Pres_OC->setText("Close");
+        } else {
+            qsTemp = qsTemp.arg("not open");
+        }
+    } else {
+        if (pComPresObj->CloseConnection()){
+            qsTemp = qsTemp.arg("is closed");
+            ui->pushButton_Com_Pres_OC->setText("Open");
+        } else {
+            qsTemp = qsTemp.arg("not closed");
+        }
+    }
+    ui->label_Com_Pres_Status->setText(qsTemp);
+}
+
+void MainWindow::on_pushButton_OxSC_Start_clicked()
+{
+    pComPresObj->SendCommand("serial start");
+}
+
+void MainWindow::on_pushButton__OxSC_Stop_clicked()
+{
+    pComPresObj->SendCommand("serial stop");
 }
