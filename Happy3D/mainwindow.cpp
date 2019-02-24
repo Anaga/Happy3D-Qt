@@ -141,6 +141,35 @@ void MainWindow::motorsMove(MoveDirection dir)
     pComLaserObj->SendCommand(command);
 }
 
+void MainWindow::RecoaterSeq()
+{
+    /*
+            SerialConnection.SendData1("R");//Right up
+            Delay(500);
+            SerialConnection.SendData1("F"); //left down
+            Delay(500);
+            MoveMotor2("13000", "y", "1");//Motor2 run to the right end
+            DelayS(9);
+            SerialConnection.SendData1("I");//Right down
+            Delay(500);
+            SerialConnection.SendData1("L"); //left up
+            Delay(500);
+            MoveMotor2("8300", "y", "2");//Motor2 run to the push position
+            DelayS(6);
+            SerialConnection.SendData1("D");//Push
+            Delay(500);
+            MoveMotor1(Motor1MoveText.Text, "x", "1");//Motor1 down one layer
+            Delay(500);
+            SerialConnection.SendData1("U");//Pull
+            Delay(900);
+            SerialConnection.SendData1("H");//Hold
+            Delay(500);
+            MoveMotor2("4700", "y", "2");
+            DelayS(4);
+            SerialConnection.SendData1("F"); //left down
+      */
+}
+
 void MainWindow::on_pushButton_ProC_StopLaser_clicked()
 {
     QString qsTemp = pLaserObj->stopLaser();
@@ -303,4 +332,59 @@ void MainWindow::on_pushButton_OxSC_Start_clicked()
 void MainWindow::on_pushButton__OxSC_Stop_clicked()
 {
     pComPresObj->SendCommand("serial stop");
+}
+
+void MainWindow::on_pushButton_GasCp_On_clicked()
+{
+
+}
+
+void MainWindow::on_pushButton_GasCp_Of_clicked()
+{
+
+}
+
+void MainWindow::on_pushButton_RecC_LeftUp_clicked()
+{
+    pComPresObj->SendCommand("L");
+}
+
+void MainWindow::on_pushButton_RecC_LeftDown_clicked()
+{
+    pComPresObj->SendCommand("F");//left down
+}
+
+void MainWindow::on_pushButton_RecC_RigthUp_clicked()
+{
+    pComPresObj->SendCommand("R");//Right up
+}
+
+void MainWindow::on_pushButton_RecC_RifgthDown_clicked()
+{
+    pComPresObj->SendCommand("I");//Right down
+}
+
+void MainWindow::on_pushButton_PushC_Pull_clicked()
+{
+     pComPresObj->SendCommand("U");//Pull
+}
+
+void MainWindow::on_pushButton_PushC_TPull_clicked()
+{
+    pComPresObj->SendCommand("U");//Pull
+}
+
+void MainWindow::on_pushButton_PushC_Hold_clicked()
+{
+    pComPresObj->SendCommand("H");//Hold
+}
+
+void MainWindow::on_pushButton_PushC_TPush_clicked()
+{
+    pComPresObj->SendCommand("D");//Push
+}
+
+void MainWindow::on_pushButton_PushC_Push_clicked()
+{
+    pComPresObj->SendCommand("D");//Push
 }

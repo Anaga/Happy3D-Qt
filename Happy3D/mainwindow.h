@@ -26,6 +26,8 @@ private slots:
     void getDataFromLaserCom(const QByteArray &arg1);
     void motorsMove(MoveDirection dir);
 
+    void RecoaterSeq();
+
     /* UI handlers */
     void on_pushButton_Com_Refresh_clicked(); 
     void on_pushButton_ProC_StopLaser_clicked();
@@ -57,6 +59,28 @@ private slots:
     void on_pushButton_OxSC_Start_clicked();
 
     void on_pushButton__OxSC_Stop_clicked();
+
+    void on_pushButton_GasCp_On_clicked();
+
+    void on_pushButton_GasCp_Of_clicked();
+
+    void on_pushButton_RecC_LeftUp_clicked();
+
+    void on_pushButton_RecC_LeftDown_clicked();
+
+    void on_pushButton_RecC_RigthUp_clicked();
+
+    void on_pushButton_RecC_RifgthDown_clicked();
+
+    void on_pushButton_PushC_Pull_clicked();
+
+    void on_pushButton_PushC_TPull_clicked();
+
+    void on_pushButton_PushC_Hold_clicked();
+
+    void on_pushButton_PushC_TPush_clicked();
+
+    void on_pushButton_PushC_Push_clicked();
 
 private:
     Ui::MainWindow *ui;
