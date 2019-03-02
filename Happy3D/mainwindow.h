@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include "communicaton.h"
 #include "lasercontrol.h"
+#include <QElapsedTimer>
 
 
 namespace Ui {
@@ -89,6 +90,7 @@ private:
     Communicaton *pComPresObj;
 
     LaserControl *pLaserObj;
+    QElapsedTimer t;
 };
 
 #endif // MAINWINDOW_H
