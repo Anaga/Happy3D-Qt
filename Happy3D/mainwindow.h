@@ -9,7 +9,10 @@
 #include <QElapsedTimer>
 
 #include "spdlog/spdlog.h"
+#include "spdlog/sinks/daily_file_sink.h"
+#include "spdlog/sinks/rotating_file_sink.h"
 #include "spdlog/sinks/basic_file_sink.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -29,7 +32,8 @@ private slots:
     void getDataFromLaserCom(const QByteArray &arg1);
     void motorsMove(MoveDirection dir);
 
-    void RecoaterSeq();
+    void recoaterSeq();
+    void initMotors();
 
     /* UI handlers */
     void on_pushButton_Com_Refresh_clicked(); 
@@ -56,33 +60,23 @@ private slots:
     void on_pushButton_MotC_Down_clicked();
 
     void on_pushButton_Com_Las_OC_clicked(bool checked);
-
     void on_pushButton_Com_Pres_OC_clicked(bool checked);
 
     void on_pushButton_OxSC_Start_clicked();
-
     void on_pushButton__OxSC_Stop_clicked();
 
     void on_pushButton_GasCp_On_clicked();
-
     void on_pushButton_GasCp_Of_clicked();
 
     void on_pushButton_RecC_LeftUp_clicked();
-
     void on_pushButton_RecC_LeftDown_clicked();
-
     void on_pushButton_RecC_RigthUp_clicked();
-
     void on_pushButton_RecC_RifgthDown_clicked();
 
     void on_pushButton_PushC_Pull_clicked();
-
     void on_pushButton_PushC_TPull_clicked();
-
     void on_pushButton_PushC_Hold_clicked();
-
     void on_pushButton_PushC_TPush_clicked();
-
     void on_pushButton_PushC_Push_clicked();
 
 private:
@@ -93,6 +87,10 @@ private:
 
     LaserControl *pLaserObj;
     QElapsedTimer t;
+    QElapsedTimer globalTimer;
+
+    std::shared_ptr<spdlog::logger> _logger;
+
 };
 
 #endif // MAINWINDOW_H

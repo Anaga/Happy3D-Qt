@@ -28,7 +28,7 @@ void Communicaton::handleTimeout()
          //qDebug() << QObject::tr("Data successfully received from port %1")
          //                   .arg(m_serialPort->portName());
 
-         qDebug() << m_readData << endl;
+         //qDebug() << m_readData << endl;
          emit readDataFromCom(m_readData);
          m_readData.clear();
     }
@@ -136,7 +136,12 @@ bool Communicaton::SendCommand(QString command)
         return false;
     }
 
+    //Add new line for command:
+    command.append('\r');
+    command.append('\n');
+
     m_writeData = command.toLocal8Bit();
+
     const qint64 bytesWritten = comPort.write(m_writeData);
 
     if (bytesWritten == -1) {

@@ -12,19 +12,19 @@ QString LaserControl::moveMotors(MoveDirection direction, long distance, long sp
 
     switch (direction) {
     case Up:
-        commandRow = "#mx=2,%1,%2\r\n";
+        commandRow = "#mx=2,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
     case Down:
-        commandRow = "#mx=1,%1,%2\r\n";
+        commandRow = "#mx=1,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
     case Left:
-        commandRow = "#my=2,%1,%2\r\n";
+        commandRow = "#my=2,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
     case Right:
-        commandRow = "#my=1,%1,%2\r\n";
+        commandRow = "#my=1,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
     }

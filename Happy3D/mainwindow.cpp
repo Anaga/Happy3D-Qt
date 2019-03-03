@@ -6,28 +6,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    _logger = spdlog::daily_logger_mt("MainWindows", "logs/logfile.log", 8, 00); // new log on each morning at 8:00
 
-    auto my_logger = spdlog::basic_logger_mt("basic_logger", "logs/basic-log.txt");
-
-    my_logger->info("MainWindow start up!");
-
-    my_logger->info("Welcome to spdlog version {}.{}.{} !", SPDLOG_VER_MAJOR, SPDLOG_VER_MINOR, SPDLOG_VER_PATCH);
-    my_logger->warn("Easy padding in numbers like {:08d}", 12);
-    my_logger->critical("Support for int: {0:d};  hex: {0:x};  oct: {0:o}; bin: {0:b}", 42);
-    my_logger->info("Support for floats {:03.2f}", 1.23456);
-    my_logger->info("Positional args are {1} {0}..", "too", "supported");
-    my_logger->info("{:>8} aligned, {:<8} aligned", "right", "left");
-
-    // Runtime log levels
-    my_logger->set_level(spdlog::level::info); // Set global log level to info
-    my_logger->debug("This message should not be displayed!");
-    my_logger->set_level(spdlog::level::trace); // Set specific logger's log level
-    my_logger->debug("This message should be displayed..");
-
-    // Customize msg format for all loggers
-    spdlog::set_pattern("[%H:%M:%S %z] [%^%L%$] [thread %t] %v");
-    spdlog::info("This an info message with custom format");
-    spdlog::set_pattern("%+"); // back to default format
+    _logger->info("MainWindow startup");
 
     pComLaserObj = new Communicaton();
     pComPresObj = new Communicaton();
@@ -41,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    _logger->info("MainWindow shutdown");
     delete ui;
 }
 
@@ -126,16 +108,25 @@ void MainWindow::getDataFromPresCom(const QByteArray &arg1)
 {
     // qDebug() << __PRETTY_FUNCTION__;
     QString qsTemp(arg1);
-    qsTemp = qsTemp.trimmed();
+    qsTemp = qsTemp.trimmed();    
+    static double lastOxValue = 0;
+
     if (qsTemp.contains("Oxygen value:")){
         qsTemp= qsTemp.replace("\r\n", ":");
         QStringList qslOx = qsTemp.split(":");
         double oxVal = qslOx.at(1).toDouble();
-        ui->lineEdit_OxSC_OxVal->setText(QString::number(oxVal));
-        return;
+
+        // do not logging Oxygen value, only on change
+        if ( !qFuzzyCompare(lastOxValue, oxVal)) {  // function for floating points comparrison
+            ui->lineEdit_OxSC_OxVal->setText(QString::number(oxVal));
+            lastOxValue = oxVal;
+            ui->textBrowser_log->append(qsTemp);
+            _logger->info("Data from press: {}",qPrintable(qsTemp));
+        }
+        return;        
     }
     ui->textBrowser_log->append(qsTemp);
-    //ui->textBrowser_Main_Orig->append(qsTemp);
+    _logger->info("Data from press: {}",qPrintable(qsTemp));
 }
 
 void MainWindow::getDataFromLaserCom(const QByteArray &arg1)
@@ -143,7 +134,8 @@ void MainWindow::getDataFromLaserCom(const QByteArray &arg1)
     // qDebug() << __PRETTY_FUNCTION__;
     QString qsTemp(arg1);
     qsTemp = qsTemp.trimmed();
-     ui->textBrowser_log->append(qsTemp);
+    ui->textBrowser_log->append(qsTemp);
+    _logger->info("Data from laser: {}",qPrintable(qsTemp));
     //ui->textBrowser_Main_Trans->append(qsTemp);
 }
 
@@ -166,7 +158,28 @@ void MainWindow::motorsMove(MoveDirection dir)
     pComLaserObj->SendCommand(command);
 }
 
-void MainWindow::RecoaterSeq()
+void MainWindow::initMotors()
+{
+    _logger->info("initMotors");
+    QString command;
+    qint64 timeout = 1000; //milliseconds
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+    command = pLaserObj->initMotors(X);
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+    command = pLaserObj->initMotors(X);
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+
+}
+
+void MainWindow::recoaterSeq()
 {
     /*
             SerialConnection.SendData1("R");//Right up
@@ -312,12 +325,15 @@ void MainWindow::on_pushButton_Com_Las_OC_clicked(bool checked)
         if (pComLaserObj->OpenConnection(qsPortName)){
             qsTemp = qsTemp.arg("is open");
             ui->pushButton_Com_Las_OC->setText("Close");
+            initMotors();
+            /*
             t.start();
             while(t.elapsed()<1000);
             pComLaserObj->SendCommand("#mx=S,200\r\n");
             t.start();
             while(t.elapsed()<1000);
             pComLaserObj->SendCommand("#my=S,200\r\n");
+            */
         } else {
             qsTemp = qsTemp.arg("not open");
         }
