@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include "communicaton.h"
 #include "lasercontrol.h"
+#include <QElapsedTimer>
 
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/basic_file_sink.h"
@@ -91,6 +92,7 @@ private:
     Communicaton *pComPresObj;
 
     LaserControl *pLaserObj;
+    QElapsedTimer t;
 };
 
 #endif // MAINWINDOW_H

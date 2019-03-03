@@ -158,7 +158,7 @@ void MainWindow::motorsMove(MoveDirection dir)
     }
 
     if ((dir==Up) || (dir==Down)) {
-        speed = ui->lineEdit_MotC_VertDist->text().toLong();
+        speed = ui->lineEdit_MotC_VertSpeed->text().toLong();
         dist =  ui->lineEdit_MotC_VertDist->text().toLong();
     }
     command = pLaserObj->moveMotors(dir,dist,speed);
@@ -312,6 +312,12 @@ void MainWindow::on_pushButton_Com_Las_OC_clicked(bool checked)
         if (pComLaserObj->OpenConnection(qsPortName)){
             qsTemp = qsTemp.arg("is open");
             ui->pushButton_Com_Las_OC->setText("Close");
+            t.start();
+            while(t.elapsed()<1000);
+            pComLaserObj->SendCommand("#mx=S,200\r\n");
+            t.start();
+            while(t.elapsed()<1000);
+            pComLaserObj->SendCommand("#my=S,200\r\n");
         } else {
             qsTemp = qsTemp.arg("not open");
         }
@@ -361,12 +367,12 @@ void MainWindow::on_pushButton__OxSC_Stop_clicked()
 
 void MainWindow::on_pushButton_GasCp_On_clicked()
 {
-
+    //pComPresObj->SendCommand("M");
 }
 
 void MainWindow::on_pushButton_GasCp_Of_clicked()
 {
-
+    //pComPresObj->SendCommand("N");
 }
 
 void MainWindow::on_pushButton_RecC_LeftUp_clicked()
