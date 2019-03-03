@@ -6,17 +6,13 @@ This is a Qt port of original Happy3D SW
 
 Author on this SW - Aleksandr Bobyrev
 
-SW date: 23.02.2019
+SW date: 03.03.2019
 
-Add second communication object, to work with second COM port
+Screenshot of current version (0d8cd71) 
 
-Update all buttons names and labels, reorder button in logical positions.
+Update screenshot, version 1.0.5
 
-Screenshot of current version (20ef650) 
-
-Update screenshot, version 1.0.2
-
-![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV1.0.2.png)
+![](https://github.com/Anaga/Happy3D-Qt/blob/master/Img/ScrinshotV5.png)
 
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
 
