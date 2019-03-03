@@ -171,7 +171,10 @@
     <item row="2" column="2">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Le2</string>
+       <string>Aleksandr 
+Bobyrev
+03.03.2019
+Ver 1.0.5</string>
       </property>
      </widget>
     </item>
@@ -666,7 +669,7 @@
    </property>
    <widget class="QMenu" name="menuWelcome_to_version_1_0_0">
     <property name="title">
-     <string>Welcome to version 1.0.3</string>
+     <string>Welcome to version 1.0.5</string>
     </property>
    </widget>
    <addaction name="menuWelcome_to_version_1_0_0"/>
