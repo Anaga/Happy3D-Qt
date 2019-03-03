@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect( pComLaserObj, SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromLaserCom(const QByteArray)));
     connect( pComPresObj,  SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromPresCom(const QByteArray)));
     pLaserObj = new LaserControl;
+    command = "";
 
 }
 
@@ -56,7 +57,7 @@ bool MainWindow::inputCheck(QString text, CheckType type)
     bool bOk = false;
     qreal fVal = 0.0;
     long iVal = 0;
-    QString qsTemp = "Can't convert %2 to %1!";
+    qsTemp = "Can't convert %2 to %1!";
 
     if (type == Integer){
         iVal = text.toLong(&bOk);
@@ -106,9 +107,7 @@ void MainWindow::on_lineEdit_Proc_LasPow_textEdited(const QString &arg1)
 
 void MainWindow::getDataFromPresCom(const QByteArray &arg1)
 {
-    // qDebug() << __PRETTY_FUNCTION__;
-    QString qsTemp(arg1);
-    qsTemp = qsTemp.trimmed();    
+    qsTemp = arg1.trimmed();
     static double lastOxValue = 0;
 
     if (qsTemp.contains("Oxygen value:")){
@@ -123,7 +122,7 @@ void MainWindow::getDataFromPresCom(const QByteArray &arg1)
             ui->textBrowser_log->append(qsTemp);
             _logger->info("Data from press: {}",qPrintable(qsTemp));
         }
-        return;        
+        return;
     }
     ui->textBrowser_log->append(qsTemp);
     _logger->info("Data from press: {}",qPrintable(qsTemp));
@@ -143,7 +142,6 @@ void MainWindow::motorsMove(MoveDirection dir)
 {
     long speed =0;
     long dist =0;
-    QString command;
     if ((dir==Left) || (dir==Right)) {
         speed = ui->lineEdit_MotC_HorSpeed->text().toLong();
         dist =  ui->lineEdit_MotC_HorDist->text().toLong();
@@ -161,7 +159,7 @@ void MainWindow::motorsMove(MoveDirection dir)
 void MainWindow::initMotors()
 {
     _logger->info("initMotors");
-    QString command;
+
     qint64 timeout = 1000; //milliseconds
     globalTimer.start();
     while(globalTimer.elapsed()<timeout);
@@ -181,6 +179,88 @@ void MainWindow::initMotors()
 
 void MainWindow::recoaterSeq()
 {
+    _logger->info(__PRETTY_FUNCTION__);
+
+    // we will use globalTimer to simylate delays.
+    qint64 timeout = 500; //milliseconds
+
+    pComPresObj->SendCommand("R"); //Right up
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    pComPresObj->SendCommand("F"); //left down
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+
+    //Motor2 run to the right end
+    long distance = 13000;
+    long speed = 16000;
+    command = pLaserObj->moveMotors(Right, distance, speed);
+    qDebug() << "We will send to laser this row:" << command;
+    pComLaserObj->SendCommand(command);
+    timeout = 9000; // 9000 milliseconds = 9 sec
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    timeout = 500;
+    pComPresObj->SendCommand("I"); //Right down
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    pComPresObj->SendCommand("L"); //left down
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    //Motor2 run to the push position
+    // MoveMotor2("8300", "y", "2");
+    distance = 8300;
+    command = pLaserObj->moveMotors(Right, distance, speed);
+    qDebug() << "We will send to laser this row:" << command;
+    pComLaserObj->SendCommand(command);
+    timeout = 6000; // 6000 milliseconds = 6 sec
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    timeout = 500;
+    pComPresObj->SendCommand("D"); //Push
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+
+
+    //Motor1 down one layer
+    // MoveMotor1(Motor1MoveText.Text, "x", "1");
+    qsTemp = ui->lineEdit_MotC_VertDist->text();
+    distance = qsTemp.toLong();
+    command = pLaserObj->moveMotors(Down, distance, speed);
+    qDebug() << "We will send to laser this row:" << command;
+    pComLaserObj->SendCommand(command);
+    timeout = 500; // 6000 milliseconds = 6 sec
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    timeout = 900;
+    pComPresObj->SendCommand("U"); //Pull
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    timeout = 500;
+    pComPresObj->SendCommand("H"); //Hold
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    //MoveMotor2("4700", "y", "2");
+    distance = 4700;
+    command = pLaserObj->moveMotors(Left, distance, speed);
+    qDebug() << "We will send to laser this row:" << command;
+    pComLaserObj->SendCommand(command);
+    timeout = 4000;
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    pComPresObj->SendCommand("F"); //left down
+
     /*
             SerialConnection.SendData1("R");//Right up
             Delay(500);
@@ -413,7 +493,7 @@ void MainWindow::on_pushButton_RecC_RifgthDown_clicked()
 
 void MainWindow::on_pushButton_PushC_Pull_clicked()
 {
-     pComPresObj->SendCommand("U");//Pull
+    pComPresObj->SendCommand("U");//Pull
 }
 
 void MainWindow::on_pushButton_PushC_TPull_clicked()
@@ -434,4 +514,9 @@ void MainWindow::on_pushButton_PushC_TPush_clicked()
 void MainWindow::on_pushButton_PushC_Push_clicked()
 {
     pComPresObj->SendCommand("D");//Push
+}
+
+void MainWindow::on_pushButton_RecC_Sec_clicked()
+{
+    recoaterSeq();
 }

@@ -79,6 +79,8 @@ private slots:
     void on_pushButton_PushC_TPush_clicked();
     void on_pushButton_PushC_Push_clicked();
 
+    void on_pushButton_RecC_Sec_clicked();
+
 private:
     Ui::MainWindow *ui;
 
@@ -88,6 +90,9 @@ private:
     LaserControl *pLaserObj;
     QElapsedTimer t;
     QElapsedTimer globalTimer;
+
+    QString command;
+    QString qsTemp;
 
     std::shared_ptr<spdlog::logger> _logger;
 
