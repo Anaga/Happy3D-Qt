@@ -16,6 +16,7 @@ signals:
 
 public slots:
     QString moveMotors(MoveDirection direction, long distance, long speed);
+    QString initMotors(MotorAxis ax);
     QString stopLaser();
     QString stopMotor();
 

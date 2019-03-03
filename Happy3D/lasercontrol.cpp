@@ -33,6 +33,18 @@ QString LaserControl::moveMotors(MoveDirection direction, long distance, long sp
     return commandRow;
 }
 
+QString LaserControl::initMotors(MotorAxis ax)
+{
+    QString commandRow = "#m%1=S,200";
+
+    switch (ax) {
+    case X: commandRow = "#mx=S,200"; break;
+    case Y: commandRow = "#my=S,200"; break;
+    }
+    qDebug() << "commandRow " << commandRow;
+    return commandRow;
+}
+
 QString LaserControl::stopLaser()
 {
     return "#pow=0";

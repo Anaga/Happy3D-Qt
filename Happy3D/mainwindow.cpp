@@ -6,6 +6,29 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    auto my_logger = spdlog::basic_logger_mt("basic_logger", "logs/basic-log.txt");
+
+    my_logger->info("MainWindow start up!");
+
+    my_logger->info("Welcome to spdlog version {}.{}.{} !", SPDLOG_VER_MAJOR, SPDLOG_VER_MINOR, SPDLOG_VER_PATCH);
+    my_logger->warn("Easy padding in numbers like {:08d}", 12);
+    my_logger->critical("Support for int: {0:d};  hex: {0:x};  oct: {0:o}; bin: {0:b}", 42);
+    my_logger->info("Support for floats {:03.2f}", 1.23456);
+    my_logger->info("Positional args are {1} {0}..", "too", "supported");
+    my_logger->info("{:>8} aligned, {:<8} aligned", "right", "left");
+
+    // Runtime log levels
+    my_logger->set_level(spdlog::level::info); // Set global log level to info
+    my_logger->debug("This message should not be displayed!");
+    my_logger->set_level(spdlog::level::trace); // Set specific logger's log level
+    my_logger->debug("This message should be displayed..");
+
+    // Customize msg format for all loggers
+    spdlog::set_pattern("[%H:%M:%S %z] [%^%L%$] [thread %t] %v");
+    spdlog::info("This an info message with custom format");
+    spdlog::set_pattern("%+"); // back to default format
+
     pComLaserObj = new Communicaton();
     pComPresObj = new Communicaton();
     on_pushButton_Com_Refresh_clicked();
@@ -111,7 +134,8 @@ void MainWindow::getDataFromPresCom(const QByteArray &arg1)
         ui->lineEdit_OxSC_OxVal->setText(QString::number(oxVal));
         return;
     }
-    ui->textBrowser_Main_Orig->append(qsTemp);
+    ui->textBrowser_log->append(qsTemp);
+    //ui->textBrowser_Main_Orig->append(qsTemp);
 }
 
 void MainWindow::getDataFromLaserCom(const QByteArray &arg1)
@@ -119,7 +143,8 @@ void MainWindow::getDataFromLaserCom(const QByteArray &arg1)
     // qDebug() << __PRETTY_FUNCTION__;
     QString qsTemp(arg1);
     qsTemp = qsTemp.trimmed();
-    ui->textBrowser_Main_Trans->append(qsTemp);
+     ui->textBrowser_log->append(qsTemp);
+    //ui->textBrowser_Main_Trans->append(qsTemp);
 }
 
 void MainWindow::motorsMove(MoveDirection dir)

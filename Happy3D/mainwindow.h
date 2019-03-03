@@ -7,6 +7,8 @@
 #include "communicaton.h"
 #include "lasercontrol.h"
 
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h"
 
 namespace Ui {
 class MainWindow;

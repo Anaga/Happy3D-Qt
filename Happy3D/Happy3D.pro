@@ -36,7 +36,8 @@ HEADERS += \
     communicaton.h \
     lasercontrol.h \
     presscontrol.h \
-    types.h
+    types.h \
+    spdlog/spdlog.h
 
 FORMS += \
         mainwindow.ui
