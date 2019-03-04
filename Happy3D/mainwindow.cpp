@@ -170,7 +170,7 @@ void MainWindow::initMotors()
 
     globalTimer.start();
     while(globalTimer.elapsed()<timeout);
-    command = pLaserObj->initMotors(X);
+    command = pLaserObj->initMotors(Y);
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);
@@ -182,7 +182,64 @@ void MainWindow::recoaterSeq()
     _logger->info(__PRETTY_FUNCTION__);
 
     // we will use globalTimer to simylate delays.
-    qint64 timeout = 500; //milliseconds
+    unsigned int timeout = 500; //milliseconds
+
+        pComPresObj->SendCommand("R"); //Right up
+        Delay_MSec(timeout);
+        pComPresObj->SendCommand("F"); //left down
+        Delay_MSec(timeout);
+
+        //Motor2 run to the right end
+        long distance = 13000;
+        long speed = 1600;
+        command = pLaserObj->moveMotors(Right, distance, speed);
+        qDebug() << "We will send to laser this row:" << command;
+        pComLaserObj->SendCommand(command);
+        Delay_MSec(9000);
+
+        pComPresObj->SendCommand("I"); //Right down
+        Delay_MSec(timeout);
+
+        pComPresObj->SendCommand("L"); //left down
+        Delay_MSec(timeout);
+
+        //Motor2 run to the push position
+        // MoveMotor2("8300", "y", "2");
+        distance = 8300;
+        command = pLaserObj->moveMotors(Left, distance, speed);
+        qDebug() << "We will send to laser this row:" << command;
+        pComLaserObj->SendCommand(command);
+        Delay_MSec(6000);
+
+        pComPresObj->SendCommand("D"); //Push
+        Delay_MSec(timeout);
+
+        //Motor1 down one layer
+        // MoveMotor1(Motor1MoveText.Text, "x", "1");
+        qsTemp = ui->lineEdit_MotC_VertDist->text();
+        distance = qsTemp.toLong();
+        command = pLaserObj->moveMotors(Down, distance, speed);
+        qDebug() << "We will send to laser this row:" << command;
+        pComLaserObj->SendCommand(command);
+        Delay_MSec(timeout);
+
+        pComPresObj->SendCommand("U"); //Pull
+        Delay_MSec(timeout);
+
+        pComPresObj->SendCommand("H"); //Hold
+        Delay_MSec(timeout);
+
+        //MoveMotor2("4700", "y", "2");
+        distance = 4700;
+        command = pLaserObj->moveMotors(Left, distance, speed);
+        qDebug() << "We will send to laser this row:" << command;
+        pComLaserObj->SendCommand(command);
+        Delay_MSec(4000);
+
+        pComPresObj->SendCommand("F"); //left down
+
+
+    /*qint64 timeout = 500; //milliseconds
 
     pComPresObj->SendCommand("R"); //Right up
     globalTimer.start();
@@ -195,7 +252,7 @@ void MainWindow::recoaterSeq()
 
     //Motor2 run to the right end
     long distance = 13000;
-    long speed = 16000;
+    long speed = 1600;
     command = pLaserObj->moveMotors(Right, distance, speed);
     qDebug() << "We will send to laser this row:" << command;
     pComLaserObj->SendCommand(command);
@@ -214,7 +271,7 @@ void MainWindow::recoaterSeq()
 
     //Motor2 run to the push position
     // MoveMotor2("8300", "y", "2");
-    distance = 8300;
+    distance = 16600;
     command = pLaserObj->moveMotors(Right, distance, speed);
     qDebug() << "We will send to laser this row:" << command;
     pComLaserObj->SendCommand(command);
@@ -251,7 +308,7 @@ void MainWindow::recoaterSeq()
     while(globalTimer.elapsed()<timeout);
 
     //MoveMotor2("4700", "y", "2");
-    distance = 4700;
+    distance = 9400;
     command = pLaserObj->moveMotors(Left, distance, speed);
     qDebug() << "We will send to laser this row:" << command;
     pComLaserObj->SendCommand(command);
@@ -261,7 +318,7 @@ void MainWindow::recoaterSeq()
 
     pComPresObj->SendCommand("F"); //left down
 
-    /*
+
             SerialConnection.SendData1("R");//Right up
             Delay(500);
             SerialConnection.SendData1("F"); //left down
@@ -285,7 +342,32 @@ void MainWindow::recoaterSeq()
             MoveMotor2("4700", "y", "2");
             DelayS(4);
             SerialConnection.SendData1("F"); //left down
-      */
+
+    pComPresObj->SendCommand("R");//Right up
+        Delay_MSec(500);
+        pComPresObj->SendCommand("F"); //left down
+        Delay_MSec(500);
+        pComLaserObj->SendCommand("#my=1,13000,1600\r\n");//Motor2 run to the right end
+        Delay_MSec(9000);
+        pComPresObj->SendCommand("I");//Right down
+        Delay_MSec(500);
+        pComPresObj->SendCommand("L"); //left up
+        Delay_MSec(500);
+        pComLaserObj->SendCommand("#my=2,8300,1600\r\n");//Motor2 run to the push position
+        Delay_MSec(6000);
+        pComPresObj->SendCommand("D");//Push
+        Delay_MSec(500);
+        motorsMove(Down);//Motor1 down one layer
+        Delay_MSec(500);
+        pComPresObj->SendCommand("U");//Pull
+        Delay_MSec(500);
+        pComPresObj->SendCommand("H");//Hold
+        Delay_MSec(500);
+        pComLaserObj->SendCommand("#my=2,4700,1600\r\n");
+        Delay_MSec(4000);
+        pComPresObj->SendCommand("F"); //left down
+
+        */
 }
 
 void MainWindow::on_pushButton_ProC_StopLaser_clicked()
@@ -519,4 +601,12 @@ void MainWindow::on_pushButton_PushC_Push_clicked()
 void MainWindow::on_pushButton_RecC_Sec_clicked()
 {
     recoaterSeq();
+}
+void MainWindow::Delay_MSec(unsigned int msec)
+{
+    QTime _Timer = QTime::currentTime().addMSecs(msec);
+
+    while( QTime::currentTime() < _Timer )
+
+    QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }

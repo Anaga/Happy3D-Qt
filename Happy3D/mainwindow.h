@@ -7,6 +7,7 @@
 #include "communicaton.h"
 #include "lasercontrol.h"
 #include <QElapsedTimer>
+#include <QTime>
 
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/daily_file_sink.h"
@@ -80,6 +81,8 @@ private slots:
     void on_pushButton_PushC_Push_clicked();
 
     void on_pushButton_RecC_Sec_clicked();
+
+    void Delay_MSec(unsigned int msec);
 
 private:
     Ui::MainWindow *ui;
