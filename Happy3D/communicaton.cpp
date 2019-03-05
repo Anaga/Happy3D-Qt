@@ -141,9 +141,9 @@ bool Communicaton::SendCommand(QString command)
     command.append('\n');
 
     m_writeData = command.toLocal8Bit();
-    QSerialPort myPort(comPort);
+    //QSerialPort myPort(comPort);
 
-    QFuture<qint64> future = QtConcurrent::run(  comPort.write, m_writeData);
+    //QFuture<qint64> future = QtConcurrent::run(  comPort.write, m_writeData);
 
     const qint64 bytesWritten = comPort.write(m_writeData);
 
