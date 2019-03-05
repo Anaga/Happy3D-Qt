@@ -15,11 +15,16 @@
 
 #include <QtConcurrent>
 
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/daily_file_sink.h"
+
 class Communicaton : public QObject
 {
     Q_OBJECT
 public:
     explicit Communicaton(QObject *parent = nullptr);
+    Communicaton(QObject *parent = nullptr, QString name = "comPort");
+    ~Communicaton();
 
 private slots:
     void handleReadyRead();
@@ -43,6 +48,8 @@ private:
     QByteArray m_readData;
 
     QString qsTemp;
+
+    std::shared_ptr<spdlog::logger> _logger;
 
 
 public slots:

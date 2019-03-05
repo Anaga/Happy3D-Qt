@@ -10,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     _logger->info("MainWindow startup");
 
-    pComLaserObj = new Communicaton();
-    pComPresObj = new Communicaton();
+    pComLaserObj = new Communicaton(this, "Laser");
+    pComPresObj = new Communicaton(this, "Press");
     on_pushButton_Com_Refresh_clicked();
 
     connect( pComLaserObj, SIGNAL(readDataFromCom(QByteArray)), this, SLOT(getDataFromLaserCom(const QByteArray)));
@@ -159,7 +159,9 @@ void MainWindow::motorsMove(MoveDirection dir)
 void MainWindow::initMotors()
 {
     _logger->info("initMotors");
-
+    ui->pushButton_Init_MX->click();
+    Delay_MSec(100);
+    ui->pushButton_Init_MY->click();
 }
 
 void MainWindow::recoaterSeq()
