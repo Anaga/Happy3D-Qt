@@ -13,6 +13,8 @@
 #include <QTextStream>
 #include <QTimer>
 
+#include <QtConcurrent>
+
 class Communicaton : public QObject
 {
     Q_OBJECT

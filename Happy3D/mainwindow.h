@@ -7,6 +7,8 @@
 #include "communicaton.h"
 #include "lasercontrol.h"
 #include <QElapsedTimer>
+#include <QtConcurrent>
+
 
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/daily_file_sink.h"
