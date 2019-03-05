@@ -166,8 +166,8 @@ void MainWindow::recoaterSeq()
 {
     _logger->info(__PRETTY_FUNCTION__);
 
-    // we will use globalTimer to simylate delays.
-    unsigned int timeout = 500; //milliseconds
+    // we will use Delay_MSec to simylate delays.
+        unsigned int timeout = 500; //milliseconds
 
         pComPresObj->SendCommand("R"); //Right up
         Delay_MSec(timeout);
@@ -256,7 +256,7 @@ void MainWindow::recoaterSeq()
 
     //Motor2 run to the push position
     // MoveMotor2("8300", "y", "2");
-    distance = 16600;
+    distance = 8300;
     command = pLaserObj->moveMotors(Right, distance, speed);
     qDebug() << "We will send to laser this row:" << command;
     pComLaserObj->SendCommand(command);
@@ -293,7 +293,7 @@ void MainWindow::recoaterSeq()
     while(globalTimer.elapsed()<timeout);
 
     //MoveMotor2("4700", "y", "2");
-    distance = 9400;
+    distance = 4700;
     command = pLaserObj->moveMotors(Left, distance, speed);
     qDebug() << "We will send to laser this row:" << command;
     pComLaserObj->SendCommand(command);
