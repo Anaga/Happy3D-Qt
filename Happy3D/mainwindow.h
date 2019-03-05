@@ -84,6 +84,10 @@ private slots:
 
     void Delay_MSec(unsigned int msec);
 
+    void on_pushButton_Init_MX_clicked();
+
+    void on_pushButton_Init_MY_clicked();
+
 private:
     Ui::MainWindow *ui;
 

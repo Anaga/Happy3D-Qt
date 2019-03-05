@@ -160,21 +160,6 @@ void MainWindow::initMotors()
 {
     _logger->info("initMotors");
 
-    qint64 timeout = 1000; //milliseconds
-    globalTimer.start();
-    while(globalTimer.elapsed()<timeout);
-    command = pLaserObj->initMotors(X);
-    qDebug() << "We will send to laser this row:" << command;
-    _logger->info("We will send to laser this row: {}", qPrintable(command));
-    pComLaserObj->SendCommand(command);
-
-    globalTimer.start();
-    while(globalTimer.elapsed()<timeout);
-    command = pLaserObj->initMotors(Y);
-    qDebug() << "We will send to laser this row:" << command;
-    _logger->info("We will send to laser this row: {}", qPrintable(command));
-    pComLaserObj->SendCommand(command);
-
 }
 
 void MainWindow::recoaterSeq()
@@ -609,4 +594,42 @@ void MainWindow::Delay_MSec(unsigned int msec)
     while( QTime::currentTime() < _Timer )
 
     QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+}
+  /*
+void MainWindow::on_pushButton_initMotors_clicked()
+{
+
+    qint64 timeout = 5000; //milliseconds
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+
+    command = pLaserObj->initMotors(X);
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+
+
+    globalTimer.start();
+    while(globalTimer.elapsed()<timeout);
+    command = pLaserObj->initMotors(Y);
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+
+}
+ */
+void MainWindow::on_pushButton_Init_MX_clicked()
+{
+    command = pLaserObj->initMotors(X);
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+}
+
+void MainWindow::on_pushButton_Init_MY_clicked()
+{
+    command = pLaserObj->initMotors(Y);
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
 }
