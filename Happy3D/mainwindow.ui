@@ -263,6 +263,13 @@ Ver 1.0.5</string>
          </property>
         </widget>
        </item>
+       <item row="3" column="3">
+        <widget class="QPushButton" name="pushButton_ProC_SentLaserSettings">
+         <property name="text">
+          <string>SENT</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -483,31 +490,10 @@ Ver 1.0.5</string>
       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2">
        <item>
         <layout class="QGridLayout" name="gridLayout_4">
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_Cub_H">
-           <property name="text">
-            <string>Heigth, mm</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label_Cub_W">
            <property name="text">
             <string>Width, mm</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_Cub_L">
-           <property name="text">
-            <string>Length, mm</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_Cub_W">
-           <property name="text">
-            <string>5</string>
            </property>
           </widget>
          </item>
@@ -518,6 +504,13 @@ Ver 1.0.5</string>
            </property>
           </widget>
          </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_Cub_L">
+           <property name="text">
+            <string>Length, mm</string>
+           </property>
+          </widget>
+         </item>
          <item row="2" column="1">
           <widget class="QLineEdit" name="lineEdit_Cub_H">
            <property name="text">
@@ -525,10 +518,31 @@ Ver 1.0.5</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0" colspan="2">
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_Cub_H">
+           <property name="text">
+            <string>Heigth, mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_Cub_W">
+           <property name="text">
+            <string>5</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
           <widget class="QPushButton" name="pushButton_Cub_Circel">
            <property name="text">
-            <string>Draw circle</string>
+            <string>Circle</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QPushButton" name="pushButton_Cub_Line">
+           <property name="text">
+            <string>Line</string>
            </property>
           </widget>
          </item>
@@ -574,7 +588,7 @@ Ver 1.0.5</string>
          <item row="3" column="0" colspan="2">
           <widget class="QPushButton" name="pushButton_Cub_AutoStart">
            <property name="text">
-            <string>Autostart cube</string>
+            <string>10x10 cm rectangle</string>
            </property>
           </widget>
          </item>

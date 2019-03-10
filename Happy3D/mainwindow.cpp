@@ -159,6 +159,7 @@ void MainWindow::motorsMove(MoveDirection dir)
 void MainWindow::initMotors()
 {
     _logger->info("initMotors");
+    Delay_MSec(100);
     ui->pushButton_Init_MX->click();
     Delay_MSec(100);
     ui->pushButton_Init_MY->click();
@@ -631,6 +632,70 @@ void MainWindow::on_pushButton_Init_MX_clicked()
 void MainWindow::on_pushButton_Init_MY_clicked()
 {
     command = pLaserObj->initMotors(Y);
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+}
+
+void MainWindow::on_pushButton_Com_Las_OC_clicked()
+{
+
+}
+
+void MainWindow::on_pushButton_Cub_Circel_clicked()
+{
+    command = "#circle=1,2,2,0,180";
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+}
+
+
+void MainWindow::on_pushButton_ProC_SentLaserSettings_clicked()
+{
+
+    QString expTime = ui->lineEdit_ProC_ExT->text();
+
+    command = "#del=%1";
+    command = command.arg(expTime);
+
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+    Delay_MSec(200);
+
+    command = "#step=%1";
+    command = command.arg(ui->lineEdit_ProC_PD->text());
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+    Delay_MSec(200);
+
+
+    command = "#pow=%1";
+    command = command.arg(ui->lineEdit_Proc_LasPow->text());
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+    Delay_MSec(200);
+}
+
+void MainWindow::on_pushButton_Cub_Line_clicked()
+{
+    command = "#line=1,1,5,5";
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+}
+
+void MainWindow::on_pushButton_Cub_AutoStart_clicked()
+{
+    command = "#line=0,0,10,10";
+    qDebug() << "We will send to laser this row:" << command;
+    _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pComLaserObj->SendCommand(command);
+
+    command = "#line=0,10,10,0";
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);

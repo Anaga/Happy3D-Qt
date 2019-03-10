@@ -90,6 +90,16 @@ private slots:
     
     void on_pushButton_Init_MY_clicked();
 
+    void on_pushButton_Com_Las_OC_clicked();
+
+    void on_pushButton_Cub_Circel_clicked();
+
+    void on_pushButton_ProC_SentLaserSettings_clicked();
+
+    void on_pushButton_Cub_Line_clicked();
+
+    void on_pushButton_Cub_AutoStart_clicked();
+
 private:
     Ui::MainWindow *ui;
 
