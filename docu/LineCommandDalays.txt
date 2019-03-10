@@ -1,0 +1,57 @@
+28.517
+26.482
+02.035
+
+[2019-03-10 15:47:30.193] [MainWindows] [info] We will send to laser this row: #del=100
+[2019-03-10 15:47:30.206] [Comm Laser] [info] handleTimeout DELAY_OK	100 (us)
+[2019-03-10 15:47:30.393] [Comm Laser] [info] m_writeData : #step=100
+[2019-03-10 15:47:30.393] [MainWindows] [info] We will send to laser this row: #step=100
+[2019-03-10 15:47:30.406] [Comm Laser] [info] handleTimeout STEP_OK
+[2019-03-10 15:47:30.407] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-10 15:47:30.593] [Comm Laser] [info] m_writeData : #pow=100
+[2019-03-10 15:47:30.593] [MainWindows] [info] We will send to laser this row: #pow=100
+[2019-03-10 15:47:30.606] [Comm Laser] [info] handleTimeout POWER_OK
+[2019-03-10 15:47:35.002] [MainWindows] [info] We will send to laser this row: #line=0,10,10,0
+[2019-03-10 15:47:35.367] [Comm Laser] [info] handleTimeout LINE_OK
+Responce after: 0:00:0.364999999998 H:M:S.mS
+
+[2019-03-10 15:47:55.953] [MainWindows] [info] We will send to laser this row: #del=500
+[2019-03-10 15:47:55.976] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+[2019-03-10 15:48:05.058] [MainWindows] [info] We will send to laser this row: #line=0,10,10,0
+[2019-03-10 15:48:06.167] [Comm Laser] [info] handleTimeout LINE_OK
+Responce after: 0:00:1.109   (h:m:s)
+
+[2019-03-10 15:48:19.105] [MainWindows] [info] We will send to laser this row: #del=1000
+[2019-03-10 15:48:19.126] [Comm Laser] [info] handleTimeout DELAY_OK	1000 (us)
+[2019-03-10 15:48:26.482] [MainWindows] [info] We will send to laser this row: #line=0,10,10,0
+[2019-03-10 15:48:28.517] [Comm Laser] [info] handleTimeout LINE_OK
+Responce after: 0:00:2.035   (h:m:s)
+
+[2019-03-10 15:48:53.746] [MainWindows] [info] We will send to laser this row: #del=5000
+[2019-03-10 15:48:53.756] [Comm Laser] [info] handleTimeout DELAY_OK	5000 (us)
+[2019-03-10 15:48:56.450] [MainWindows] [info] We will send to laser this row: #line=0,10,10,0
+[2019-03-10 15:49:05.917] [Comm Laser] [info] handleTimeout LINE_OK
+Responce after: 0:00:9.467   (h:m:s)
+
+[2019-03-10 15:49:17.466] [MainWindows] [info] We will send to laser this row: #del=4000
+[2019-03-10 15:49:17.476] [Comm Laser] [info] handleTimeout DELAY_OK	4000 (us)
+[2019-03-10 15:49:19.290] [MainWindows] [info] We will send to laser this row: #line=0,10,10,0
+[2019-03-10 15:49:26.897] [Comm Laser] [info] handleTimeout LINE_OK
+Responce after: 0:00:7.607   (h:m:s)
+
+[2019-03-10 15:49:36.265] [MainWindows] [info] We will send to laser this row: #del=3000
+[2019-03-10 15:49:36.276] [Comm Laser] [info] handleTimeout DELAY_OK	3000 (us)
+[2019-03-10 15:49:39.065] [MainWindows] [info] We will send to laser this row: #line=0,10,10,0
+[2019-03-10 15:49:44.817] [Comm Laser] [info] handleTimeout LINE_OK
+Responce after: 0:00:5.752   (h:m:s)
+
+
+[2019-03-10 15:49:49.434] [Comm Laser] [info] m_writeData : #del=2000
+[2019-03-10 15:49:49.436] [Comm Laser] [info] handleTimeout DELAY_OK	2000
+[2019-03-10 15:49:49.634] [Comm Laser] [info] m_writeData : #step=100
+[2019-03-10 15:49:49.646] [Comm Laser] [info] handleTimeout STEP_OK
+[2019-03-10 15:49:49.834] [MainWindows] [info] We will send to laser this row: #pow=100
+[2019-03-10 15:49:49.836] [Comm Laser] [info] handleTimeout POWER_OK
+[2019-03-10 15:49:53.041] [MainWindows] [info] We will send to laser this row: #line=0,10,10,0
+[2019-03-10 15:49:56.947] [Comm Laser] [info] handleTimeout LINE_OK
+Responce after: 0:00:3.906   (h:m:s)
