@@ -48,22 +48,29 @@ sent: "#line=0,0,10,10"
 response: LINE_OK
 
 log example
-`[2019-03-10 15:09:26.795] [Comm Laser] [info] SendCommand`
-`[2019-03-10 15:09:26.795] [Comm Laser] [info] m_writeData : #del=100`
-`[2019-03-10 15:09:26.806] [Comm Laser] [info] handleTimeout DELAY_OK	100 (us)`
 
-`[2019-03-10 15:09:27.795] [Comm Laser] [info] SendCommand`
-`[2019-03-10 15:09:27.795] [Comm Laser] [info] m_writeData : #step=100`
-`[2019-03-10 15:09:27.816] [Comm Laser] [info] handleTimeout STEP_OK`
+```c++
+[2019-03-10 15:09:26.795] [Comm Laser] [info] SendCommand
+[2019-03-10 15:09:26.795] [Comm Laser] [info] m_writeData : #del=100
+[2019-03-10 15:09:26.806] [Comm Laser] [info] handleTimeout DELAY_OK	100 (us)
 
-`[2019-03-10 15:09:28.795] [Comm Laser] [info] SendCommand`
-`[2019-03-10 15:09:28.795] [Comm Laser] [info] m_writeData : #pow=20`
-`[2019-03-10 15:09:28.806] [Comm Laser] [info] handleTimeout POWER_OK`
+[2019-03-10 15:09:27.795] [Comm Laser] [info] SendCommand
+[2019-03-10 15:09:27.795] [Comm Laser] [info] m_writeData : #step=100
+[2019-03-10 15:09:27.816] [Comm Laser] [info] handleTimeout STEP_OK
 
-`[2019-03-10 15:09:29.795] [Comm Laser] [info] SendCommand`
-`[2019-03-10 15:09:29.795] [Comm Laser] [info] m_writeData : #circle=1,2,2,0,180`
-`[2019-03-10 15:09:29.877] [Comm Laser] [info] handleTimeout CIRCLE_OK`
+[2019-03-10 15:09:28.795] [Comm Laser] [info] SendCommand
+[2019-03-10 15:09:28.795] [Comm Laser] [info] m_writeData : #pow=20
+[2019-03-10 15:09:28.806] [Comm Laser] [info] handleTimeout POWER_OK
 
-`[2019-03-10 15:49:53.041] [Comm Laser] [info] SendCommand`
-`[2019-03-10 15:49:53.041] [Comm Laser] [info] m_writeData : #line=0,10,10,0`
-`[2019-03-10 15:49:56.947] [Comm Laser] [info] handleTimeout LINE_OK`
+[2019-03-10 15:09:29.795] [Comm Laser] [info] SendCommand
+[2019-03-10 15:09:29.795] [Comm Laser] [info] m_writeData : #circle=1,2,2,0,180
+[2019-03-10 15:09:29.877] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-10 15:49:53.041] [Comm Laser] [info] SendCommand
+[2019-03-10 15:49:53.041] [Comm Laser] [info] m_writeData : #line=0,10,10,0
+[2019-03-10 15:49:56.947] [Comm Laser] [info] handleTimeout LINE_OK
+```
+
+
+
+
