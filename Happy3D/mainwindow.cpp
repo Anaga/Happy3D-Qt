@@ -54,6 +54,7 @@ bool MainWindow::inputCheck(QString text, CheckType type)
      *
      * Including the unit or additional characters leads to a conversion error.
      */
+    if (text.isEmpty()) return false;
     bool bOk = false;
     qreal fVal = 0.0;
     long iVal = 0;
@@ -159,7 +160,7 @@ void MainWindow::motorsMove(MoveDirection dir)
 void MainWindow::initMotors()
 {
     _logger->info("initMotors");
-    Delay_MSec(100);
+    //Delay_MSec(400);
     ui->pushButton_Init_MX->click();
     Delay_MSec(100);
     ui->pushButton_Init_MY->click();
@@ -653,6 +654,7 @@ void MainWindow::on_pushButton_Cub_Circel_clicked()
 
 void MainWindow::on_pushButton_ProC_SentLaserSettings_clicked()
 {
+    unsigned int pause = 1600;
 
     QString expTime = ui->lineEdit_ProC_ExT->text();
 
@@ -662,14 +664,14 @@ void MainWindow::on_pushButton_ProC_SentLaserSettings_clicked()
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);
-    Delay_MSec(200);
+    Delay_MSec(pause);
 
     command = "#step=%1";
     command = command.arg(ui->lineEdit_ProC_PD->text());
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);
-    Delay_MSec(200);
+    Delay_MSec(pause);
 
 
     command = "#pow=%1";
@@ -677,7 +679,7 @@ void MainWindow::on_pushButton_ProC_SentLaserSettings_clicked()
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);
-    Delay_MSec(200);
+    Delay_MSec(pause);
 }
 
 void MainWindow::on_pushButton_Cub_Line_clicked()
