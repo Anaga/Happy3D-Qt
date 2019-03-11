@@ -16,40 +16,43 @@ Update screenshot, version 1.0.5
 
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
 
-Programm for slicing: Slic3r, https://slic3r.org/
-Config files: \Slic3r_config
+### Programs
+> Programm for slicing: Slic3r, https://slic3r.org/
+> Config files: `\Slic3r_config`
 
-G-code viewer online: http://gcode.ws/
-G-code viewer online: https://ncviewer.com/
+> G-code viewer online: http://gcode.ws/
+> G-code viewer online: https://ncviewer.com/
 
-G-code viewer and simulator: CAMotics, https://camotics.org/ 
+> G-code viewer and simulator: CAMotics, https://camotics.org/ 
+
+### Inputs/Outputs
 
 ##### ET - Exposure Time at one point in [microseconds]
 
-sent: "#del=100"  
-response: "DELAY_OK	100 (us)"    
+> ent: "#del=100"  
+> response: "DELAY_OK	100 (us)"    
 
 ##### PD - Point Distance between two points in [micrometres]
 
-sent: "#step=100"  
-response: STEP_OK
+> sent: "#step=100"  
+> response: STEP_OK
 
 ##### LP - Laser power in [percent]
 
-sent: "#pow=20"  
-responce: POWER_OK
+> sent: "#pow=20"  
+> responce: POWER_OK
 
 ##### CIRCLE - Draw circle (radius),(x),(y),(start degree),(end degree) in [centimetres]
 
-sent: "#circle=1,2,2,0,180"  
-response: CIRCLE_OK
+> sent: "#circle=1,2,2,0,180"  
+> response: CIRCLE_OK
 
 ##### LINE - Draw line (x0),(y0),(x1),(y1) in [centimetres]
 
-sent: "#line=0,0,10,10"
-response: LINE_OK
+> sent: "#line=0,0,10,10"
+> response: LINE_OK
 
-log example
+##### Log example
 
 ```c++
 [2019-03-10 15:09:26.795] [Comm Laser] [info] SendCommand
