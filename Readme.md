@@ -17,13 +17,13 @@ Update screenshot, version 1.0.5
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
 
 ### Programs
-> Programm for slicing: Slic3r, https://slic3r.org/
-> Config files: `\Slic3r_config`
+> Programm for slicing: Slic3r, https://slic3r.org/  
+> Config files: `\Slic3r_config`  
 
-> G-code viewer online: http://gcode.ws/
-> G-code viewer online: https://ncviewer.com/
+> G-code viewer online: http://gcode.ws/  
+> G-code viewer online: https://ncviewer.com/  
 
-> G-code viewer and simulator: CAMotics, https://camotics.org/ 
+> G-code viewer and simulator: CAMotics, https://camotics.org/   
 
 ### Inputs/Outputs
 
@@ -35,22 +35,22 @@ Update screenshot, version 1.0.5
 ##### PD - Point Distance between two points in [micrometres]
 
 > sent: "#step=100"  
-> response: STEP_OK
+> response: STEP_OK  
 
 ##### LP - Laser power in [percent]
 
 > sent: "#pow=20"  
-> responce: POWER_OK
+> responce: POWER_OK  
 
 ##### CIRCLE - Draw circle (radius),(x),(y),(start degree),(end degree) in [centimetres]
 
 > sent: "#circle=1,2,2,0,180"  
-> response: CIRCLE_OK
+> response: CIRCLE_OK  
 
 ##### LINE - Draw line (x0),(y0),(x1),(y1) in [centimetres]
 
 > sent: "#line=0,0,10,10"
-> response: LINE_OK
+> response: LINE_OK  
 
 ##### Log example
 
