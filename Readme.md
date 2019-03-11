@@ -16,11 +16,13 @@ Update screenshot, version 1.0.5
 
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
 
-Testing the GitKraken under linux. Roman.
+Programm for slicing: Slic3r, https://slic3r.org/
+Config files: \Slic3r_config
 
-Testing the GitKraken under linux-2. From 3D printer PC. Roman.
+G-code viewer online: http://gcode.ws/
+G-code viewer online: https://ncviewer.com/
 
-
+G-code viewer and simulator: CAMotics, https://camotics.org/ 
 
 ##### ET - Exposure Time at one point in [microseconds]
 
