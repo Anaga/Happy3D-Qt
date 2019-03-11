@@ -16,21 +16,21 @@ Update screenshot, version 1.0.5
 
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
 
-### Programs
+### Programms
 > Programm for slicing: Slic3r, https://slic3r.org/  
 > Config files: `\Slic3r_config`  
-
+>  
 > G-code viewer online: http://gcode.ws/  
 > G-code viewer online: https://ncviewer.com/  
-
+>  
 > G-code viewer and simulator: CAMotics, https://camotics.org/   
 
-### Inputs/Outputs
+### Inputs / Outputs
 
 ##### ET - Exposure Time at one point in [microseconds]
 
-> ent: "#del=100"  
-> response: "DELAY_OK	100 (us)"    
+> sent: "#del=100"  
+> response: "DELAY_OK	100 (us)"   
 
 ##### PD - Point Distance between two points in [micrometres]
 
@@ -49,7 +49,7 @@ Update screenshot, version 1.0.5
 
 ##### LINE - Draw line (x0),(y0),(x1),(y1) in [centimetres]
 
-> sent: "#line=0,0,10,10"
+> sent: "#line=0,0,10,10"  
 > response: LINE_OK  
 
 ##### Log example
