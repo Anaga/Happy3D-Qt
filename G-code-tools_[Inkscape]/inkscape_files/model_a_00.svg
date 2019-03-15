@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg9407"
+   inkscape:version="0.92.4 (unknown)"
+   sodipodi:docname="model_a_00.svg">
+  <defs
+     id="defs9401" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="-118.49844"
+     inkscape:cy="33.028507"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true" />
+  <metadata
+     id="metadata9404">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-197)">
+    <path
+       style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:#bc6363;stroke-width:0;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 127.55859 47.130859 L 128.88086 107.64453 L 69.902344 94.037109 L 109.8125 139.54102 L 55.886719 167.0293 L 115.71094 176.23438 L 99.091797 215.40234 A 22.223356 23.233509 0 0 0 89.904297 213.29883 A 22.223356 23.233509 0 0 0 67.679688 236.53125 A 22.223356 23.233509 0 0 0 89.904297 259.76562 A 22.223356 23.233509 0 0 0 112.12695 236.53125 A 22.223356 23.233509 0 0 0 107.60742 222.52148 L 143.8125 200.55078 L 161.51758 258.42969 L 180.9707 201.11523 L 209.85352 219.86523 L 203.51367 239.46094 L 220.64453 226.87109 L 231.73828 234.07227 L 227.09375 222.13086 L 235.70898 215.79883 L 250.72266 252.82617 L 260.17578 214.00391 L 295.47852 232.71875 L 277.76562 196.90234 L 316.83789 188.54688 L 280.24805 172.49609 L 304.80859 140.98047 L 266.46094 152.20508 L 265.01562 112.27539 L 242.85547 145.52148 L 228.04297 129.11133 L 258.07812 96.892578 L 198.71484 108.70312 L 201.875 48.259766 L 163.99023 95.464844 L 127.55859 47.130859 z M 209.60742 135.51562 A 25.75889 24.243661 0 0 1 235.36523 159.75977 A 25.75889 24.243661 0 0 1 209.60742 184.00391 A 25.75889 24.243661 0 0 1 183.84766 159.75977 A 25.75889 24.243661 0 0 1 209.60742 135.51562 z "
+       transform="matrix(0.26458333,0,0,0.26458333,0,197)"
+       id="path10417" />
+    <g
+       id="g13494" />
+    <g
+       id="g14008" />
+    <g
+       id="g14774" />
+  </g>
+  <defs
+     id="defs13724">
+    <marker
+       style="overflow:visible"
+       refY="-1.687441"
+       refX="-4"
+       orient="auto"
+       id="CheckToolsAndOPMarker">
+      <path
+         d=" m -4.588864,-1.687441 0.0,0.0 L -9.177728,0.0 c 0.73311,-0.996261 0.728882,-2.359329 0.0,-3.374882"
+         style="fill:#000044; fill-rule:evenodd;stroke:none;"
+         id="path13721" />
+    </marker>
+  </defs>
+  <defs
+     id="defs13729">
+    <marker
+       style="overflow:visible"
+       refY="-1.687441"
+       refX="-4"
+       orient="auto"
+       id="DrawCurveMarker">
+      <path
+         id="path13726"
+         style="fill:#000044; fill-rule:evenodd;stroke:none;"
+         d="m -4.588864,-1.687441 0.0,0.0 L -9.177728,0.0 c 0.73311,-0.996261 0.728882,-2.359329 0.0,-3.374882" />
+    </marker>
+  </defs>
+  <defs
+     id="defs13734">
+    <marker
+       style="overflow:visible"
+       refY="-1.687441"
+       refX="4"
+       orient="auto"
+       id="DrawCurveMarker_r">
+      <path
+         id="path13731"
+         style="fill:#000044; fill-rule:evenodd;stroke:none;"
+         d="m 4.588864,-1.687441 0.0,0.0 L 9.177728,0.0 c -0.73311,-0.996261 -0.728882,-2.359329 0.0,-3.374882" />
+    </marker>
+  </defs>
+  <defs
+     id="defs13739">
+    <marker
+       style="overflow:visible"
+       refY="-1.687441"
+       refX="-4"
+       orient="auto"
+       id="InOutPathMarker">
+      <path
+         id="path13736"
+         style="fill:#0072a7; fill-rule:evenodd;stroke:none;"
+         d="m -4.588864,-1.687441 0.0,0.0 L -9.177728,0.0 c 0.73311,-0.996261 0.728882,-2.359329 0.0,-3.374882" />
+    </marker>
+  </defs>
+</svg>

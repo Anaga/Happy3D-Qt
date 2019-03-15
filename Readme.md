@@ -17,13 +17,20 @@ Update screenshot, version 1.0.5
 ![](C:\Users\aleks\Documents\GitHub\Happy3D-Qt\Img\ScrinshotV1.0.2.png)
 
 ### Programms
-> Programm for slicing: Slic3r, https://slic3r.org/  
-> Config files: `\Slic3r_config`  
+> Programm for slicing: **Slic3r**, https://slic3r.org/  
+> Config files: `/Slic3r_config`  
 >  
 > G-code viewer online: http://gcode.ws/  
 > G-code viewer online: https://ncviewer.com/  
 >  
-> G-code viewer and simulator: CAMotics, https://camotics.org/   
+> G-code viewer and simulator: **CAMotics**, https://camotics.org/   
+>  
+> Programm for SVG: **Inkscape**, https://inkscape.org  
+>  
+> Plugin for Inkscape, for haching and generating g-code: **gcodetools**, https://github.com/cnc-club/gcodetools  
+> Plugin files: `/G-code-tools_[Inkscape]/gcodetools-plugin`  
+> Screenshots, documentation, g-code etc.: `/G-code-tools_[Inkscape]`
+
 
 ### Inputs / Outputs
 
