@@ -15,8 +15,8 @@ public:
 signals:
 
 public slots:
-    QString moveMotors(MoveDirection direction, long distance, long speed);
-    QString initMotors(MotorAxis ax);
+    QString moveMotors( Enums::MoveDirection direction, long distance, long speed);
+    QString initMotors(Enums::MotorAxis ax);
     QString stopLaser();
     QString stopMotor();
 

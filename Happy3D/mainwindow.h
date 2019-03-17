@@ -30,10 +30,10 @@ public:
     ~MainWindow();
 
 private slots:
-    bool inputCheck(QString text, CheckType type);
+    bool inputCheck(QString text, Enums::CheckType type);
     void getDataFromPresCom(const QByteArray &arg1);
     void getDataFromLaserCom(const QByteArray &arg1);
-    void motorsMove(MoveDirection dir);
+    void motorsMove(Enums::MoveDirection dir);
 
     void recoaterSeq();
     void initMotors();

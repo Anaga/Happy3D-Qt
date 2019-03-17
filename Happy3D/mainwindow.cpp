@@ -44,7 +44,7 @@ void MainWindow::on_pushButton_Com_Refresh_clicked()
 }
 
 
-bool MainWindow::inputCheck(QString text, CheckType type)
+bool MainWindow::inputCheck(QString text, Enums::CheckType type)
 {
     /* Warning:
      *
@@ -60,11 +60,11 @@ bool MainWindow::inputCheck(QString text, CheckType type)
     long iVal = 0;
     qsTemp = "Can't convert %2 to %1!";
 
-    if (type == Integer){
+    if (type == Enums::Integer){
         iVal = text.toLong(&bOk);
         qsTemp = qsTemp.arg("Integer");
     }
-    if (type == Double){
+    if (type == Enums::Double){
         fVal = text.toDouble(&bOk);
         qsTemp = qsTemp.arg("Double");
     }
@@ -85,7 +85,7 @@ bool MainWindow::inputCheck(QString text, CheckType type)
 void MainWindow::on_lineEdit_ProC_PD_textEdited(const QString &arg1)
 {
     // #step=N – point distance in µm (float)
-    if (!inputCheck(arg1,Double)) {
+    if (!inputCheck(arg1,Enums::Double)) {
         ui->lineEdit_ProC_PD->clear();
     }
 }
@@ -93,7 +93,7 @@ void MainWindow::on_lineEdit_ProC_PD_textEdited(const QString &arg1)
 void MainWindow::on_lineEdit_ProC_ExT_textEdited(const QString &arg1)
 {
     // #del=N – exposure time in µs (integer)
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_ProC_ExT->clear();
     }
 }
@@ -101,7 +101,7 @@ void MainWindow::on_lineEdit_ProC_ExT_textEdited(const QString &arg1)
 void MainWindow::on_lineEdit_Proc_LasPow_textEdited(const QString &arg1)
 {
     //#pow=N – laser power in percent (float) (minimum laser power with visible beam is 3.87%)
-    if (!inputCheck(arg1,Double)) {
+    if (!inputCheck(arg1,Enums::Double)) {
         ui->lineEdit_Proc_LasPow->clear();
     }
 }
@@ -139,16 +139,16 @@ void MainWindow::getDataFromLaserCom(const QByteArray &arg1)
     //ui->textBrowser_Main_Trans->append(qsTemp);
 }
 
-void MainWindow::motorsMove(MoveDirection dir)
+void MainWindow::motorsMove(Enums::MoveDirection dir)
 {
     long speed =0;
     long dist =0;
-    if ((dir==Left) || (dir==Right)) {
+    if ((dir==Enums::Left) || (dir==Enums::Right)) {
         speed = ui->lineEdit_MotC_HorSpeed->text().toLong();
         dist =  ui->lineEdit_MotC_HorDist->text().toLong();
     }
 
-    if ((dir==Up) || (dir==Down)) {
+    if ((dir==Enums::Up) || (dir==Enums::Down)) {
         speed = ui->lineEdit_MotC_VertSpeed->text().toLong();
         dist =  ui->lineEdit_MotC_VertDist->text().toLong();
     }
@@ -181,7 +181,7 @@ void MainWindow::recoaterSeq()
         //Motor2 run to the right end
         long distance = 13000;
         long speed = 1600;
-        command = pLaserObj->moveMotors(Right, distance, speed);
+        command = pLaserObj->moveMotors(Enums::Right, distance, speed);
         qDebug() << "We will send to laser this row:" << command;
         pComLaserObj->SendCommand(command);
         Delay_MSec(9000);
@@ -195,7 +195,7 @@ void MainWindow::recoaterSeq()
         //Motor2 run to the push position
         // MoveMotor2("8300", "y", "2");
         distance = 8300;
-        command = pLaserObj->moveMotors(Left, distance, speed);
+        command = pLaserObj->moveMotors(Enums::Left, distance, speed);
         qDebug() << "We will send to laser this row:" << command;
         pComLaserObj->SendCommand(command);
         Delay_MSec(6000);
@@ -207,7 +207,7 @@ void MainWindow::recoaterSeq()
         // MoveMotor1(Motor1MoveText.Text, "x", "1");
         qsTemp = ui->lineEdit_MotC_VertDist->text();
         distance = qsTemp.toLong();
-        command = pLaserObj->moveMotors(Down, distance, speed);
+        command = pLaserObj->moveMotors(Enums::Down, distance, speed);
         qDebug() << "We will send to laser this row:" << command;
         pComLaserObj->SendCommand(command);
         Delay_MSec(timeout);
@@ -220,7 +220,7 @@ void MainWindow::recoaterSeq()
 
         //MoveMotor2("4700", "y", "2");
         distance = 4700;
-        command = pLaserObj->moveMotors(Left, distance, speed);
+        command = pLaserObj->moveMotors(Enums::Left, distance, speed);
         qDebug() << "We will send to laser this row:" << command;
         pComLaserObj->SendCommand(command);
         Delay_MSec(4000);
@@ -375,42 +375,42 @@ void MainWindow::on_pushButton_ProcC_StopMotor_clicked()
 
 void MainWindow::on_lineEdit_Cub_LayerDist_textEdited(const QString &arg1)
 {
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_Cub_LayerDist->clear();
     }
 }
 
 void MainWindow::on_lineEdit_Cub_HatchingDist_textEdited(const QString &arg1)
 {
-    if (!inputCheck(arg1,Double)) {
+    if (!inputCheck(arg1,Enums::Double)) {
         ui->lineEdit_Cub_HatchingDist->clear();
     }
 }
 
 void MainWindow::on_lineEdit_Cub_W_textEdited(const QString &arg1)
 {
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_Cub_W->clear();
     }
 }
 
 void MainWindow::on_lineEdit_Cub_L_textEdited(const QString &arg1)
 {
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_Cub_L->clear();
     }
 }
 
 void MainWindow::on_lineEdit_Cub_H_textEdited(const QString &arg1)
 {
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_Cub_H->clear();
     }
 }
 
 void MainWindow::on_lineEdit_OxSC_OxVal_textEdited(const QString &arg1)
 {
-    if (!inputCheck(arg1,Double)) {
+    if (!inputCheck(arg1, Enums::Double)) {
         ui->lineEdit_OxSC_OxVal->clear();
     }
 }
@@ -418,7 +418,7 @@ void MainWindow::on_lineEdit_OxSC_OxVal_textEdited(const QString &arg1)
 void MainWindow::on_lineEdit_MotC_HorSpeed_textEdited(const QString &arg1)
 {
     //speed – 0 – 12500, in µm/s
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_MotC_HorSpeed->clear();
     }
 }
@@ -426,7 +426,7 @@ void MainWindow::on_lineEdit_MotC_HorSpeed_textEdited(const QString &arg1)
 void MainWindow::on_lineEdit_MotC_HorDist_textEdited(const QString &arg1)
 {
     //distance – any integer value in um
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_MotC_HorDist->clear();
     }
 }
@@ -434,7 +434,7 @@ void MainWindow::on_lineEdit_MotC_HorDist_textEdited(const QString &arg1)
 void MainWindow::on_lineEdit_MotC_VertSpeed_textEdited(const QString &arg1)
 {
     //speed – 0 – 12500, in µm/s
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_MotC_VertSpeed->clear();
     }
 }
@@ -442,29 +442,29 @@ void MainWindow::on_lineEdit_MotC_VertSpeed_textEdited(const QString &arg1)
 void MainWindow::on_lineEdit_MotC_VertDist_textEdited(const QString &arg1)
 {
     //distance – any integer value in um
-    if (!inputCheck(arg1, Integer)) {
+    if (!inputCheck(arg1, Enums::Integer)) {
         ui->lineEdit_MotC_VertDist->clear();
     }
 }
 
 void MainWindow::on_pushButton_MotC_Left_clicked()
 {
-    motorsMove(Left);
+    motorsMove(Enums::Left);
 }
 
 void MainWindow::on_pushButton_MotC_Rigth_clicked()
 {
-    motorsMove(Right);
+    motorsMove(Enums::Right);
 }
 
 void MainWindow::on_pushButton_MotC_Up_clicked()
 {
-    motorsMove(Up);
+    motorsMove(Enums::Up);
 }
 
 void MainWindow::on_pushButton_MotC_Down_clicked()
 {
-    motorsMove(Down);
+    motorsMove(Enums::Down);
 }
 
 void MainWindow::on_pushButton_Com_Las_OC_clicked(bool checked)
@@ -593,7 +593,7 @@ void MainWindow::on_pushButton_RecC_Sec_clicked()
 }
 void MainWindow::Delay_MSec(unsigned int msec)
 {
-    QTime _Timer = QTime::currentTime().addMSecs(msec);
+    QTime _Timer = QTime::currentTime().addMSecs(static_cast<int>(msec));
 
     while( QTime::currentTime() < _Timer )
 
@@ -624,7 +624,7 @@ void MainWindow::on_pushButton_initMotors_clicked()
  */
 void MainWindow::on_pushButton_Init_MX_clicked()
 {
-    command = pLaserObj->initMotors(X);
+    command = pLaserObj->initMotors(Enums::X);
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);
@@ -632,7 +632,7 @@ void MainWindow::on_pushButton_Init_MX_clicked()
 
 void MainWindow::on_pushButton_Init_MY_clicked()
 {
-    command = pLaserObj->initMotors(Y);
+    command = pLaserObj->initMotors(Enums::Y);
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);

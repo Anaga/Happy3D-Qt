@@ -5,25 +5,25 @@ LaserControl::LaserControl(QObject *parent) : QObject(parent)
 
 }
 
-QString LaserControl::moveMotors(MoveDirection direction, long distance, long speed)
+QString LaserControl::moveMotors(Enums::MoveDirection direction, long distance, long speed)
 {
     qDebug() << __PRETTY_FUNCTION__;
     QString commandRow = "";
 
     switch (direction) {
-    case Up:
+    case Enums::Up:
         commandRow = "#mx=2,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
-    case Down:
+    case Enums::Down:
         commandRow = "#mx=1,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
-    case Left:
+    case Enums::Left:
         commandRow = "#my=2,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
-    case Right:
+    case Enums::Right:
         commandRow = "#my=1,%1,%2";
         commandRow = commandRow.arg(distance).arg(speed);
         break;
@@ -33,13 +33,13 @@ QString LaserControl::moveMotors(MoveDirection direction, long distance, long sp
     return commandRow;
 }
 
-QString LaserControl::initMotors(MotorAxis ax)
+QString LaserControl::initMotors(Enums::MotorAxis ax)
 {
     QString commandRow = "#m%1=S,200";
 
     switch (ax) {
-    case X: commandRow = "#mx=S,200"; break;
-    case Y: commandRow = "#my=S,200"; break;
+    case Enums::X: commandRow = "#mx=S,200"; break;
+    case Enums::Y: commandRow = "#my=S,200"; break;
     }
     qDebug() << "commandRow " << commandRow;
     return commandRow;
