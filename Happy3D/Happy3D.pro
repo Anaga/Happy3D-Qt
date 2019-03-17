@@ -30,7 +30,8 @@ SOURCES += \
         mainwindow.cpp \
     communicaton.cpp \
     lasercontrol.cpp \
-    presscontrol.cpp
+    presscontrol.cpp \
+    task.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -38,7 +39,8 @@ HEADERS += \
     lasercontrol.h \
     presscontrol.h \
     types.h \
-    spdlog/spdlog.h
+    spdlog/spdlog.h \
+    task.h
 
 FORMS += \
         mainwindow.ui

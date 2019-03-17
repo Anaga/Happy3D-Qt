@@ -162,8 +162,16 @@ void MainWindow::initMotors()
     _logger->info("initMotors");
     //Delay_MSec(400);
     ui->pushButton_Init_MX->click();
+
+    Task initX(this, "#mx=S,200", "$MX:S,200");
+    //initX.setCommand("#mx=S,200");
+    //initX.setExp_res("$MX:S,200");
+    _logger->info(qPrintable(initX.print()));
     Delay_MSec(100);
+    //Task initY(this, "#my=S,200", "$MY:S,200");
+    //_logger->info(qPrintable(initY.print()));
     ui->pushButton_Init_MY->click();
+    //_logger->info(qPrintable(initY.print()));
 }
 
 void MainWindow::recoaterSeq()
@@ -477,14 +485,6 @@ void MainWindow::on_pushButton_Com_Las_OC_clicked(bool checked)
             qsTemp = qsTemp.arg("is open");
             ui->pushButton_Com_Las_OC->setText("Close");
             initMotors();
-            /*
-            t.start();
-            while(t.elapsed()<1000);
-            pComLaserObj->SendCommand("#mx=S,200\r\n");
-            t.start();
-            while(t.elapsed()<1000);
-            pComLaserObj->SendCommand("#my=S,200\r\n");
-            */
         } else {
             qsTemp = qsTemp.arg("not open");
         }
@@ -638,11 +638,6 @@ void MainWindow::on_pushButton_Init_MY_clicked()
     pComLaserObj->SendCommand(command);
 }
 
-void MainWindow::on_pushButton_Com_Las_OC_clicked()
-{
-
-}
-
 void MainWindow::on_pushButton_Cub_Circel_clicked()
 {
     command = "#circle=1,2,2,0,180";
@@ -702,3 +697,4 @@ void MainWindow::on_pushButton_Cub_AutoStart_clicked()
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);
 }
+
