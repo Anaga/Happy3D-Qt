@@ -17,6 +17,15 @@ public:
     };
     Q_ENUM(CommandStatus)
 
+    enum class SendTo:int { notSet, toLaser, toPress };
+    Q_ENUM(SendTo)
+
+    static QString print(Enums::SendTo s){
+        if (s==SendTo::toLaser) return "to lazer";
+        if (s==SendTo::toPress) return "to press";
+        return "not set";
+    }
+
 
     enum MotorAxis { X, Y };
     Q_ENUM(MotorAxis)

@@ -2,20 +2,21 @@
 
 Task::Task(QObject *parent) : QObject(parent)
 {
-    _logger = spdlog::daily_logger_mt("Task", "logs/logfile.log", 8, 00); // new log on each morning at 8:00
+   // _logger = spdlog::daily_logger_mt("Task", "logs/logfile.log", 8, 00); // new log on each morning at 8:00
 
-    _logger->info("Empty Task created");
+    //_logger->info("Empty Task created");
     m_delay=0;
     m_status=Enums::CommandStatus::notInQueue;
     m_command="";
     m_exp_res="";
     m_timeout=2000; //2000 msec = 2sec
+    m_sendTo=Enums::SendTo::notSet;
 }
 
-Task::Task(QObject *parent, QString command, QString expRes, int delay, int timeout)
+Task::Task(QString command, QString expRes, int delay, int timeout)
 {
-    _logger = spdlog::daily_logger_mt("Task", "logs/logfile.log", 8, 00); // new log on each morning at 8:00
-    _logger->info("Specific Task created");
+  //  _logger = spdlog::daily_logger_mt("Task", "logs/logfile.log", 8, 00); // new log on each morning at 8:00
+  //  _logger->info("Specific Task created");
     m_delay=delay;
     m_status=Enums::CommandStatus::notInQueue;
     m_command=command;
@@ -25,23 +26,23 @@ Task::Task(QObject *parent, QString command, QString expRes, int delay, int time
 
 Task::~Task()
 {
-    _logger->info("Task deleted");
+  //  _logger->info("Task deleted");
 }
 
 QString Task::print()
 {
     qDebug()  << __PRETTY_FUNCTION__ ;
-    _logger->info( __PRETTY_FUNCTION__);
+    //_logger->info( __PRETTY_FUNCTION__);
     QString retVal = "";
 
-    QString qsStatusRow = "Task:  status %1\n"
+    QString qsStatusRow = "Task %6 status %1 \n"
                   "command: %2, timeOut: %3, \n"
                   "exp_res: %4, delay: %5";
     retVal =  qsStatusRow    .arg( printStatus(m_status))
             .arg(m_command)  .arg(m_timeout)
-            .arg(m_exp_res)  .arg(m_delay);
+            .arg(m_exp_res)  .arg(m_delay)
+            .arg(Enums::print(m_sendTo));
     return retVal;
-
 }
 
 QString Task::printStatus(const Enums::CommandStatus commStat)

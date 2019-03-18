@@ -20,19 +20,22 @@ class Task : public QObject
     Q_PROPERTY(int delay READ delay WRITE setDelay)
     Q_PROPERTY(int timeout READ timeout WRITE setTimeout)
     Q_PROPERTY(Enums::CommandStatus status READ status WRITE setStatus NOTIFY statusChanged)
-
+    Q_PROPERTY(Enums::SendTo sendTo READ sendTo WRITE setSendTo)
 
     QString m_command;
     QString m_exp_res;
     int m_delay;
     int m_timeout;
     Enums::CommandStatus m_status;
+    Enums::SendTo m_sendTo;
 
     std::shared_ptr<spdlog::logger> _logger;
 
+
+
 public:
     explicit Task(QObject *parent = nullptr);
-    Task(QObject *parent = nullptr, QString command="", QString expRes="",
+    Task(QString command="", QString expRes="",
          int delay=0, int timeout=2000);
     ~Task();
     QString print();
@@ -63,6 +66,11 @@ Enums::CommandStatus status() const
     return m_status;
 }
 
+Enums::SendTo sendTo() const
+{
+    return m_sendTo;
+}
+
 signals:
 
 void statusChanged(Enums::CommandStatus status);
@@ -91,6 +99,10 @@ void setStatus(Enums::CommandStatus status)
 void setExp_res(QString exp_res)
 {
     m_exp_res = exp_res;
+}
+void setSendTo(Enums::SendTo sendTo)
+{
+    m_sendTo = sendTo;
 }
 };
 

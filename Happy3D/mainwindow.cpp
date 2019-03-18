@@ -163,13 +163,14 @@ void MainWindow::initMotors()
     //Delay_MSec(400);
     ui->pushButton_Init_MX->click();
 
-    Task initX(this, "#mx=S,200", "$MX:S,200");
+    Task initX("#mx=S,200", "$MX:S,200");
+    initX.setSendTo(Enums::SendTo::toLaser);
     //initX.setCommand("#mx=S,200");
     //initX.setExp_res("$MX:S,200");
     _logger->info(qPrintable(initX.print()));
     Delay_MSec(100);
-    //Task initY(this, "#my=S,200", "$MY:S,200");
-    //_logger->info(qPrintable(initY.print()));
+    Task initY("#my=S,200", "$MY:S,200");
+    _logger->info(qPrintable(initY.print()));
     ui->pushButton_Init_MY->click();
     //_logger->info(qPrintable(initY.print()));
 }
