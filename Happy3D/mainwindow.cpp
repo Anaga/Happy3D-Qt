@@ -19,6 +19,10 @@ MainWindow::MainWindow(QWidget *parent) :
     pLaserObj = new LaserControl;
     command = "";
 
+    pGeneral = new Commander();
+    pGeneral->setComLaser(pComLaserObj);
+    pGeneral->setComPress(pComPresObj);
+
 }
 
 MainWindow::~MainWindow()
@@ -161,17 +165,20 @@ void MainWindow::initMotors()
 {
     _logger->info("initMotors");
     //Delay_MSec(400);
-    ui->pushButton_Init_MX->click();
+    //ui->pushButton_Init_MX->click();
 
     Task initX("#mx=S,200", "$MX:S,200");
     initX.setSendTo(Enums::SendTo::toLaser);
-    //initX.setCommand("#mx=S,200");
-    //initX.setExp_res("$MX:S,200");
+    pGeneral->addTask(&initX);
+
+    pGeneral->runTop();
     _logger->info(qPrintable(initX.print()));
-    Delay_MSec(100);
+    //Delay_MSec(100);
     Task initY("#my=S,200", "$MY:S,200");
+    pGeneral->addTask(&initY);
     _logger->info(qPrintable(initY.print()));
-    ui->pushButton_Init_MY->click();
+    pGeneral->runTop();
+    //ui->pushButton_Init_MY->click();
     //_logger->info(qPrintable(initY.print()));
 }
 

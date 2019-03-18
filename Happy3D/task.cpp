@@ -35,9 +35,9 @@ QString Task::print()
     //_logger->info( __PRETTY_FUNCTION__);
     QString retVal = "";
 
-    QString qsStatusRow = "Task %6 status %1 \n"
-                  "command: %2, timeOut: %3, \n"
-                  "exp_res: %4, delay: %5";
+    QString qsStatusRow = "Task %6 status %1\n"
+                  "\t\t command: %2, timeout: %3 msec,\n"
+                  "\t\t exp_res: %4, delay : %5  msec";
     retVal =  qsStatusRow    .arg( printStatus(m_status))
             .arg(m_command)  .arg(m_timeout)
             .arg(m_exp_res)  .arg(m_delay)

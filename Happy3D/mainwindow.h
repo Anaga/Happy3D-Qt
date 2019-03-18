@@ -11,6 +11,7 @@
 #include "communicaton.h"
 #include "lasercontrol.h"
 #include "task.h"
+#include "commander.h"
 
 
 #include "spdlog/spdlog.h"
@@ -114,6 +115,8 @@ private:
     
     QString command;
     QString qsTemp;
+
+    Commander *pGeneral;
     
     std::shared_ptr<spdlog::logger> _logger;
 
