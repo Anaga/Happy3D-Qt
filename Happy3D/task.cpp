@@ -1,5 +1,7 @@
 #include "task.h"
 
+
+
 Task::Task(QObject *parent) : QObject(parent)
 {
    // _logger = spdlog::daily_logger_mt("Task", "logs/logfile.log", 8, 00); // new log on each morning at 8:00
@@ -57,4 +59,17 @@ QString Task::printStatus(const Enums::CommandStatus commStat)
     case Enums::CommandStatus::finishByCorrectResponce  : return "finish By Correct Responce";
     }
     return "CODE ERROR";
+}
+
+QString Job::print()
+{
+    QString retVal = "";
+    QString qsStatusRow = "Job %6 status %1\n"
+                  "\t\t command: %2, timeout: %3 msec,\n"
+                  "\t\t exp_res: %4, delay : %5  msec";
+    retVal =  qsStatusRow        .arg(Enums::print(this->status))
+            .arg(this->command)  .arg(this->timeout)
+            .arg(this->exp_res)  .arg(this->delay)
+            .arg(Enums::print(this->sendTo));
+    return retVal;
 }

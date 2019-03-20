@@ -7,8 +7,17 @@
 #include <QDebug>
 
 #include "types.h"
-#include "spdlog/spdlog.h"
-#include "spdlog/sinks/daily_file_sink.h"
+
+struct Job {
+    Enums::SendTo sendTo = Enums::SendTo::toLaser;
+    Enums::CommandStatus status = Enums::CommandStatus::notInQueue;
+    QString command;
+    QString exp_res = "";
+    int delay = 0;
+    int timeout = 2000;
+
+    QString print();
+};
 
 
 class Task : public QObject
@@ -28,10 +37,6 @@ class Task : public QObject
     int m_timeout;
     Enums::CommandStatus m_status;
     Enums::SendTo m_sendTo;
-
-    std::shared_ptr<spdlog::logger> _logger;
-
-
 
 public:
     explicit Task(QObject *parent = nullptr);

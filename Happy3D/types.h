@@ -16,6 +16,18 @@ public:
         finishByTimeout,
     };
     Q_ENUM(CommandStatus)
+    static QString print(Enums::CommandStatus stat){
+        switch (stat) {
+        case Enums::CommandStatus::inQueue                  : return "in Queue";
+        case Enums::CommandStatus::running                  : return "running";
+        case Enums::CommandStatus::notInQueue               : return "not In Queue";
+        case Enums::CommandStatus::finishByTimeout          : return "finish By Timeout";
+        case Enums::CommandStatus::finishByDelay            : return "finish By Delay";
+        case Enums::CommandStatus::finishByCorrectResponce  : return "finish By Correct Responce";
+        }
+        return "CODE ERROR";
+    }
+
 
     enum class SendTo:int { notSet, toLaser, toPress };
     Q_ENUM(SendTo)

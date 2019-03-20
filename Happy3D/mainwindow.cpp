@@ -129,6 +129,7 @@ void MainWindow::getDataFromPresCom(const QByteArray &arg1)
         }
         return;
     }
+    pGeneral->getResponce(qsTemp);
     ui->textBrowser_log->append(qsTemp);
     _logger->info("Data from press: {}",qPrintable(qsTemp));
 }
@@ -139,6 +140,7 @@ void MainWindow::getDataFromLaserCom(const QByteArray &arg1)
     QString qsTemp(arg1);
     qsTemp = qsTemp.trimmed();
     ui->textBrowser_log->append(qsTemp);
+    pGeneral->getResponce(qsTemp);
     _logger->info("Data from laser: {}",qPrintable(qsTemp));
     //ui->textBrowser_Main_Trans->append(qsTemp);
 }
@@ -166,20 +168,50 @@ void MainWindow::initMotors()
     _logger->info("initMotors");
     //Delay_MSec(400);
     //ui->pushButton_Init_MX->click();
-
+/*
     Task initX("#mx=S,200", "$MX:S,200");
     initX.setSendTo(Enums::SendTo::toLaser);
     pGeneral->addTask(&initX);
 
-    pGeneral->runTop();
+    //pGeneral->runTop();
     _logger->info(qPrintable(initX.print()));
     //Delay_MSec(100);
     Task initY("#my=S,200", "$MY:S,200");
+    initX.setSendTo(Enums::SendTo::toLaser);
     pGeneral->addTask(&initY);
     _logger->info(qPrintable(initY.print()));
-    pGeneral->runTop();
+    pGeneral->runAll();
     //ui->pushButton_Init_MY->click();
     //_logger->info(qPrintable(initY.print()));
+    */
+    //Enums::SendTo las = Enums::SendTo::toLaser;
+    Job init;
+    init.command = "#mx=S,200";
+    init.exp_res = "$MX:S,200";
+    pGeneral->addJob(init);
+    init.command = "#my=S,200";
+    init.exp_res = "$MY:S,200";
+    pGeneral->addJob(init);
+    init.command = "#mx=S,200";
+    init.exp_res = "$MX:S,200";
+    pGeneral->addJob(init);
+    init.command = "#my=S,200";
+    init.exp_res = "$MY:S,200";
+    pGeneral->addJob(init);
+    init.command = "#mx=S,200";
+    init.exp_res = "$MX:S,200";
+    pGeneral->addJob(init);
+    init.command = "#my=S,200";
+    init.exp_res = "$MY:S,200";
+    pGeneral->addJob(init);
+    init.command = "#mx=S,200";
+    init.exp_res = "$MX:S,200";
+    pGeneral->addJob(init);
+    init.command = "#my=S,200";
+    init.exp_res = "$MY:S,200";
+    pGeneral->addJob(init);
+    pGeneral->runAllJob();
+
 }
 
 void MainWindow::recoaterSeq()
@@ -632,18 +664,25 @@ void MainWindow::on_pushButton_initMotors_clicked()
  */
 void MainWindow::on_pushButton_Init_MX_clicked()
 {
+
     command = pLaserObj->initMotors(Enums::X);
+    Task initMX(command,"");
+    pGeneral->addTask(&initMX);
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
-    pComLaserObj->SendCommand(command);
+    //pComLaserObj->SendCommand(command);
+    pGeneral->runTop();
 }
 
 void MainWindow::on_pushButton_Init_MY_clicked()
 {
     command = pLaserObj->initMotors(Enums::Y);
+    Task init(command,"");
+    pGeneral->addTask(&init);
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
-    pComLaserObj->SendCommand(command);
+    //pComLaserObj->SendCommand(command);
+    pGeneral->runTop();
 }
 
 void MainWindow::on_pushButton_Cub_Circel_clicked()
