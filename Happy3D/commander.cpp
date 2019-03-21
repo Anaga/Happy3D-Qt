@@ -12,17 +12,6 @@ Commander::Commander(QObject *parent) : QObject(parent)
     nextTry_timer->start(100);
 }
 
-QStringList Commander::printTaskList()
-{
-    QStringList qslRet;
-    Task * p_task;
-
-    foreach (p_task, m_taskList){
-        qslRet.append(p_task->print());
-    }
-    return qslRet;
-}
-
 QStringList Commander::printJobList()
 {
     QStringList qslRet;
@@ -74,52 +63,6 @@ void Commander::runAllJob()
 
 }
 
-void Commander::runTop()
-{
-    qDebug()  << __PRETTY_FUNCTION__  ;
-    if (m_taskList.isEmpty()){
-        isRunning = false;
-        return;
-    }
-    Task *pTop = m_taskList.first();
-
-    if (pTop->status()==Enums::CommandStatus::running){
-        qDebug() << "top command is running now";
-        return;
-    }
-    QString const command = pTop->command();
-    m_taskList.first()->setStatus(Enums::CommandStatus::running);
-    qDebug() << "Running top command " << command;
-
-    switch (pTop->sendTo()) {
-    case Enums::SendTo::notSet :  qDebug() << "top command 'send to' is not define now";  break;
-    case Enums::SendTo::toLaser: m_pComLaserObj->SendCommand(command); break;
-    case Enums::SendTo::toPress: m_pComPressObj->SendCommand(command); break;
-    }
-
-
-    int const timeout = pTop->timeout();
-
-    qDebug() << "timeout is " <<timeout << "msec";
-    if (timeout){
-        QTimer::singleShot(timeout, this, SLOT(commandTimeout()));
-    }
-
-    int const delay = pTop->delay();
-
-    qDebug() << "delay is " <<delay << "msec";
-    if (delay){
-        QTimer::singleShot(delay, this, SLOT(delayTimeout()));
-    }
-
-}
-
-void Commander::runAll()
-{
-    qDebug()  << __PRETTY_FUNCTION__   << "commandList size " << m_taskList.size();
-    isRunning = true;
-    runTop();
-}
 
 void Commander::getResponce(QString resp)
 {
@@ -129,7 +72,7 @@ void Commander::getResponce(QString resp)
         isRunning = false;
         return;
     }
-    //Task *pT = m_taskList.first();
+
     Job j = m_jobList.first();
 
     if (j.status!=Enums::CommandStatus::running){
@@ -157,7 +100,7 @@ void Commander::delayTimeout()
         isRunning = false;
         return;
     }
-    //Task *pT = m_taskList.first();
+
     qDebug() << "Waiting is over, we got delayTimeout";
     qDebug() << "Remove task from list";
     m_jobList.removeFirst();
