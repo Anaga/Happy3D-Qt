@@ -23,6 +23,9 @@ MainWindow::MainWindow(QWidget *parent) :
     pGeneral->setComLaser(pComLaserObj);
     pGeneral->setComPress(pComPresObj);
 
+    connect( pGeneral, SIGNAL(taskFinished(Enums::CommandStatus)),
+             this,  SLOT(handleJobFinished(Enums::CommandStatus)));
+
 }
 
 MainWindow::~MainWindow()
@@ -163,53 +166,34 @@ void MainWindow::motorsMove(Enums::MoveDirection dir)
     pComLaserObj->SendCommand(command);
 }
 
+void MainWindow::handleJobFinished(const Enums::CommandStatus status)
+{
+    qDebug() << Enums::print(status);
+    updateJobList(pGeneral->printJobList());
+}
+
+void MainWindow::updateJobList(const QStringList jobList)
+{
+    ui->plainTextEdit_JobList->clear();
+
+    ui->plainTextEdit_JobList->appendPlainText("updateJobList");
+    for (auto jobDisk : jobList){
+        ui->plainTextEdit_JobList->appendPlainText(jobDisk);
+    }
+}
+
 void MainWindow::initMotors()
 {
     _logger->info("initMotors");
-    //Delay_MSec(400);
-    //ui->pushButton_Init_MX->click();
-/*
-    Task initX("#mx=S,200", "$MX:S,200");
-    initX.setSendTo(Enums::SendTo::toLaser);
-    pGeneral->addTask(&initX);
+    Job init(Enums::SendTo::toLaser, "#mx=S,200", "$MX:S,200");
+    pGeneral->addJob(init);
 
-    //pGeneral->runTop();
-    _logger->info(qPrintable(initX.print()));
-    //Delay_MSec(100);
-    Task initY("#my=S,200", "$MY:S,200");
-    initX.setSendTo(Enums::SendTo::toLaser);
-    pGeneral->addTask(&initY);
-    _logger->info(qPrintable(initY.print()));
-    pGeneral->runAll();
-    //ui->pushButton_Init_MY->click();
-    //_logger->info(qPrintable(initY.print()));
-    */
-    //Enums::SendTo las = Enums::SendTo::toLaser;
-    Job init;
-    init.command = "#mx=S,200";
-    init.exp_res = "$MX:S,200";
-    pGeneral->addJob(init);
     init.command = "#my=S,200";
     init.exp_res = "$MY:S,200";
     pGeneral->addJob(init);
-    init.command = "#mx=S,200";
-    init.exp_res = "$MX:S,200";
-    pGeneral->addJob(init);
-    init.command = "#my=S,200";
-    init.exp_res = "$MY:S,200";
-    pGeneral->addJob(init);
-    init.command = "#mx=S,200";
-    init.exp_res = "$MX:S,200";
-    pGeneral->addJob(init);
-    init.command = "#my=S,200";
-    init.exp_res = "$MY:S,200";
-    pGeneral->addJob(init);
-    init.command = "#mx=S,200";
-    init.exp_res = "$MX:S,200";
-    pGeneral->addJob(init);
-    init.command = "#my=S,200";
-    init.exp_res = "$MY:S,200";
-    pGeneral->addJob(init);
+
+    QStringList jobs = pGeneral->printJobList();
+    updateJobList(jobs);
     pGeneral->runAllJob();
 
 }
@@ -664,25 +648,34 @@ void MainWindow::on_pushButton_initMotors_clicked()
  */
 void MainWindow::on_pushButton_Init_MX_clicked()
 {
+    Job initX;
+    initX.sendTo = Enums::SendTo::toLaser;
+    initX.command = pLaserObj->initMotors(Enums::X);
+    initX.exp_res = "$MX:S,200";
+    // we send short command to laser, and waiting resp
 
-    command = pLaserObj->initMotors(Enums::X);
-    Task initMX(command,"");
-    pGeneral->addTask(&initMX);
-    qDebug() << "We will send to laser this row:" << command;
-    _logger->info("We will send to laser this row: {}", qPrintable(command));
-    //pComLaserObj->SendCommand(command);
-    pGeneral->runTop();
+
+    pGeneral->addJob(initX);
+    qDebug() << "We will send to laser this row:" << initX.command;
+    _logger->info("We will send to laser this row: {}", qPrintable(initX.command));
+    updateJobList(pGeneral->printJobList());
+    pGeneral->runAllJob();
 }
 
 void MainWindow::on_pushButton_Init_MY_clicked()
 {
-    command = pLaserObj->initMotors(Enums::Y);
-    Task init(command,"");
-    pGeneral->addTask(&init);
-    qDebug() << "We will send to laser this row:" << command;
-    _logger->info("We will send to laser this row: {}", qPrintable(command));
-    //pComLaserObj->SendCommand(command);
-    pGeneral->runTop();
+    Job initY;
+    initY.sendTo = Enums::SendTo::toLaser;
+    initY.command = pLaserObj->initMotors(Enums::Y);
+    initY.exp_res = "$MY:S,200";
+    // we send short command to laser, and waiting resp
+
+
+    pGeneral->addJob(initY);
+    qDebug() << "We will send to laser this row:" << initY.command;
+    _logger->info("We will send to laser this row: {}", qPrintable(initY.command));
+    updateJobList(pGeneral->printJobList());
+    pGeneral->runAllJob();
 }
 
 void MainWindow::on_pushButton_Cub_Circel_clicked()
@@ -696,32 +689,48 @@ void MainWindow::on_pushButton_Cub_Circel_clicked()
 
 void MainWindow::on_pushButton_ProC_SentLaserSettings_clicked()
 {
-    unsigned int pause = 1600;
+    Job laserSettings(
+                Enums::SendTo::toLaser,
+                "#del=%1", "DELAY_OK",1600);
+
 
     QString expTime = ui->lineEdit_ProC_ExT->text();
 
     command = "#del=%1";
-    command = command.arg(expTime);
+    laserSettings.command = command.arg(expTime);
 
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pGeneral->addJob(laserSettings);
+    /*
     pComLaserObj->SendCommand(command);
     Delay_MSec(pause);
-
+    */
     command = "#step=%1";
-    command = command.arg(ui->lineEdit_ProC_PD->text());
+    laserSettings.command = command.arg(ui->lineEdit_ProC_PD->text());
+    laserSettings.exp_res = "STEP_OK";
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pGeneral->addJob(laserSettings);
+    /*
     pComLaserObj->SendCommand(command);
     Delay_MSec(pause);
-
+    */
 
     command = "#pow=%1";
-    command = command.arg(ui->lineEdit_Proc_LasPow->text());
+    laserSettings.command =  command.arg(ui->lineEdit_Proc_LasPow->text());
+    laserSettings.exp_res = "POWER_OK";
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
+    pGeneral->addJob(laserSettings);
+
+    updateJobList(pGeneral->printJobList());
+    pGeneral->runAllJob();
+
+    /*
     pComLaserObj->SendCommand(command);
     Delay_MSec(pause);
+    */
 }
 
 void MainWindow::on_pushButton_Cub_Line_clicked()

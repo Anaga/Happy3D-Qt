@@ -38,6 +38,9 @@ private slots:
     void getDataFromLaserCom(const QByteArray &arg1);
     void motorsMove(Enums::MoveDirection dir);
 
+    void handleJobFinished(const Enums::CommandStatus status);
+    void updateJobList(const QStringList jobList);
+
     void recoaterSeq();
     void initMotors();
     

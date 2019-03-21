@@ -10,7 +10,6 @@ Commander::Commander(QObject *parent) : QObject(parent)
     nextTry_timer = new QTimer(this);
     connect(nextTry_timer, SIGNAL(timeout()), SLOT(nextTry()));
     nextTry_timer->start(100);
-
 }
 
 QStringList Commander::printTaskList()
@@ -30,19 +29,20 @@ QStringList Commander::printJobList()
     foreach (auto job, m_jobList){
         qslRet.append(job.print());
     }
+    //qDebug() << qslRet;
     return qslRet;
 }
 
 void Commander::runAllJob()
 {
-    qDebug()  << __PRETTY_FUNCTION__  ;
+   // qDebug()  << __PRETTY_FUNCTION__  ;
     if (m_jobList.isEmpty()){
         isRunning = false;
         return;
     }
     nextTry_timer->start(100);
     if (m_jobList.first().status==Enums::CommandStatus::running){
-        qDebug() << "top job is running now";
+       // qDebug() << "top job is running now";
         return;
     }
     QString const command = m_jobList.first().command;
@@ -60,7 +60,9 @@ void Commander::runAllJob()
 
     qDebug() << "timeout is " <<timeout << "msec";
     if (timeout){
+        timeout_timer->start(timeout);
        // timeout_timer->singleShot(timeout, this, SLOT(commandTimeout()));
+        qDebug() << timeout_timer->remainingTime();
     }
 
     int const delay =m_jobList.first().delay;
@@ -138,7 +140,7 @@ void Commander::getResponce(QString resp)
     if (resp.contains(j.exp_res)){
         qDebug() << "Waiting for "<<j.exp_res << " is over, got responce " <<resp;
         qDebug() << "Remove task from list, stop timer";
-        //timeout_timer->stop();
+        timeout_timer->stop();
         m_jobList.removeFirst();
         emit taskFinished(Enums::CommandStatus::finishByCorrectResponce);
     } else {
@@ -166,10 +168,12 @@ void Commander::commandTimeout()
 {
     qDebug()  << __PRETTY_FUNCTION__   << "commandList size " << m_jobList.size();
 
+    timeout_timer->stop();
     if (m_jobList.isEmpty()){
         isRunning = false;
         return;
     }
+
     qDebug() << "Waiting is over, we got commandTimeout";
     qDebug() << "Remove task from list";
     m_jobList.removeFirst();
@@ -178,7 +182,8 @@ void Commander::commandTimeout()
 
 void Commander::nextTry()
 {
-    qDebug()  << __PRETTY_FUNCTION__   << "commandList size " << m_jobList.size();
+    qDebug()<<__PRETTY_FUNCTION__<<"List size"<< m_jobList.size()
+    << "timeout :"<<timeout_timer->remainingTime() << "msec.";
     if (m_jobList.isEmpty()){
         isRunning = false;
         nextTry_timer->stop();
