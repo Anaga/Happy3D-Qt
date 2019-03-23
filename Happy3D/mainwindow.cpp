@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect( pGeneral, SIGNAL(taskFinished(Enums::CommandStatus)),
              this,  SLOT(handleJobFinished(Enums::CommandStatus)));
-
+    handleJobFinished(Enums::CommandStatus::notInQueue);
 }
 
 MainWindow::~MainWindow()
@@ -168,6 +168,16 @@ void MainWindow::motorsMove(Enums::MoveDirection dir)
 
 void MainWindow::handleJobFinished(const Enums::CommandStatus status)
 {
+    QPixmap pxGren = QPixmap(":/img/LED-GRN-small.png");
+    QPixmap pxRed = QPixmap(":/img/LED-RED-small.png");
+    QPixmap pxWhite = QPixmap(":/img/LED-WHT-small.png");
+    QPixmap pxYellow = QPixmap(":/img/LED-YEL-small.png");
+    switch (status) {
+    case Enums::CommandStatus::finishByCorrectResponce :ui->label_status->setPixmap(pxGren); break;
+    case Enums::CommandStatus::finishByTimeout :ui->label_status->setPixmap(pxRed); break;
+    case Enums::CommandStatus::finishByDelay :ui->label_status->setPixmap(pxYellow); break;
+    default: ui->label_status->setPixmap(pxWhite);
+    }
     qDebug() << Enums::print(status);
     updateJobList(pGeneral->printJobList());
 }
@@ -180,6 +190,7 @@ void MainWindow::updateJobList(const QStringList jobList)
     for (auto jobDisk : jobList){
         ui->plainTextEdit_JobList->appendPlainText(jobDisk);
     }
+    //ui->plainTextEdit_JobList->moveCursor();
 }
 
 void MainWindow::initMotors()
@@ -211,90 +222,67 @@ void MainWindow::recoaterSeq()
     pGeneral->addJob(rocControl);
 
 
+    //Motor2 run to the right end
+    long distance = 13000;
+    long speed = 1600;
+    Job motControl(Enums::SendTo::toLaser, "R", iDelay, iTimeout);
+    motControl.command = pLaserObj->moveMotors(Enums::Right, distance, speed);
+    motControl.delay=9000;
+    // timeout shall be more than delay
+    motControl.timeout = 9000 + iDelay;
+    pGeneral->addJob(motControl);
+    qDebug() << "We will send to laser this row:" << motControl.command;
 
-    // we will use Delay_MSec to simylate delays.
-        //unsigned int timeout = 500; //milliseconds
-/*
-        pComPresObj->SendCommand("R"); //Right up
-        Delay_MSec(timeout);
-        pComPresObj->SendCommand("F"); //left down
-        Delay_MSec(timeout);
+    rocControl.command="I";
+    pGeneral->addJob(rocControl);
 
-   */
+    rocControl.command="L";
+    pGeneral->addJob(rocControl);
 
-        //Motor2 run to the right end
-        long distance = 13000;
-        long speed = 1600;
-        Job motControl(Enums::SendTo::toLaser, "R", iDelay, iTimeout);
-        motControl.command = pLaserObj->moveMotors(Enums::Right, distance, speed);
-        motControl.delay=9000;
-        pGeneral->addJob(motControl);
+    //Motor2 run to the push position
+    // MoveMotor2("8300", "y", "2");
+    distance = 8300;
+    motControl.command = pLaserObj->moveMotors(Enums::Left, distance, speed);
+    motControl.delay=6000;
+    motControl.timeout = motControl.delay + iDelay;
+    pGeneral->addJob(motControl);
+    qDebug() << "We will send to laser this row:" << motControl.command;
 
-        qDebug() << "We will send to laser this row:" << motControl.command;
-        //pComLaserObj->SendCommand(command);
-        //Delay_MSec(9000);
+    rocControl.command="D";
+    pGeneral->addJob(rocControl);
 
-        rocControl.command="I";
-        pGeneral->addJob(rocControl);
-        //pComPresObj->SendCommand("I"); //Right down
-        //Delay_MSec(timeout);
+    //Motor1 down one layer
+    // MoveMotor1(Motor1MoveText.Text, "x", "1");
+    qsTemp = ui->lineEdit_MotC_VertDist->text();
+    distance = qsTemp.toLong();
+    motControl.command = pLaserObj->moveMotors(Enums::Down, distance, speed);
+    pGeneral->addJob(motControl);
+    qDebug() << "We will send to laser this row:" << motControl.command;
 
-        rocControl.command="L";
-        pGeneral->addJob(rocControl);
-        //pComPresObj->SendCommand("L"); //left down
-        //Delay_MSec(timeout);
+    rocControl.command="U";
+    pGeneral->addJob(rocControl);
 
-        //Motor2 run to the push position
-        // MoveMotor2("8300", "y", "2");
-        distance = 8300;
-        motControl.command = pLaserObj->moveMotors(Enums::Left, distance, speed);
-        motControl.delay=6000;
-        pGeneral->addJob(motControl);
-        qDebug() << "We will send to laser this row:" << motControl.command;
-        //pComLaserObj->SendCommand(command);
-        //Delay_MSec(6000);
+    rocControl.command="H";
+    pGeneral->addJob(rocControl);
 
-        rocControl.command="D";
-        pGeneral->addJob(rocControl);
-        //pComPresObj->SendCommand("D"); //Push
-        //Delay_MSec(timeout);
+    //MoveMotor2("4700", "y", "2");
+    distance = 4700;
+    motControl.command = pLaserObj->moveMotors(Enums::Left, distance, speed);
+    motControl.delay=4000;
+    motControl.timeout = motControl.delay + iDelay;
+    pGeneral->addJob(motControl);
+    qDebug() << "We will send to laser this row:" << motControl.command;
+    //pComLaserObj->SendCommand(command);
+    //Delay_MSec(4000);
 
-        //Motor1 down one layer
-        // MoveMotor1(Motor1MoveText.Text, "x", "1");
-        qsTemp = ui->lineEdit_MotC_VertDist->text();
-        distance = qsTemp.toLong();
-        motControl.command = pLaserObj->moveMotors(Enums::Down, distance, speed);
-        pGeneral->addJob(motControl);
-        qDebug() << "We will send to laser this row:" << motControl.command;
-        //pComLaserObj->SendCommand(command);
-        //Delay_MSec(timeout);
+    // //left down
+    rocControl.command="F";
+    pGeneral->addJob(rocControl);
 
-        rocControl.command="U";
-        pGeneral->addJob(rocControl);
-        //pComPresObj->SendCommand("U"); //Pull
-        //Delay_MSec(timeout);
-
-        rocControl.command="H";
-        pGeneral->addJob(rocControl);
-        //pComPresObj->SendCommand("H"); //Hold
-        //Delay_MSec(timeout);
-
-        //MoveMotor2("4700", "y", "2");
-        distance = 4700;
-        motControl.command = pLaserObj->moveMotors(Enums::Left, distance, speed);
-        pGeneral->addJob(motControl);
-        qDebug() << "We will send to laser this row:" << motControl.command;
-        //pComLaserObj->SendCommand(command);
-        //Delay_MSec(4000);
-
-        //pComPresObj->SendCommand("F"); //left down
-        rocControl.command="F";
-        pGeneral->addJob(rocControl);
-
-        QStringList jobs = pGeneral->printJobList();
-        updateJobList(jobs);
-        qDebug() << "Now we start to run all jobs! ";
-        pGeneral->runAllJob();
+    QStringList jobs = pGeneral->printJobList();
+    updateJobList(jobs);
+    qDebug() << "Now we start to run all jobs! ";
+    pGeneral->runAllJob();
 
     /*qint64 timeout = 500; //milliseconds
 
@@ -657,9 +645,9 @@ void MainWindow::Delay_MSec(unsigned int msec)
 
     while( QTime::currentTime() < _Timer )
 
-    QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }
-  /*
+/*
 void MainWindow::on_pushButton_initMotors_clicked()
 {
 
