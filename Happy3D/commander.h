@@ -25,10 +25,10 @@ class Commander : public QObject
     Communicaton *m_pComPressObj;
 
     QLinkedList<Job> m_jobList;
-    bool isRunning = false;
 
     QTimer *timeout_timer;
     QTimer *nextTry_timer;
+    QTimer *delay_timer;
 
 public:
     explicit Commander(QObject *parent = nullptr);
@@ -46,7 +46,6 @@ public slots:
         m_jobList.append(job);    }
 
     void runAllJob();
-
     void getResponce(QString resp);
 
 private slots:

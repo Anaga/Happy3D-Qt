@@ -7,6 +7,9 @@ Commander::Commander(QObject *parent) : QObject(parent)
     timeout_timer = new QTimer(this);
     connect(timeout_timer, SIGNAL(timeout()), SLOT(commandTimeout()));
 
+    delay_timer = new QTimer(this);
+    connect(delay_timer, SIGNAL(timeout()), SLOT(delayTimeout()));
+
     nextTry_timer = new QTimer(this);
     connect(nextTry_timer, SIGNAL(timeout()), SLOT(nextTry()));
     nextTry_timer->start(100);
@@ -26,7 +29,6 @@ void Commander::runAllJob()
 {
    // qDebug()  << __PRETTY_FUNCTION__  ;
     if (m_jobList.isEmpty()){
-        isRunning = false;
         return;
     }
     nextTry_timer->start(100);
@@ -46,21 +48,17 @@ void Commander::runAllJob()
 
 
     int const timeout = m_jobList.first().timeout;
-
     qDebug() << "timeout is " <<timeout << "msec";
     if (timeout){
         timeout_timer->start(timeout);
-       // timeout_timer->singleShot(timeout, this, SLOT(commandTimeout()));
         qDebug() << timeout_timer->remainingTime();
     }
 
     int const delay =m_jobList.first().delay;
-
     qDebug() << "delay is " <<delay << "msec";
     if (delay){
-       // QTimer::singleShot(delay, this, SLOT(delayTimeout()));
+        delay_timer->start(delay);
     }
-
 }
 
 
@@ -69,7 +67,6 @@ void Commander::getResponce(QString resp)
     qDebug()  << __PRETTY_FUNCTION__   << "commandList size " << m_jobList.size();
 
     if (m_jobList.isEmpty()){
-        isRunning = false;
         return;
     }
 
@@ -84,6 +81,8 @@ void Commander::getResponce(QString resp)
         qDebug() << "Waiting for "<<j.exp_res << " is over, got responce " <<resp;
         qDebug() << "Remove task from list, stop timer";
         timeout_timer->stop();
+        // if we got expected responce, stop waiting delay
+        delay_timer->stop();
         m_jobList.removeFirst();
         emit taskFinished(Enums::CommandStatus::finishByCorrectResponce);
     } else {
@@ -97,12 +96,13 @@ void Commander::delayTimeout()
     qDebug()  << __PRETTY_FUNCTION__   << "commandList size " << m_jobList.size();
 
     if (m_jobList.isEmpty()){
-        isRunning = false;
+        delay_timer->stop();
         return;
     }
 
     qDebug() << "Waiting is over, we got delayTimeout";
     qDebug() << "Remove task from list";
+    delay_timer->stop();
     m_jobList.removeFirst();
     emit taskFinished(Enums::CommandStatus::finishByDelay);
 }
@@ -113,22 +113,36 @@ void Commander::commandTimeout()
 
     timeout_timer->stop();
     if (m_jobList.isEmpty()){
-        isRunning = false;
+        delay_timer->stop();
         return;
     }
 
     qDebug() << "Waiting is over, we got commandTimeout";
     qDebug() << "Remove task from list";
+    delay_timer->stop();
     m_jobList.removeFirst();
     emit taskFinished(Enums::CommandStatus::finishByTimeout);
 }
 
 void Commander::nextTry()
 {
-    qDebug()<<__PRETTY_FUNCTION__<<"List size"<< m_jobList.size()
-    << "timeout :"<<timeout_timer->remainingTime() << "msec.";
+    QString qsTemp = "List size %1; ";
+    qsTemp = qsTemp.arg(m_jobList.size());
+    int timeoutRemTime = timeout_timer->remainingTime();
+    if ( timeoutRemTime> 0){
+        qsTemp.append("timeout: ");
+        qsTemp.append(QString::number(timeoutRemTime));
+        qsTemp.append("msec; ");
+    }
+    int delayRemTime = delay_timer->remainingTime();
+    if ( delayRemTime> 0){
+        qsTemp.append("delay: ");
+        qsTemp.append(QString::number(delayRemTime));
+        qsTemp.append("msec; ");
+    }
+    qDebug()<<__PRETTY_FUNCTION__<<  qsTemp;
+
     if (m_jobList.isEmpty()){
-        isRunning = false;
         nextTry_timer->stop();
         return;
     }
