@@ -210,7 +210,7 @@
        <item row="0" column="1">
         <widget class="QLineEdit" name="lineEdit_ProC_PD">
          <property name="text">
-          <string>5</string>
+          <string>10</string>
          </property>
          <property name="maxLength">
           <number>10</number>
@@ -686,7 +686,7 @@ Ver 1.0.6</string>
      <x>0</x>
      <y>0</y>
      <width>1041</width>
-     <height>21</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuWelcome_to_version_1_0_0">

@@ -34,6 +34,70 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+QList<Job> MainWindow::sqere(float size)
+{
+    float CentX = 5.0;
+    float CentY = 5.0;
+
+    QPointF leftTop;
+//# Fix me
+    leftTop.setX( (qreal)(CentX-(size/2.0)));
+    leftTop.setY( (qreal)(CentY-(size/2.0)));
+    qDebug() << "leftTop" << leftTop;
+
+    QPointF rigthTop;
+    rigthTop.setX( (qreal)(CentX+(size/2.0)));
+    rigthTop.setY( (qreal)(CentY-(size/2.0)));
+    qDebug() << "rigthTop" << rigthTop;
+
+    QPointF rigthBottom;
+    rigthBottom.setX( (qreal)(CentX+(size/2.0)));
+    rigthBottom.setY( (qreal)(CentY+(size/2.0)));
+    qDebug() << "rigthBottom" << rigthBottom;
+
+    QPointF leftBottom;
+    leftBottom.setX( (qreal)(CentX-(size/2.0)));
+    leftBottom.setY( (qreal)(CentY+(size/2.0)));
+    qDebug() << "leftBottom" << leftBottom;
+
+    QString qsTemp = "#line=%1,%2,%3,%4";
+    Job topLine;
+    topLine.sendTo = Enums::SendTo::toLaser;
+    topLine.timeout = 1000* static_cast<int>(size)+1000;
+    topLine.command = qsTemp.arg(leftTop.x()).arg(leftTop.y())
+            .arg(rigthTop.x()).arg(rigthTop.y());
+    qDebug() << "topLine command " << topLine.command ;
+    topLine.exp_res = "LINE_OK";
+
+    Job topLine1(topLine);
+    topLine1.command = qsTemp.arg(leftTop.x()).arg(leftTop.y()+0.2)
+            .arg(rigthTop.x()).arg(rigthTop.y()+0.2);
+
+    Job topLine2(topLine);
+    topLine2.command = qsTemp.arg(leftTop.x()).arg(leftTop.y()-0.2)
+            .arg(rigthTop.x()).arg(rigthTop.y()-0.2);
+
+    Job leftLine(topLine);
+    leftLine.command = qsTemp.arg(leftTop.x()).arg(leftTop.y())
+            .arg(leftBottom.x()).arg(leftBottom.y());
+    qDebug() << "LeftLine command " << leftLine.command ;
+
+    Job bottomLine(topLine);
+    bottomLine.command = qsTemp.arg(rigthBottom.x()).arg(rigthBottom.y())
+            .arg(leftBottom.x()).arg(leftBottom.y());
+    qDebug() << "bottomLine.command " << bottomLine.command ;
+
+    Job rigthLine(topLine);
+    rigthLine.command = qsTemp.arg(rigthTop.x()).arg(rigthTop.y())
+            .arg(rigthBottom.x()).arg(rigthBottom.y());
+    qDebug() << "rigthLine .command " << rigthLine.command ;
+
+    QList<Job> retList;
+    retList << topLine << topLine1 << topLine2 << leftLine << bottomLine << rigthLine;
+    return  retList;
+
+}
+
 void MainWindow::on_pushButton_Com_Refresh_clicked()
 {
     ui->comboBox_Com_Laser_Select->clear();
@@ -206,6 +270,8 @@ void MainWindow::initMotors()
     QStringList jobs = pGeneral->printJobList();
     updateJobList(jobs);
     pGeneral->runAllJob();
+
+    ui->pushButton_ProC_SentLaserSettings->click();
 
 }
 
@@ -767,11 +833,12 @@ void MainWindow::on_pushButton_Cub_Line_clicked()
 
 void MainWindow::on_pushButton_Cub_AutoStart_clicked()
 {
+    /*
     Job line;
     line.sendTo = Enums::SendTo::toLaser;
     line.command = "#line=0,0,10,10";
     line.exp_res = "LINE_OK";
-    line.timeout = 10000; // 10 sec - this can be not enought
+    line.timeout = 30000; // 10 sec - this can be not enought
     pGeneral->addJob(line);
 
     qDebug() << "We will send to laser this row:" << command;
@@ -782,6 +849,34 @@ void MainWindow::on_pushButton_Cub_AutoStart_clicked()
     pGeneral->addJob(line);
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
+
+    Job circle;
+    circle.sendTo  = Enums::SendTo::toLaser;
+    circle.command = "#circle=2,5,5,0,360";
+    circle.exp_res = "CIRCLE_OK";
+    circle.timeout = 30000; // 10 sec - this can be not enought
+    for (int i = 0; i < 20; ++i) {
+           pGeneral->addJob(circle);
+    }
+
+    line.command = "#line=0,0,10,0";
+    pGeneral->addJob(line);
+
+    line.command = "#line=10,0,10,10";
+    pGeneral->addJob(line);
+
+    line.command = "#line=10,10,0,10";
+    pGeneral->addJob(line);
+
+    line.command = "#line=0,10, 0,0";
+    pGeneral->addJob(line);
+*/
+    for (int i = 1; i <= 5; ++i) {
+        auto recJobs = sqere(i*2);
+        foreach (auto job , recJobs) {
+            pGeneral->addJob(job);
+        }
+    }
 
     updateJobList(pGeneral->printJobList());
     pGeneral->runAllJob();

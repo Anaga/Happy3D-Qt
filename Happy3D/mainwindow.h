@@ -7,6 +7,7 @@
 #include <QElapsedTimer>
 #include <QtConcurrent>
 #include <QTime>
+#include <QList>
 
 #include "communicaton.h"
 #include "lasercontrol.h"
@@ -32,6 +33,8 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    QList<Job> sqere(float size);
+
 private slots:
     bool inputCheck(QString text, Enums::CheckType type);
     void getDataFromPresCom(const QByteArray &arg1);
@@ -43,6 +46,7 @@ private slots:
 
     void recoaterSeq();
     void initMotors();
+
     
     /* UI handlers */
     void on_pushButton_Com_Refresh_clicked(); 

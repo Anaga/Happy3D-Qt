@@ -1,0 +1,2452 @@
+[2019-03-24 09:58:31.495] [Comm Press] [info] Communicaton startup
+[2019-03-24 09:58:37.794] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 09:58:31.495] [Comm Laser] [info] Communicaton startup
+[2019-03-24 09:58:37.794] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 09:58:31.494] [MainWindows] [info] MainWindow startup
+[2019-03-24 09:58:37.793] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 10:00:55.297] [Comm Press] [info] Communicaton startup
+[2019-03-24 10:03:02.562] [Comm Press] [info] SendCommand
+[2019-03-24 10:03:02.562] [Comm Press] [info] m_writeData : L
+
+[2019-03-24 10:03:02.621] [Comm Press] [info] handleTimeout read value:L
+
+[2019-03-24 10:03:04.737] [Comm Press] [info] SendCommand
+[2019-03-24 10:03:04.737] [Comm Press] [info] m_writeData : F
+
+[2019-03-24 10:03:04.820] [Comm Press] [info] handleTimeout read value:F
+
+[2019-03-24 10:03:06.369] [Comm Press] [info] SendCommand
+[2019-03-24 10:03:06.369] [Comm Press] [info] m_writeData : R
+
+[2019-03-24 10:03:06.420] [Comm Press] [info] handleTimeout read value:R
+
+[2019-03-24 10:03:07.905] [Comm Press] [info] SendCommand
+[2019-03-24 10:03:07.905] [Comm Press] [info] m_writeData : I
+
+[2019-03-24 10:03:07.920] [Comm Press] [info] handleTimeout read value:I
+
+[2019-03-24 10:09:53.462] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:53.462] [Comm Press] [info] m_writeData : R
+
+[2019-03-24 10:09:53.570] [Comm Press] [info] handleTimeout read value:R
+
+[2019-03-24 10:09:53.672] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:53.672] [Comm Press] [info] m_writeData : F
+
+[2019-03-24 10:09:53.770] [Comm Press] [info] handleTimeout read value:F
+
+[2019-03-24 10:09:53.874] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:53.874] [Comm Press] [info] m_writeData : I
+
+[2019-03-24 10:09:53.970] [Comm Press] [info] handleTimeout read value:I
+
+[2019-03-24 10:09:53.976] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:53.977] [Comm Press] [info] m_writeData : L
+
+[2019-03-24 10:09:54.070] [Comm Press] [info] handleTimeout read value:L
+
+[2019-03-24 10:09:54.174] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:54.174] [Comm Press] [info] m_writeData : D
+
+[2019-03-24 10:09:54.270] [Comm Press] [info] handleTimeout read value:D
+
+[2019-03-24 10:09:54.374] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:54.374] [Comm Press] [info] m_writeData : U
+
+[2019-03-24 10:09:54.470] [Comm Press] [info] handleTimeout read value:U
+
+[2019-03-24 10:09:54.475] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:54.475] [Comm Press] [info] m_writeData : H
+
+[2019-03-24 10:09:54.570] [Comm Press] [info] handleTimeout read value:H
+
+[2019-03-24 10:09:58.474] [Comm Press] [info] SendCommand
+[2019-03-24 10:09:58.474] [Comm Press] [info] m_writeData : F
+
+[2019-03-24 10:09:58.570] [Comm Press] [info] handleTimeout read va
+[2019-03-24 10:09:58.580] [Comm Press] [info] handleTimeout lue:F
+
+[2019-03-24 10:10:32.380] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 10:00:55.297] [Comm Laser] [info] Communicaton startup
+[2019-03-24 10:01:51.421] [Comm Laser] [info] SendCommand
+[2019-03-24 10:01:51.421] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 10:01:51.479] [Comm Laser] [info] handleTimeout Unknown input
+
+[2019-03-24 10:01:53.475] [Comm Laser] [info] SendCommand
+[2019-03-24 10:01:53.475] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 10:01:53.540] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 10:09:28.191] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:28.191] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 10:09:28.264] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 10:09:30.456] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:30.456] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 10:09:30.524] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 10:09:41.560] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:41.560] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 10:09:41.573] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 10:09:41.665] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:41.665] [Comm Laser] [info] m_writeData : #step=5
+
+[2019-03-24 10:09:41.683] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 10:09:41.770] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:41.770] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 10:09:41.783] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 10:09:53.777] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:53.777] [Comm Laser] [info] m_writeData : #my=1,13000,1600
+
+[2019-03-24 10:09:53.833] [Comm Laser] [info] handleTimeout $MY:1,0,000,34C,0
+
+[2019-03-24 10:09:54.076] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:54.077] [Comm Laser] [info] m_writeData : #my=2,8300,1600
+
+[2019-03-24 10:09:54.133] [Comm Laser] [info] handleTimeout $MY:2,273,000,35C,273
+
+[2019-03-24 10:09:54.275] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:54.276] [Comm Laser] [info] m_writeData : #mx=1,25,1600
+
+[2019-03-24 10:09:54.323] [Comm Laser] [info] handleTimeout $MX:1,0,000,35C,0
+
+[2019-03-24 10:09:54.577] [Comm Laser] [info] SendCommand
+[2019-03-24 10:09:54.577] [Comm Laser] [info] m_writeData : #my=2,4700,1600
+
+[2019-03-24 10:10:32.379] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 10:00:55.297] [MainWindows] [info] MainWindow startup
+[2019-03-24 10:01:51.420] [MainWindows] [info] initMotors
+[2019-03-24 10:01:51.480] [MainWindows] [info] Data from laser: Unknown input
+[2019-03-24 10:01:53.541] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 10:03:02.621] [MainWindows] [info] Data from press: read value:L
+[2019-03-24 10:03:04.820] [MainWindows] [info] Data from press: read value:F
+[2019-03-24 10:03:06.420] [MainWindows] [info] Data from press: read value:R
+[2019-03-24 10:03:07.920] [MainWindows] [info] Data from press: read value:I
+[2019-03-24 10:09:28.190] [MainWindows] [info] We will send to laser this row: #mx=S,200
+[2019-03-24 10:09:28.266] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 10:09:30.456] [MainWindows] [info] We will send to laser this row: #my=S,200
+[2019-03-24 10:09:30.524] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 10:09:41.559] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 10:09:41.559] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 10:09:41.559] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:09:41.574] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 10:09:41.684] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 10:09:41.784] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 10:09:53.455] [MainWindows] [info] void MainWindow::recoaterSeq()
+[2019-03-24 10:09:53.574] [MainWindows] [info] Data from press: read value:R
+[2019-03-24 10:09:53.774] [MainWindows] [info] Data from press: read value:F
+[2019-03-24 10:09:53.837] [MainWindows] [info] Data from laser: $MY:1,0,000,34C,0
+[2019-03-24 10:09:53.973] [MainWindows] [info] Data from press: read value:I
+[2019-03-24 10:09:54.072] [MainWindows] [info] Data from press: read value:L
+[2019-03-24 10:09:54.135] [MainWindows] [info] Data from laser: $MY:2,273,000,35C,273
+[2019-03-24 10:09:54.272] [MainWindows] [info] Data from press: read value:D
+[2019-03-24 10:09:54.324] [MainWindows] [info] Data from laser: $MX:1,0,000,35C,0
+[2019-03-24 10:09:54.471] [MainWindows] [info] Data from press: read value:U
+[2019-03-24 10:09:54.571] [MainWindows] [info] Data from press: read value:H
+[2019-03-24 10:09:58.570] [MainWindows] [info] Data from press: read va
+[2019-03-24 10:09:58.580] [MainWindows] [info] Data from press: lue:F
+[2019-03-24 10:10:32.340] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 10:14:32.917] [Comm Press] [info] Communicaton startup
+[2019-03-24 10:16:19.804] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 10:14:32.917] [Comm Laser] [info] Communicaton startup
+[2019-03-24 10:14:43.053] [Comm Laser] [info] SendCommand
+[2019-03-24 10:14:43.054] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 10:14:43.124] [Comm Laser] [info] handleTimeout $M
+[2019-03-24 10:14:43.134] [Comm Laser] [info] handleTimeout X:S,200,1
+
+[2019-03-24 10:14:44.975] [Comm Laser] [info] SendCommand
+[2019-03-24 10:14:44.975] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 10:14:45.035] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 10:15:02.700] [Comm Laser] [info] SendCommand
+[2019-03-24 10:15:02.700] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 10:15:02.715] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 10:15:02.795] [Comm Laser] [info] SendCommand
+[2019-03-24 10:15:02.796] [Comm Laser] [info] m_writeData : #step=5
+
+[2019-03-24 10:15:02.815] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 10:15:02.891] [Comm Laser] [info] SendCommand
+[2019-03-24 10:15:02.891] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 10:15:02.905] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 10:15:12.677] [Comm Laser] [info] SendCommand
+[2019-03-24 10:15:12.677] [Comm Laser] [info] m_writeData : #line=0,0,10,10
+
+[2019-03-24 10:15:22.975] [Comm Laser] [info] SendCommand
+[2019-03-24 10:15:22.975] [Comm Laser] [info] m_writeData : #line=0,10,10,0
+
+[2019-03-24 10:15:34.515] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:16:19.797] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 10:14:32.916] [MainWindows] [info] MainWindow startup
+[2019-03-24 10:14:43.052] [MainWindows] [info] initMotors
+[2019-03-24 10:14:43.125] [MainWindows] [info] Data from laser: $M
+[2019-03-24 10:14:43.135] [MainWindows] [info] Data from laser: X:S,200,1
+[2019-03-24 10:14:45.036] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 10:15:02.699] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 10:15:02.699] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 10:15:02.699] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:15:02.716] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 10:15:02.815] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 10:15:02.905] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 10:15:12.676] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:15:12.676] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:15:34.515] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:16:19.765] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 10:21:40.327] [Comm Laser] [info] Communicaton startup
+[2019-03-24 10:22:14.652] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:14.652] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 10:22:14.736] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 10:22:14.758] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:14.758] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 10:22:14.826] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 10:22:24.235] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:24.235] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 10:22:24.249] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 10:22:24.340] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:24.340] [Comm Laser] [info] m_writeData : #step=50
+
+[2019-03-24 10:22:24.359] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 10:22:24.446] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:24.446] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 10:22:24.459] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 10:22:29.371] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:29.371] [Comm Laser] [info] m_writeData : #line=0,0,10,10
+
+[2019-03-24 10:22:31.578] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:22:31.674] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:31.674] [Comm Laser] [info] m_writeData : #line=0,10,10,0
+
+[2019-03-24 10:22:33.868] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:22:33.874] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:33.874] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:22:34.228] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:22:53.558] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:53.558] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 10:22:53.569] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 10:22:53.663] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:53.663] [Comm Laser] [info] m_writeData : #step=25
+
+[2019-03-24 10:22:53.689] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 10:22:53.768] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:53.768] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 10:22:53.779] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 10:22:55.414] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:55.414] [Comm Laser] [info] m_writeData : #line=0,0,10,10
+
+[2019-03-24 10:22:59.799] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:22:59.874] [Comm Laser] [info] SendCommand
+[2019-03-24 10:22:59.874] [Comm Laser] [info] m_writeData : #line=0,10,10,0
+
+[2019-03-24 10:23:04.239] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:23:04.274] [Comm Laser] [info] SendCommand
+[2019-03-24 10:23:04.274] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:23:04.629] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:23:32.805] [Comm Laser] [info] SendCommand
+[2019-03-24 10:23:32.805] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 10:23:32.819] [Comm Laser] [info] handleTimeout DELAY_OK
+[2019-03-24 10:23:32.829] [Comm Laser] [info] handleTimeout 	500 (us)
+
+[2019-03-24 10:23:32.900] [Comm Laser] [info] SendCommand
+[2019-03-24 10:23:32.900] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 10:23:32.909] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 10:23:32.995] [Comm Laser] [info] SendCommand
+[2019-03-24 10:23:32.995] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 10:23:33.009] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 10:23:36.973] [Comm Laser] [info] SendCommand
+[2019-03-24 10:23:36.973] [Comm Laser] [info] m_writeData : #line=0,0,10,10
+
+[2019-03-24 10:23:47.898] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:23:47.974] [Comm Laser] [info] SendCommand
+[2019-03-24 10:23:47.974] [Comm Laser] [info] m_writeData : #line=0,10,10,0
+
+[2019-03-24 10:23:58.889] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:23:58.974] [Comm Laser] [info] SendCommand
+[2019-03-24 10:23:58.974] [Comm Las[2019-03-24 10:21:40.327] [Comm Press] [info] Communicaton startup
+[2019-03-24 10:25:57.394] [Comm Press] [info] Communicaton shutdown
+er] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:23:59.319] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:25:57.383] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 10:21:40.327] [MainWindows] [info] MainWindow startup
+[2019-03-24 10:22:14.651] [MainWindows] [info] initMotors
+[2019-03-24 10:22:14.738] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 10:22:14.827] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 10:22:24.234] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 10:22:24.234] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 10:22:24.234] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:22:24.251] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 10:22:24.360] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 10:22:24.460] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 10:22:29.370] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:22:29.370] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:22:31.580] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:22:33.869] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:22:34.229] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:22:53.555] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 10:22:53.555] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 10:22:53.555] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:22:53.570] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 10:22:53.690] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 10:22:53.779] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 10:22:55.411] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:22:55.411] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:22:59.800] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:23:04.240] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:23:04.629] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:23:32.804] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 10:23:32.804] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 10:23:32.804] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:23:32.820] [MainWindows] [info] Data from laser: DELAY_OK
+[2019-03-24 10:23:32.830] [MainWindows] [info] Data from laser: 500 (us)
+[2019-03-24 10:23:32.910] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 10:23:33.010] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 10:23:36.972] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:23:36.972] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:23:47.900] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:23:58.890] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:23:59.319] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:25:57.359] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 10:30:46.735] [Comm Laser] [info] Communicaton startup
+[2019-03-24 10:30:54.660] [Comm Laser] [info] SendCommand
+[2019-03-24 10:30:54.660] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 10:30:54.746] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 10:30:54.765] [Comm Laser] [info] SendCommand
+[2019-03-24 10:30:54.765] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 10:30:54.837] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 10:31:30.587] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:30.587] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 10:31:30.606] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 10:31:30.683] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:30.683] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 10:31:30.707] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 10:31:30.778] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:30.778] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 10:31:30.796] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 10:31:34.122] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:34.122] [Comm Laser] [info] m_writeData : #line=0,0,10,10
+
+[2019-03-24 10:31:45.047] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:31:45.074] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:45.074] [Comm Laser] [info] m_writeData : #line=0,10,10,0
+
+[2019-03-24 10:31:55.998] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:31:56.074] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:56.074] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:56.428] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:56.474] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:56.475] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:56.828] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:56.874] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:56.874] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:57.228] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:57.274] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:57.274] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:57.628] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:57.674] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:57.674] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:58.028] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:58.074] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:58.074] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:58.428] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:58.474] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:58.474] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:58.828] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:58.874] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:58.874] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:59.228] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:59.274] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:59.274] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:31:59.628] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:31:59.674] [Comm Laser] [info] SendCommand
+[2019-03-24 10:31:59.674] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:00.028] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:00.074] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:00.074] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:00.428] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:00.474] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:00.474] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:00.828] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:00.874] [Comm Laser] [info] SendCommand
+[2019-03-24 10:3[2019-03-24 10:30:46.735] [Comm Press] [info] Communicaton startup
+[2019-03-24 10:37:01.615] [Comm Press] [info] Communicaton shutdown
+2:00.875] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:01.228] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:01.274] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:01.274] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:01.628] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:01.675] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:01.675] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:02.028] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:02.074] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:02.074] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:02.428] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:02.474] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:02.474] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:02.828] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:02.874] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:02.874] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:03.228] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:03.274] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:03.274] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:03.628] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:03.674] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:03.674] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 10:32:04.028] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 10:32:04.074] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:04.074] [Comm Laser] [info] m_writeData : #line=0,0,10,0
+
+[2019-03-24 10:32:11.928] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:32:11.974] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:11.974] [Comm Laser] [info] m_writeData : #line=10,0,10,10
+
+[2019-03-24 10:32:19.468] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:32:19.474] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:19.474] [Comm Laser] [info] m_writeData : #line=10,10,0,10
+
+[2019-03-24 10:32:27.318] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 10:32:27.374] [Comm Laser] [info] SendCommand
+[2019-03-24 10:32:27.374] [Comm Laser] [info] m_writeData : #line=0,10, 0,0
+
+[2019-03-24 10:32:34.868] [Comm Laser] [info] handleTimeout LINE_O
+[2019-03-24 10:32:34.888] [Comm Laser] [info] handleTimeout K
+
+[2019-03-24 10:37:01.608] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 10:30:46.734] [MainWindows] [info] MainWindow startup
+[2019-03-24 10:30:54.659] [MainWindows] [info] initMotors
+[2019-03-24 10:30:54.747] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 10:30:54.837] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 10:31:30.586] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 10:31:30.586] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 10:31:30.586] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:31:30.608] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 10:31:30.708] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 10:31:30.797] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 10:31:34.115] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:31:34.115] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 10:31:45.055] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:31:56.005] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:31:56.435] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:56.835] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:57.235] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:57.634] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:58.034] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:58.434] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:58.833] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:59.233] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:31:59.634] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:00.032] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:00.432] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:00.833] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:01.233] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:01.631] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:02.031] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:02.431] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:02.830] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:03.230] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:03.630] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:04.030] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 10:32:11.932] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:32:19.469] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:32:27.319] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 10:32:34.869] [MainWindows] [info] Data from laser: LINE_O
+[2019-03-24 10:32:34.889] [MainWindows] [info] Data from laser: K
+[2019-03-24 10:37:01.546] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:00:05.999] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:01:19.235] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:19.235] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:01:21.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:21.374] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:01:21.424] [Comm Laser] [info] handleTimeout read value:#my=S,200
+
+[2019-03-24 11:01:27.991] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:27.991] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:01:28.063] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:01:28.086] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:28.086] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:01:28.143] [Comm Laser] [info] handleTimeout $MY
+[2019-03-24 11:01:28.163] [Comm Laser] [info] handleTimeout :S,200,1
+
+[2019-03-24 11:01:39.815] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:39.815] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:01:39.884] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:01:39.910] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:39.910] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:01:39.974] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:01:56.663] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:56.663] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:01:56.674] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:01:56.768] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:56.768] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:01:56.794] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:01:56.873] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:56.873] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:01:56.884] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:01:58.823] [Comm Laser] [info] SendCommand
+[2019-03-24 11:01:58.823] [Comm Laser] [info] m_writeData : #line=0,0,10,10
+
+[2019-03-24 11:02:09.747] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:02:09.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:09.774] [Comm Laser] [info] m_writeData : #line=0,10,10,0
+
+[2019-03-24 11:02:20.707] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:02:20.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:20.774] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:21.127] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:21.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:21.174] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:21.527] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:21.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:21.574] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:21.917] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:21.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:21.974] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:22.317] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:22.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:22.375] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:22.717] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:22.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:22.774] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:23.117] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:23.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:23.174] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:23.517] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:23.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:23.575] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:23.917] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:23.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:23.975] [Comm Laser] [info] m[2019-03-24 11:00:06.000] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:04:46.828] [Comm Press] [info] Communicaton shutdown
+_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:24.334] [Comm Laser] [info] handleTimeout CIR
+[2019-03-24 11:02:24.354] [Comm Laser] [info] handleTimeout CLE_OK
+
+[2019-03-24 11:02:53.979] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:53.979] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:54.335] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:54.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:54.374] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:54.735] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:54.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:54.774] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:55.135] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:55.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:55.174] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:55.535] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:55.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:55.574] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:55.935] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:55.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:55.974] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:56.335] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:56.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:56.374] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:56.735] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:56.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:56.774] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:57.135] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:57.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:57.174] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:57.535] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:57.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:57.574] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:57.935] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:57.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:57.974] [Comm Laser] [info] m_writeData : #circle=2,5,5,0,360
+
+[2019-03-24 11:02:58.335] [Comm Laser] [info] handleTimeout CIRCLE_OK
+
+[2019-03-24 11:02:58.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:02:58.374] [Comm Laser] [info] m_writeData : #line=0,0,10,0
+
+[2019-03-24 11:03:06.235] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:03:06.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:03:06.274] [Comm Laser] [info] m_writeData : #line=10,0,10,10
+
+[2019-03-24 11:03:13.764] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:03:13.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:03:13.774] [Comm Laser] [info] m_writeData : #line=10,10,0,10
+
+[2019-03-24 11:03:21.624] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:03:21.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:03:21.674] [Comm Laser] [info] m_writeData : #line=0,10, 0,0
+
+[2019-03-24 11:03:29.174] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:03:29.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:03:29.274] [Comm Laser] [info] m_writeData : line=4.5,4.5,5.5,4.5
+
+[2019-03-24 11:03:29.284] [Comm Laser] [info] handleTimeout Unknown input
+
+[2019-03-24 11:03:58.976] [Comm Laser] [info] SendCommand
+[2019-03-24 11:03:58.976] [Comm Laser] [info] m_writeData : line=5.5,4.5,5.5,5.5
+
+[2019-03-24 11:03:58.995] [Comm Laser] [info] handleTimeout Unknown input
+
+[2019-03-24 11:04:28.975] [Comm Laser] [info] SendCommand
+[2019-03-24 11:04:28.975] [Comm Laser] [info] m_writeData : line=4.5,4.5,5.5,4.5
+
+[2019-03-24 11:04:28.984] [Comm Laser] [info] handleTimeout Unknown input
+
+[2019-03-24 11:04:46.819] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:00:05.999] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:01:19.234] [MainWindows] [info] initMotors
+[2019-03-24 11:01:21.424] [MainWindows] [info] Data from laser: read value:#my=S,200
+[2019-03-24 11:01:27.990] [MainWindows] [info] initMotors
+[2019-03-24 11:01:28.064] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:01:28.144] [MainWindows] [info] Data from laser: $MY
+[2019-03-24 11:01:28.164] [MainWindows] [info] Data from laser: :S,200,1
+[2019-03-24 11:01:39.814] [MainWindows] [info] initMotors
+[2019-03-24 11:01:39.885] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:01:39.975] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:01:56.662] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:01:56.662] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:01:56.662] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:01:56.675] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:01:56.795] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:01:56.884] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:01:58.814] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:01:58.814] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:02:09.756] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:02:20.716] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:02:21.136] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:21.535] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:21.926] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:22.326] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:22.725] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:23.124] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:23.524] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:23.924] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:24.334] [MainWindows] [info] Data from laser: CIR
+[2019-03-24 11:02:24.354] [MainWindows] [info] Data from laser: CLE_OK
+[2019-03-24 11:02:54.341] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:54.741] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:55.140] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:55.540] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:55.940] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:56.341] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:56.740] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:57.140] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:57.538] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:57.938] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:02:58.338] [MainWindows] [info] Data from laser: CIRCLE_OK
+[2019-03-24 11:03:06.238] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:03:13.766] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:03:21.626] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:03:29.176] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:03:29.285] [MainWindows] [info] Data from laser: Unknown input
+[2019-03-24 11:03:58.995] [MainWindows] [info] Data from laser: Unknown input
+[2019-03-24 11:04:28.985] [MainWindows] [info] Data from laser: Unknown input
+[2019-03-24 11:04:46.814] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:06:18.362] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:07:22.425] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 11:06:18.362] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:06:22.748] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:22.748] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:06:22.823] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:06:22.853] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:22.853] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:06:22.914] [Comm Laser] [info] handleTimeout $MY:S
+[2019-03-24 11:06:22.934] [Comm Laser] [info] handleTimeout ,200,1
+
+[2019-03-24 11:06:36.953] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:36.953] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:06:36.973] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:06:37.058] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:37.058] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:06:37.073] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:06:37.163] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:37.163] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:06:37.183] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:06:39.552] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:39.552] [Comm Laser] [info] m_writeData : #line=4.5,4.5,5.5,4.5
+
+[2019-03-24 11:06:40.383] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:06:40.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:40.474] [Comm Laser] [info] m_writeData : #line=5.5,4.5,5.5,5.5
+
+[2019-03-24 11:06:41.263] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:06:41.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:41.274] [Comm Laser] [info] m_writeData : #line=4.5,4.5,5.5,4.5
+
+[2019-03-24 11:06:42.094] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:06:42.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:06:42.174] [Comm Laser] [info] m_writeData : #line=4.5,4.5,5.5,4.5
+
+[2019-03-24 11:06:43.004] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:07:22.418] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:06:18.362] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:06:22.747] [MainWindows] [info] initMotors
+[2019-03-24 11:06:22.824] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:06:22.914] [MainWindows] [info] Data from laser: $MY:S
+[2019-03-24 11:06:22.934] [MainWindows] [info] Data from laser: ,200,1
+[2019-03-24 11:06:36.952] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:06:36.952] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:06:36.952] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:06:36.974] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:06:37.074] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:06:37.184] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:06:40.385] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:06:41.264] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:06:42.095] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:06:43.004] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:07:22.354] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:12:27.670] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:13:24.291] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 11:12:27.670] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:12:44.332] [Comm Laser] [info] SendCommand
+[2019-03-24 11:12:44.332] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:12:44.402] [Comm Laser] [info] handleTimeout $M
+[2019-03-24 11:12:44.412] [Comm Laser] [info] handleTimeout X:S,200,1
+
+[2019-03-24 11:12:46.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:12:46.474] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:12:46.542] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:12:57.162] [Comm Laser] [info] SendCommand
+[2019-03-24 11:12:57.162] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:12:57.173] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:12:57.267] [Comm Laser] [info] SendCommand
+[2019-03-24 11:12:57.267] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:12:57.293] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:12:57.372] [Comm Laser] [info] SendCommand
+[2019-03-24 11:12:57.372] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:12:57.383] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:13:00.498] [Comm Laser] [info] SendCommand
+[2019-03-24 11:13:00.498] [Comm Laser] [info] m_writeData : #line=4.5,4.5,5.5,4.5
+
+[2019-03-24 11:13:01.323] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:13:01.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:13:01.374] [Comm Laser] [info] m_writeData : #line=4.5,4.5,4.5,5.5
+
+[2019-03-24 11:13:02.173] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:13:02.176] [Comm Laser] [info] SendCommand
+[2019-03-24 11:13:02.176] [Comm Laser] [info] m_writeData : #line=5.5,5.5,4.5,5.5
+
+[2019-03-24 11:13:03.003] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:13:03.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:13:03.074] [Comm Laser] [info] m_writeData : #line=5.5,4.5,5.5,5.5
+
+[2019-03-24 11:13:03.863] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:13:24.285] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:12:27.670] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:12:44.331] [MainWindows] [info] initMotors
+[2019-03-24 11:12:44.402] [MainWindows] [info] Data from laser: $M
+[2019-03-24 11:12:44.412] [MainWindows] [info] Data from laser: X:S,200,1
+[2019-03-24 11:12:46.543] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:12:57.161] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:12:57.161] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:12:57.161] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:12:57.175] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:12:57.294] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:12:57.384] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:13:01.324] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:13:02.174] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:13:03.003] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:13:03.863] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:13:24.226] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:14:59.842] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:15:03.783] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:03.783] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:15:05.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:05.974] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:15:06.071] [Comm Laser] [info] handleTimeout read value:#my=S,200
+
+[2019-03-24 11:15:09.311] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:09.311] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:15:09.386] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:15:09.406] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:09.406] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:15:09.466] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:15:17.749] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:17.749] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:15:17.777] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:15:17.855] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:17.855] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:15:17.867] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:15:17.960] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:17.960] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:15:17.977] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:15:20.023] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:20.023] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:15:21.258] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:21.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:21.274] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:15:22.458] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:22.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:22.474] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:15:23.708] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:23.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:23.774] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:15:24.958] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:24.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:24.974] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:15:26.208] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:26.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:26.274] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:15:27.447] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:27.475] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:27.475] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:15:28.697] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:28.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:28.774] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:15:29.957] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:29.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:29.974] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:15:31.207] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:31.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:31.274] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:15:32.457] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:32.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:32.474] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:15:33.707] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:33.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:33.774] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:15:34.957] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:34.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:34.974] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:15:36.197] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:36.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:36.274] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:15:37.447] [Comm Laser] [info] handleTimeout LIN
+[2019-03-24 11:15:37.467] [Comm Laser] [info] handleTimeout E_OK
+
+[2019-03-24 11:15:39.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:39.474] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:15:40.697] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:40.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:40.774] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:15:41.957] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:41.975] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:41.975] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:15:43.208] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:43.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:43.274] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:15:44.458] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:44.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:44.474] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:15:45.698] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:45.775] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:45.775] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:15:46.948] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:46.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:46.974] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:15:48.198] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:48.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:48.274] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:15:49.458] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:49.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:49.475] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:15:50.697] [Comm Laser] [info] handleTimeout LI
+[2019-03-24 11:15:50.708] [Comm Laser] [info] handleTimeout NE_OK
+
+[2019-03-24 11:15:52.479] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:52.479] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:15:53.667] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:53.675] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:53.675] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:15:54.897] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:54.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:54.974] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:15:56.147] [Comm Laser] [info] handleTimeout L
+[2019-03-24 11:15:56.167] [Comm Laser] [info] handleTimeout INE_OK
+
+[2019-03-24 11:15:57.978] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:57.978] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:15:59.207] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:15:59.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:15:59.274] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:16:00.447] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:00.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:00.474] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:16:01.697] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:01.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:01.774] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:16:02.957] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:02.975] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:02.975] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4[2019-03-24 11:14:59.842] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:21:07.710] [Comm Press] [info] Communicaton shutdown
+.25,5.75
+
+[2019-03-24 11:16:04.197] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:04.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:04.274] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:16:05.457] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:05.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:05.474] [Comm Laser] [info] m_writeData : #line=4.25,4.25,5.75,4.25
+
+[2019-03-24 11:16:06.707] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:06.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:06.774] [Comm Laser] [info] m_writeData : #line=4.25,4.25,4.25,5.75
+
+[2019-03-24 11:16:07.958] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:07.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:07.975] [Comm Laser] [info] m_writeData : #line=5.75,5.75,4.25,5.75
+
+[2019-03-24 11:16:09.198] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:16:09.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:16:09.274] [Comm Laser] [info] m_writeData : #line=5.75,4.25,5.75,5.75
+
+[2019-03-24 11:16:10.468] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:07.704] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:14:59.841] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:15:03.782] [MainWindows] [info] initMotors
+[2019-03-24 11:15:06.071] [MainWindows] [info] Data from laser: read value:#my=S,200
+[2019-03-24 11:15:09.310] [MainWindows] [info] initMotors
+[2019-03-24 11:15:09.387] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:15:09.467] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:15:17.746] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:15:17.747] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:15:17.747] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:15:17.779] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:15:17.868] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:15:17.978] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:15:21.268] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:22.467] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:23.719] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:24.967] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:26.217] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:27.457] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:28.707] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:29.967] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:31.216] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:32.465] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:33.715] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:34.965] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:36.206] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:37.447] [MainWindows] [info] Data from laser: LIN
+[2019-03-24 11:15:37.467] [MainWindows] [info] Data from laser: E_OK
+[2019-03-24 11:15:40.703] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:41.963] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:43.215] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:44.463] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:45.703] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:46.954] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:48.204] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:49.462] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:50.698] [MainWindows] [info] Data from laser: LI
+[2019-03-24 11:15:50.708] [MainWindows] [info] Data from laser: NE_OK
+[2019-03-24 11:15:53.671] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:54.901] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:15:56.148] [MainWindows] [info] Data from laser: L
+[2019-03-24 11:15:56.168] [MainWindows] [info] Data from laser: INE_OK
+[2019-03-24 11:15:59.210] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:00.450] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:01.700] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:02.959] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:04.199] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:05.459] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:06.708] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:07.959] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:09.199] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:16:10.468] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:07.701] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:19:03.865] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:21:09.627] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 11:19:03.865] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:21:09.627] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:19:03.864] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:21:09.599] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:21:18.845] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:21:23.400] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:23.400] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:21:23.476] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:21:23.495] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:23.495] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:21:23.567] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:21:29.239] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:29.239] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:21:29.257] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:21:29.344] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:29.344] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:21:29.357] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:21:29.449] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:29.449] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:21:29.467] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:21:31.949] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:31.949] [Comm Laser] [info] m_writeData : #line=4.75,4.75,5.25,4.75
+
+[2019-03-24 11:21:32.377] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:32.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:32.474] [Comm Laser] [info] m_writeData : #line=4.75,4.75,4.75,5.25
+
+[2019-03-24 11:21:32.877] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:32.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:32.974] [Comm Laser] [info] m_writeData : #line=5.25,5.25,4.75,5.25
+
+[2019-03-24 11:21:33.406] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:33.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:33.474] [Comm Laser] [info] m_writeData : #line=5.25,4.75,5.25,5.25
+
+[2019-03-24 11:21:33.886] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:33.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:33.974] [Comm Laser] [info] m_writeData : #line=3.75,3.75,6.25,3.75
+
+[2019-03-24 11:21:36.016] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:36.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:36.074] [Comm Laser] [info] m_writeData : #line=3.75,3.75,3.75,6.25
+
+[2019-03-24 11:21:38.026] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:38.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:38.074] [Comm Laser] [info] m_writeData : #line=6.25,6.25,3.75,6.25
+
+[2019-03-24 11:21:40.106] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:40.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:40.174] [Comm Laser] [info] m_writeData : #line=6.25,3.75,6.25,6.25
+
+[2019-03-24 11:21:42.126] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:42.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:42.174] [Comm Laser] [info] m_writeData : #line=2.75,2.75,7.25,2.75
+
+[2019-03-24 11:21:45.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:45.074] [Comm Laser] [info] m_writeData : #line=2.75,2.75,2.75,7.25
+
+[2019-03-24 11:21:45.806] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:45.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:45.874] [Comm Laser] [info] m_writeData : #line=7.25,7.25,2.75,7.25
+
+[2019-03-24 11:21:48.977] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:48.977] [Comm Laser] [info] m_writeData : #line=7.25,2.75,7.25,7.25
+
+[2019-03-24 11:21:49.496] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:49.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:49.574] [Comm Laser] [info] m_writeData : #line=1.75,1.75,8.25,1.75
+
+[2019-03-24 11:21:52.477] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:52.477] [Comm Laser] [info] m_writeData : #line=1.75,1.75,1.75,8.25
+
+[2019-03-24 11:21:54.776] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:21:54.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:21:54.874] [Comm Laser] [info] m_writeData : #line=8.25,8.25,1.75,8.25
+
+[2019-03-24 11:21:57.976] [Comm Laser] [info] SendCommand
+[2019-03-[2019-03-24 11:21:18.845] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:23:07.650] [Comm Press] [info] Communicaton shutdown
+24 11:21:57.976] [Comm Laser] [info] m_writeData : #line=8.25,1.75,8.25,8.25
+
+[2019-03-24 11:22:00.086] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:22:00.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:22:00.175] [Comm Laser] [info] m_writeData : #line=0.75,0.75,9.25,0.75
+
+[2019-03-24 11:22:03.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:22:03.074] [Comm Laser] [info] m_writeData : #line=0.75,0.75,0.75,9.25
+
+[2019-03-24 11:22:05.975] [Comm Laser] [info] SendCommand
+[2019-03-24 11:22:05.975] [Comm Laser] [info] m_writeData : #line=9.25,9.25,0.75,9.25
+
+[2019-03-24 11:22:06.917] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:22:06.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:22:06.974] [Comm Laser] [info] m_writeData : #line=9.25,0.75,9.25,9.25
+
+[2019-03-24 11:22:13.457] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:23:07.642] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:21:18.845] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:21:23.399] [MainWindows] [info] initMotors
+[2019-03-24 11:21:23.477] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:21:23.567] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:21:29.238] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:21:29.238] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:21:29.238] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:21:29.259] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:21:29.358] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:21:29.467] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:21:32.383] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:32.883] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:33.412] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:33.894] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:36.022] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:38.032] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:40.111] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:42.131] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:45.810] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:49.499] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:21:54.778] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:22:00.088] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:22:06.918] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:22:13.457] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:23:07.640] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:24:08.937] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:24:43.499] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:43.499] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:24:43.571] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:24:43.595] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:43.595] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:24:43.662] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:24:48.981] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:48.981] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:24:49.002] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:24:49.076] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:49.076] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:24:49.082] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:24:49.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:49.174] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:24:49.182] [Comm Laser] [info] handleTimeout POWER_OK
+[2019-03-24 11:24:49.202] [Comm Laser] [info] handleTimeout 
+
+[2019-03-24 11:24:55.124] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:55.124] [Comm Laser] [info] m_writeData : #line=4.75,4.75,5.25,4.75
+
+[2019-03-24 11:24:55.552] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:24:55.649] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:55.649] [Comm Laser] [info] m_writeData : #line=4.75,4.75,4.75,5.25
+
+[2019-03-24 11:24:56.062] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:24:56.072] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:56.072] [Comm Laser] [info] m_writeData : #line=5.25,5.25,4.75,5.25
+
+[2019-03-24 11:24:56.492] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:24:56.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:56.574] [Comm Laser] [info] m_writeData : #line=5.25,4.75,5.25,5.25
+
+[2019-03-24 11:24:56.972] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:24:56.980] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:56.980] [Comm Laser] [info] m_writeData : #line=3.75,3.75,6.25,3.75
+
+[2019-03-24 11:24:59.022] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:24:59.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:24:59.074] [Comm Laser] [info] m_writeData : #line=3.75,3.75,3.75,6.25
+
+[2019-03-24 11:25:01.022] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:01.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:01.074] [Comm Laser] [info] m_writeData : #line=6.25,6.25,3.75,6.25
+
+[2019-03-24 11:25:03.112] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:03.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:03.174] [Comm Laser] [info] m_writeData : #line=6.25,3.75,6.25,6.25
+
+[2019-03-24 11:25:05.132] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:05.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:05.174] [Comm Laser] [info] m_writeData : #line=2.75,2.75,7.25,2.75
+
+[2019-03-24 11:25:08.812] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:08.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:08.874] [Comm Laser] [info] m_writeData : #line=2.75,2.75,2.75,7.25
+
+[2019-03-24 11:25:12.362] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:12.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:12.375] [Comm Laser] [info] m_writeData : #line=7.25,7.25,2.75,7.25
+
+[2019-03-24 11:25:16.012] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:16.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:16.074] [Comm Laser] [info] m_writeData : #line=7.25,2.75,7.25,7.25
+
+[2019-03-24 11:25:19.562] [Comm Laser] [info] handleTimeout LI
+[2019-03-24 11:25:19.572] [Comm Laser] [info] handleTimeout NE_OK
+
+[2019-03-24 11:25:21.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:21.874] [Comm Laser] [info] m_writeData : #line=1.75,1.75,8.25,1.75
+
+[2019-03-24 11:25:27.062] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:27.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:27.074] [Comm Laser] [info] m_writeData : #line=1.75,1.75,1.75,8.25
+
+[2019-03-24 11:25:32.082] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:32.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:32.174] [Comm Laser] [info] m_writeData : #line=8.25,8.25,1.75,8.25
+
+[2019-03-24 11:25:37.382] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:37.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:37.474] [Comm Laser] [info] m_writeData : #line=8.25,1.75,8.25,8.25
+
+[2019-03-24 11:25:42.482] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:42.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:42.574] [Comm Laser] [info] m_writeData : #line=0.75,0.75,9.25,0.75
+
+[2019-03-24 11:25:49.312] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:49.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:49.374] [Comm Laser] [info] m_writeData : #line=0.75,0.75,0.75,9.25
+
+[2019-03-24 11:25:55.842] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:25:55.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:25:55.874] [Comm Laser] [info] m_writeData : #line=9.25,9.25,0.75,9.25
+
+[2019-03-24 11:26:02.612] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:26:02.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:26:02.674] [Comm Laser] [info] m_writeData : #line=9.25,0.75,9.25,9.25
+
+[2019-03-24 11:26:09.162] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:34.597] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:34.597] [Comm Laser] [info] m_writeData : #line=4.75,4.75,5.25,4.75
+
+[2019-03-24 11:27:35.022] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:35.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:35.074] [Comm Laser] [info] m_writeData : #line=4.75,4.75,4.75,5.25
+
+[2019-03-24 11:27:35.482] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:35.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:35.574] [Comm Laser] [info] m_writeData : #line=5.25,5.25,4.75,5.25
+
+[2019-03-24 11:27:35.991] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:36.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:36.074] [Comm Laser] [info] m_writeData : #line=5.25,4.75,5.25,5.25
+
+[2019-03-24 11:27:36.471] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:36.480] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:36.480] [Comm Laser] [info] m_writeData : #line=3.75,3.75,6.25,3.75
+
+[2019-03-24 11:27:38.522] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:38.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:38.574] [Comm Laser] [info] m_writeData : #line=3.75,3.75,3.75,6.25
+
+[2019-03-24 11:27:40.527] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:40.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:40.574] [Comm Laser] [info] m_writeData : #line=6.25,6.25,3.75,6.25
+
+[2019-03-24 11:27:42.597] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:42.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:42.674] [Comm Laser] [info] m_writeData : #line=6.25,3.75,6.25,6.25
+
+[2019-03-24 11:27:44.637] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:44.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:44.674] [Comm Laser] [info] m_writeData : #line=2.75,2.75,7.25,2.75
+
+[2019-03-24 11:27:48.317] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:48.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:48.374] [Comm Laser] [info] m_writeData : #line=2.75,2.75,2.75,7.25
+
+[2019-03-24 11:27:51.861] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:51.882] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:51.882] [Comm Laser] [info] m_writeData : #line=7.25,7.25,2.75,7.25
+
+[2019-03-24 11:27:55.511] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:55.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:55.574] [Comm Laser] [info] m_writeData : #line=7.25,2.75,7.25,7.25
+
+[2019-03-24 11:27:59.061] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:27:59.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:27:59.074] [Comm Laser] [info] m_writ[2019-03-24 11:24:08.937] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:34:58.699] [Comm Press] [info] Communicaton shutdown
+eData : #line=1.75,1.75,8.25,1.75
+
+[2019-03-24 11:28:04.261] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:28:04.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:28:04.274] [Comm Laser] [info] m_writeData : #line=1.75,1.75,1.75,8.25
+
+[2019-03-24 11:28:09.281] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:28:09.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:28:09.374] [Comm Laser] [info] m_writeData : #line=8.25,8.25,1.75,8.25
+
+[2019-03-24 11:28:14.581] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:28:14.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:28:14.674] [Comm Laser] [info] m_writeData : #line=8.25,1.75,8.25,8.25
+
+[2019-03-24 11:28:19.681] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:28:19.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:28:19.774] [Comm Laser] [info] m_writeData : #line=0.75,0.75,9.25,0.75
+
+[2019-03-24 11:28:26.511] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:28:26.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:28:26.574] [Comm Laser] [info] m_writeData : #line=0.75,0.75,0.75,9.25
+
+[2019-03-24 11:28:33.041] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:28:33.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:28:33.074] [Comm Laser] [info] m_writeData : #line=9.25,9.25,0.75,9.25
+
+[2019-03-24 11:28:39.811] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:28:39.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:28:39.874] [Comm Laser] [info] m_writeData : #line=9.25,0.75,9.25,9.25
+
+[2019-03-24 11:28:46.361] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:34:58.692] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:24:08.936] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:24:43.498] [MainWindows] [info] initMotors
+[2019-03-24 11:24:43.573] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:24:43.663] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:24:48.978] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:24:48.978] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:24:48.978] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:24:49.004] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:24:49.084] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:24:49.183] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:24:49.203] [MainWindows] [info] Data from laser: 
+[2019-03-24 11:24:55.559] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:24:56.069] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:24:56.499] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:24:56.977] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:24:59.027] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:01.027] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:03.116] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:05.136] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:08.816] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:12.365] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:16.015] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:19.562] [MainWindows] [info] Data from laser: LI
+[2019-03-24 11:25:19.572] [MainWindows] [info] Data from laser: NE_OK
+[2019-03-24 11:25:27.064] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:32.084] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:37.385] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:42.484] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:49.314] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:25:55.844] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:26:02.613] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:26:09.163] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:35.031] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:35.488] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:35.998] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:36.477] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:38.527] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:40.533] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:42.603] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:44.641] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:48.321] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:51.865] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:55.515] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:27:59.064] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:04.264] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:09.283] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:14.583] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:19.683] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:26.512] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:33.042] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:39.812] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:28:46.362] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:34:58.674] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:35:17.795] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:35:31.787] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:31.787] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:35:31.867] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:35:31.882] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:31.882] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:35:31.958] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:35:40.524] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:40.524] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:35:40.548] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:35:40.629] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:40.629] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:35:40.648] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:35:40.734] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:40.734] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:35:40.758] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:35:48.371] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:48.371] [Comm Laser] [info] m_writeData : #line=4.75,4.75,5.25,4.75
+
+[2019-03-24 11:35:48.808] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:48.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:48.874] [Comm Laser] [info] m_writeData : #line=4.75,4.65,5.25,4.65
+
+[2019-03-24 11:35:49.298] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:49.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:49.374] [Comm Laser] [info] m_writeData : #line=4.75,4.75,5.25,4.75
+
+[2019-03-24 11:35:49.798] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:49.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:49.874] [Comm Laser] [info] m_writeData : #line=4.75,4.75,4.75,5.25
+
+[2019-03-24 11:35:50.278] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:50.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:50.374] [Comm Laser] [info] m_writeData : #line=5.25,5.25,4.75,5.25
+
+[2019-03-24 11:35:50.797] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:50.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:50.874] [Comm Laser] [info] m_writeData : #line=5.25,4.75,5.25,5.25
+
+[2019-03-24 11:35:51.277] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:51.375] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:51.375] [Comm Laser] [info] m_writeData : #line=3.75,3.75,6.25,3.75
+
+[2019-03-24 11:35:53.407] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:53.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:53.474] [Comm Laser] [info] m_writeData : #line=3.75,3.65,6.25,3.65
+
+[2019-03-24 11:35:55.507] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:55.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:55.574] [Comm Laser] [info] m_writeData : #line=3.75,3.75,6.25,3.75
+
+[2019-03-24 11:35:57.617] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:57.683] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:57.683] [Comm Laser] [info] m_writeData : #line=3.75,3.75,3.75,6.25
+
+[2019-03-24 11:35:59.627] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:35:59.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:35:59.674] [Comm Laser] [info] m_writeData : #line=6.25,6.25,3.75,6.25
+
+[2019-03-24 11:36:01.717] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:01.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:01.774] [Comm Laser] [info] m_writeData : #line=6.25,3.75,6.25,6.25
+
+[2019-03-24 11:36:03.727] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:03.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:03.774] [Comm Laser] [info] m_writeData : #line=2.75,2.75,7.25,2.75
+
+[2019-03-24 11:36:07.407] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:07.475] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:07.475] [Comm Laser] [info] m_writeData : #line=2.75,2.65,7.25,2.65
+
+[2019-03-24 11:36:11.117] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-[2019-03-24 11:35:17.800] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:42:01.111] [Comm Press] [info] Communicaton shutdown
+03-24 11:36:11.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:11.174] [Comm Laser] [info] m_writeData : #line=2.75,2.75,7.25,2.75
+
+[2019-03-24 11:36:14.817] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:14.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:14.874] [Comm Laser] [info] m_writeData : #line=2.75,2.75,2.75,7.25
+
+[2019-03-24 11:36:18.367] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:18.377] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:18.377] [Comm Laser] [info] m_writeData : #line=7.25,7.25,2.75,7.25
+
+[2019-03-24 11:36:22.007] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:22.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:22.074] [Comm Laser] [info] m_writeData : #line=7.25,2.75,7.25,7.25
+
+[2019-03-24 11:36:25.567] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:25.575] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:25.575] [Comm Laser] [info] m_writeData : #line=1.75,1.75,8.25,1.75
+
+[2019-03-24 11:36:30.777] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:30.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:30.874] [Comm Laser] [info] m_writeData : #line=1.75,1.65,8.25,1.65
+
+[2019-03-24 11:36:36.087] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:36.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:36.174] [Comm Laser] [info] m_writeData : #line=1.75,1.75,8.25,1.75
+
+[2019-03-24 11:36:41.367] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:41.376] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:41.376] [Comm Laser] [info] m_writeData : #line=1.75,1.75,1.75,8.25
+
+[2019-03-24 11:36:46.387] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:46.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:46.474] [Comm Laser] [info] m_writeData : #line=8.25,8.25,1.75,8.25
+
+[2019-03-24 11:36:51.687] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:51.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:51.774] [Comm Laser] [info] m_writeData : #line=8.25,1.75,8.25,8.25
+
+[2019-03-24 11:36:56.777] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:36:56.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:36:56.874] [Comm Laser] [info] m_writeData : #line=0.75,0.75,9.25,0.75
+
+[2019-03-24 11:37:03.617] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:37:03.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:37:03.674] [Comm Laser] [info] m_writeData : #line=0.75,0.65,9.25,0.65
+
+[2019-03-24 11:37:10.417] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:37:10.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:37:10.474] [Comm Laser] [info] m_writeData : #line=0.75,0.75,9.25,0.75
+
+[2019-03-24 11:37:17.218] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:37:17.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:37:17.274] [Comm Laser] [info] m_writeData : #line=0.75,0.75,0.75,9.25
+
+[2019-03-24 11:37:23.748] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:37:23.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:37:23.774] [Comm Laser] [info] m_writeData : #line=9.25,9.25,0.75,9.25
+
+[2019-03-24 11:37:30.498] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:37:30.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:37:30.574] [Comm Laser] [info] m_writeData : #line=9.25,0.75,9.25,9.25
+
+[2019-03-24 11:37:37.058] [Comm Laser] [info] handleTimeout LIN
+[2019-03-24 11:37:37.068] [Comm Laser] [info] handleTimeout E_OK
+
+[2019-03-24 11:42:01.104] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:35:17.792] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:35:31.786] [MainWindows] [info] initMotors
+[2019-03-24 11:35:31.869] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:35:31.958] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:35:40.521] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:35:40.521] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:35:40.521] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:35:40.550] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:35:40.649] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:35:40.758] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:35:48.817] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:49.307] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:49.806] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:50.287] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:50.806] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:51.285] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:53.415] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:55.514] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:57.626] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:35:59.634] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:01.723] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:03.733] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:07.412] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:11.123] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:14.823] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:18.373] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:22.011] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:25.571] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:30.781] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:36.091] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:41.370] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:46.390] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:51.690] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:36:56.779] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:37:03.619] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:37:10.419] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:37:17.219] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:37:23.749] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:37:30.499] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:37:37.058] [MainWindows] [info] Data from laser: LIN
+[2019-03-24 11:37:37.068] [MainWindows] [info] Data from laser: E_OK
+[2019-03-24 11:42:01.078] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:44:05.482] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:44:10.862] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:10.862] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:44:10.948] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:44:10.969] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:10.969] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:44:11.039] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:44:11.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:11.074] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:44:11.088] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:44:11.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:11.174] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:44:11.179] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:44:11.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:11.275] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:44:11.298] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:44:16.733] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:16.733] [Comm Laser] [info] m_writeData : #line=4.75,4.75,5.25,4.75
+
+[2019-03-24 11:44:17.148] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:17.160] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:17.160] [Comm Laser] [info] m_writeData : #line=4.75,4.55,5.25,4.55
+
+[2019-03-24 11:44:17.578] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:17.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:17.674] [Comm Laser] [info] m_writeData : #line=4.75,4.75,5.25,4.75
+
+[2019-03-24 11:44:18.098] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:18.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:18.174] [Comm Laser] [info] m_writeData : #line=4.75,4.75,4.75,5.25
+
+[2019-03-24 11:44:18.568] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:18.579] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:18.579] [Comm Laser] [info] m_writeData : #line=5.25,5.25,4.75,5.25
+
+[2019-03-24 11:44:19.008] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:19.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:19.074] [Comm Laser] [info] m_writeData : #line=5.25,4.75,5.25,5.25
+
+[2019-03-24 11:44:19.488] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:19.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:19.574] [Comm Laser] [info] m_writeData : #line=3.75,3.75,6.25,3.75
+
+[2019-03-24 11:44:21.608] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:21.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:21.674] [Comm Laser] [info] m_writeData : #line=3.75,3.55,6.25,3.55
+
+[2019-03-24 11:44:23.704] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:23.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:23.774] [Comm Laser] [info] m_writeData : #line=3.75,3.75,6.25,3.75
+
+[2019-03-24 11:44:25.804] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:25.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:25.874] [Comm Laser] [info] m_writeData : #line=3.75,3.75,3.75,6.25
+
+[2019-03-24 11:44:27.824] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:27.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:27.874] [Comm Laser] [info] m_writeData : #line=6.25,6.25,3.75,6.25
+
+[2019-03-24 11:44:29.914] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:29.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:29.974] [Comm Laser] [info] m_writeData : #line=6.25,3.75,6.25,6.25
+
+[2019-03-24 11:44:31.934] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:31.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:31.974] [Comm Laser] [info] m_writeData : #line=2.75,2.75,7.25,2.75
+
+[2019-03-24 11:44:35.614] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:35.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:35.674] [Comm Laser] [info] m_writeData : #line=2.75,2.55,7.25,2.55
+
+[2019-03-24 11:44:39.294] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-[2019-03-24 11:44:05.482] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:47:35.142] [Comm Press] [info] Communicaton shutdown
+03-24 11:44:39.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:39.374] [Comm Laser] [info] m_writeData : #line=2.75,2.75,7.25,2.75
+
+[2019-03-24 11:44:43.004] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:43.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:43.074] [Comm Laser] [info] m_writeData : #line=2.75,2.75,2.75,7.25
+
+[2019-03-24 11:44:46.564] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:46.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:46.574] [Comm Laser] [info] m_writeData : #line=7.25,7.25,2.75,7.25
+
+[2019-03-24 11:44:50.204] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:50.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:50.274] [Comm Laser] [info] m_writeData : #line=7.25,2.75,7.25,7.25
+
+[2019-03-24 11:44:53.764] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:53.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:53.774] [Comm Laser] [info] m_writeData : #line=1.75,1.75,8.25,1.75
+
+[2019-03-24 11:44:58.964] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:44:58.974] [Comm Laser] [info] SendCommand
+[2019-03-24 11:44:58.974] [Comm Laser] [info] m_writeData : #line=1.75,1.55,8.25,1.55
+
+[2019-03-24 11:45:04.184] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:04.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:04.274] [Comm Laser] [info] m_writeData : #line=1.75,1.75,8.25,1.75
+
+[2019-03-24 11:45:09.464] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:09.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:09.474] [Comm Laser] [info] m_writeData : #line=1.75,1.75,1.75,8.25
+
+[2019-03-24 11:45:14.484] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:14.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:14.574] [Comm Laser] [info] m_writeData : #line=8.25,8.25,1.75,8.25
+
+[2019-03-24 11:45:19.774] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:19.776] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:19.776] [Comm Laser] [info] m_writeData : #line=8.25,1.75,8.25,8.25
+
+[2019-03-24 11:45:24.784] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:24.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:24.874] [Comm Laser] [info] m_writeData : #line=0.75,0.75,9.25,0.75
+
+[2019-03-24 11:45:31.614] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:31.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:31.674] [Comm Laser] [info] m_writeData : #line=0.75,0.55,9.25,0.55
+
+[2019-03-24 11:45:38.414] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:38.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:38.474] [Comm Laser] [info] m_writeData : #line=0.75,0.75,9.25,0.75
+
+[2019-03-24 11:45:45.214] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:45.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:45.274] [Comm Laser] [info] m_writeData : #line=0.75,0.75,0.75,9.25
+
+[2019-03-24 11:45:51.744] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:45:51.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:51.774] [Comm Laser] [info] m_writeData : #line=9.25,9.25,0.75,9.25
+
+[2019-03-24 11:45:58.494] [Comm Laser] [info] handleTimeout LINE_OK
+[2019-03-24 11:45:58.504] [Comm Laser] [info] handleTimeout 
+
+[2019-03-24 11:45:58.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:45:58.574] [Comm Laser] [info] m_writeData : #line=9.25,0.75,9.25,9.25
+
+[2019-03-24 11:46:05.054] [Comm Laser] [info] handleTimeout L
+[2019-03-24 11:46:05.064] [Comm Laser] [info] handleTimeout INE_OK
+
+[2019-03-24 11:47:35.135] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:44:05.482] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:44:10.861] [MainWindows] [info] initMotors
+[2019-03-24 11:44:10.862] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:44:10.862] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:44:10.862] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:44:10.950] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:44:11.041] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:44:11.090] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:44:11.180] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:44:11.299] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:44:17.157] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:17.588] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:18.107] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:18.576] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:19.016] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:19.497] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:21.617] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:23.712] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:25.812] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:27.832] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:29.921] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:31.940] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:35.620] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:39.299] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:43.010] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:46.569] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:50.209] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:53.768] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:44:58.968] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:04.187] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:09.467] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:14.487] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:19.776] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:24.786] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:31.616] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:38.415] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:45.215] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:51.745] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:58.495] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:45:58.504] [MainWindows] [info] Data from laser: 
+[2019-03-24 11:46:05.054] [MainWindows] [info] Data from laser: L
+[2019-03-24 11:46:05.064] [MainWindows] [info] Data from laser: INE_OK
+[2019-03-24 11:47:35.131] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:49:46.167] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:51:34.691] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 11:49:46.167] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:49:50.127] [Comm Laser] [info] SendCommand
+[2019-03-24 11:49:50.127] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:49:50.199] [Comm Laser] [info] handleTimeout $MX:S,
+[2019-03-24 11:49:50.210] [Comm Laser] [info] handleTimeout 200,1
+
+[2019-03-24 11:49:52.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:49:52.074] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:49:52.150] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:49:52.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:49:52.174] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:49:52.189] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:49:52.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:49:52.275] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:49:52.289] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:49:52.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:49:52.374] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:49:52.389] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:50:04.775] [Comm Laser] [info] SendCommand
+[2019-03-24 11:50:04.775] [Comm Laser] [info] m_writeData : #line=2,2,8,2
+
+[2019-03-24 11:50:09.587] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:50:09.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:50:09.674] [Comm Laser] [info] m_writeData : #line=2,1.8,8,1.8
+
+[2019-03-24 11:50:14.497] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:50:14.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:50:14.574] [Comm Laser] [info] m_writeData : #line=2,2,8,2
+
+[2019-03-24 11:50:19.387] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:50:19.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:50:19.474] [Comm Laser] [info] m_writeData : #line=2,2,2,8
+
+[2019-03-24 11:50:24.087] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:50:24.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:50:24.174] [Comm Laser] [info] m_writeData : #line=8,8,2,8
+
+[2019-03-24 11:50:28.987] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:50:29.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:50:29.074] [Comm Laser] [info] m_writeData : #line=8,2,8,8
+
+[2019-03-24 11:50:33.707] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:51:34.684] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:49:46.167] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:49:50.126] [MainWindows] [info] initMotors
+[2019-03-24 11:49:50.127] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:49:50.127] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:49:50.127] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:49:50.199] [MainWindows] [info] Data from laser: $MX:S,
+[2019-03-24 11:49:50.210] [MainWindows] [info] Data from laser: 200,1
+[2019-03-24 11:49:52.151] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:49:52.190] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:49:52.290] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:49:52.389] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:50:09.589] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:50:14.499] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:50:19.388] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:50:24.088] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:50:28.988] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:50:33.707] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:51:34.625] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:54:14.876] [Comm Press] [info] Communicaton startup
+[2019-03-24 11:56:36.414] [Comm Press] [info] Communicaton shutdown
+[2019-03-24 11:54:14.876] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:54:20.999] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:20.999] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:54:21.075] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:54:21.096] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:21.096] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:54:21.166] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:54:21.191] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:21.191] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:54:21.216] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:54:21.286] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:21.286] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:54:21.296] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:54:21.381] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:21.381] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:54:21.386] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:54:23.920] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:23.920] [Comm Laser] [info] m_writeData : #line=2,2,8,2
+
+[2019-03-24 11:54:28.736] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:54:28.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:28.774] [Comm Laser] [info] m_writeData : #line=2,2.2,8,2.2
+
+[2019-03-24 11:54:33.576] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:54:33.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:33.674] [Comm Laser] [info] m_writeData : #line=2,1.8,8,1.8
+
+[2019-03-24 11:54:38.496] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:54:38.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:38.574] [Comm Laser] [info] m_writeData : #line=2,2,2,8
+
+[2019-03-24 11:54:43.196] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:54:43.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:43.274] [Comm Laser] [info] m_writeData : #line=8,8,2,8
+
+[2019-03-24 11:54:48.086] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:54:48.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:54:48.174] [Comm Laser] [info] m_writeData : #line=8,2,8,8
+
+[2019-03-24 11:54:52.806] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:56:36.401] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:54:14.876] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:54:20.998] [MainWindows] [info] initMotors
+[2019-03-24 11:54:20.999] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:54:20.999] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:54:20.999] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:54:21.077] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:54:21.168] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:54:21.218] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:54:21.297] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:54:21.387] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:54:28.738] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:54:33.578] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:54:38.497] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:54:43.197] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:54:48.087] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:54:52.806] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:56:36.383] [MainWindows] [info] MainWindow shutdown
+[2019-03-24 11:57:43.775] [Comm Laser] [info] Communicaton startup
+[2019-03-24 11:57:47.480] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:47.480] [Comm Laser] [info] m_writeData : #mx=S,200
+
+[2019-03-24 11:57:47.564] [Comm Laser] [info] handleTimeout $MX:S,200,1
+
+[2019-03-24 11:57:47.578] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:47.578] [Comm Laser] [info] m_writeData : #my=S,200
+
+[2019-03-24 11:57:47.634] [Comm Laser] [info] handleTimeout $MY:S,200,1
+
+[2019-03-24 11:57:47.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:47.674] [Comm Laser] [info] m_writeData : #del=500
+
+[2019-03-24 11:57:47.684] [Comm Laser] [info] handleTimeout DELAY_OK	500 (us)
+
+[2019-03-24 11:57:47.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:47.774] [Comm Laser] [info] m_writeData : #step=10
+
+[2019-03-24 11:57:47.784] [Comm Laser] [info] handleTimeout STEP_OK
+
+[2019-03-24 11:57:47.875] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:47.875] [Comm Laser] [info] m_writeData : #pow=100
+
+[2019-03-24 11:57:47.894] [Comm Laser] [info] handleTimeout POWER_OK
+
+[2019-03-24 11:57:52.814] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:52.814] [Comm Laser] [info] m_writeData : #line=4,4,6,4
+
+[2019-03-24 11:57:54.454] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:57:54.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:54.474] [Comm Laser] [info] m_writeData : #line=4,4.2,6,4.2
+
+[2019-03-24 11:57:56.104] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:57:56.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:56.174] [Comm Laser] [info] m_writeData : #line=4,3.8,6,3.8
+
+[2019-03-24 11:57:57.794] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:57:57.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:57.874] [Comm Laser] [info] m_writeData : #line=4,4,4,6
+
+[2019-03-24 11:57:59.444] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:57:59.474] [Comm Laser] [info] SendCommand
+[2019-03-24 11:57:59.474] [Comm Laser] [info] m_writeData : #line=6,6,4,6
+
+[2019-03-24 11:58:01.104] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:01.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:01.174] [Comm Laser] [info] m_writeData : #line=6,4,6,6
+
+[2019-03-24 11:58:02.744] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:02.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:02.774] [Comm Laser] [info] m_writeData : #line=3,3,7,3
+
+[2019-03-24 11:58:06.004] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:06.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:06.074] [Comm Laser] [info] m_writeData : #line=3,3.2,7,3.2
+
+[2019-03-24 11:58:09.314] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:09.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:09.374] [Comm Laser] [info] m_writeData : #line=3,2.8,7,2.8
+
+[2019-03-24 11:58:12.605] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:12.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:12.674] [Comm Laser] [info] m_writeData : #line=3,3,3,7
+
+[2019-03-24 11:58:15.774] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:15.874] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:15.874] [Comm Laser] [info] m_writeData : #line=7,7,3,7
+
+[2019-03-24 11:58:19.104] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:19.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:19.174] [Comm Laser] [info] m_writeData : #line=7,3,7,7
+
+[2019-03-24 11:58:22.284] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:22.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:22.374] [Comm Laser] [info] m_writeData : #line=2,2,8,2
+
+[2019-03-24 11:58:27.184] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:27.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:27.274] [Comm Laser] [info] m_writeData : #line=2,2.2,8,2.2
+
+[2019-03-24 11:58:32.095] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:32.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:32.174] [Comm Laser] [info] m_writeData : #line=2,1.8,8,1.8
+
+[2019-03-24 11:5[2019-03-24 11:57:43.775] [Comm Press] [info] Communicaton startup
+[2019-03-24 12:02:48.723] [Comm Press] [info] Communicaton shutdown
+8:36.995] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:37.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:37.075] [Comm Laser] [info] m_writeData : #line=2,2,2,8
+
+[2019-03-24 11:58:41.695] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:41.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:41.774] [Comm Laser] [info] m_writeData : #line=8,8,2,8
+
+[2019-03-24 11:58:46.584] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:46.674] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:46.674] [Comm Laser] [info] m_writeData : #line=8,2,8,8
+
+[2019-03-24 11:58:51.305] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:51.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:51.374] [Comm Laser] [info] m_writeData : #line=1,1,9,1
+
+[2019-03-24 11:58:57.735] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:58:57.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:58:57.774] [Comm Laser] [info] m_writeData : #line=1,1.2,9,1.2
+
+[2019-03-24 11:59:04.135] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:04.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:04.174] [Comm Laser] [info] m_writeData : #line=1,0.8,9,0.8
+
+[2019-03-24 11:59:10.535] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:10.574] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:10.574] [Comm Laser] [info] m_writeData : #line=1,1,1,9
+
+[2019-03-24 11:59:16.674] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:16.774] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:16.774] [Comm Laser] [info] m_writeData : #line=9,9,1,9
+
+[2019-03-24 11:59:23.125] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:23.175] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:23.175] [Comm Laser] [info] m_writeData : #line=9,1,9,9
+
+[2019-03-24 11:59:29.305] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:29.374] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:29.374] [Comm Laser] [info] m_writeData : #line=0,0,10,0
+
+[2019-03-24 11:59:37.255] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:37.274] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:37.274] [Comm Laser] [info] m_writeData : #line=0,0.2,10,0.2
+
+[2019-03-24 11:59:45.134] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:45.174] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:45.174] [Comm Laser] [info] m_writeData : #line=0,-0.2,10,-0.2
+
+[2019-03-24 11:59:53.034] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 11:59:53.074] [Comm Laser] [info] SendCommand
+[2019-03-24 11:59:53.074] [Comm Laser] [info] m_writeData : #line=0,0,0,10
+
+[2019-03-24 12:00:00.594] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 12:00:00.674] [Comm Laser] [info] SendCommand
+[2019-03-24 12:00:00.674] [Comm Laser] [info] m_writeData : #line=10,10,0,10
+
+[2019-03-24 12:00:08.524] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 12:00:08.574] [Comm Laser] [info] SendCommand
+[2019-03-24 12:00:08.574] [Comm Laser] [info] m_writeData : #line=10,0,10,10
+
+[2019-03-24 12:00:16.074] [Comm Laser] [info] handleTimeout LINE_OK
+
+[2019-03-24 12:02:48.717] [Comm Laser] [info] Communicaton shutdown
+[2019-03-24 11:57:43.775] [MainWindows] [info] MainWindow startup
+[2019-03-24 11:57:47.479] [MainWindows] [info] initMotors
+[2019-03-24 11:57:47.480] [MainWindows] [info] We will send to laser this row: #del=%1
+[2019-03-24 11:57:47.480] [MainWindows] [info] We will send to laser this row: #step=%1
+[2019-03-24 11:57:47.480] [MainWindows] [info] We will send to laser this row: #pow=%1
+[2019-03-24 11:57:47.565] [MainWindows] [info] Data from laser: $MX:S,200,1
+[2019-03-24 11:57:47.635] [MainWindows] [info] Data from laser: $MY:S,200,1
+[2019-03-24 11:57:47.686] [MainWindows] [info] Data from laser: DELAY_OK	500 (us)
+[2019-03-24 11:57:47.785] [MainWindows] [info] Data from laser: STEP_OK
+[2019-03-24 11:57:47.894] [MainWindows] [info] Data from laser: POWER_OK
+[2019-03-24 11:57:54.463] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:57:56.113] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:57:57.803] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:57:59.452] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:01.112] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:02.751] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:06.012] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:09.320] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:12.611] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:15.780] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:19.110] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:22.290] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:27.189] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:32.100] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:36.999] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:41.699] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:46.589] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:51.309] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:58:57.738] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:04.138] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:10.538] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:16.677] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:23.127] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:29.307] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:37.257] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:45.136] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 11:59:53.036] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 12:00:00.596] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 12:00:08.527] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 12:00:16.076] [MainWindows] [info] Data from laser: LINE_OK
+[2019-03-24 12:02:48.655] [MainWindows] [info] MainWindow shutdown
