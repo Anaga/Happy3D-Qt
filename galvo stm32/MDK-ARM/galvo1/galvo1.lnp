@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp
+"galvo1\startup_stm32f446xx.o"
+"galvo1\main.o"
+"galvo1\stm32f4xx_it.o"
+"galvo1\stm32f4xx_hal_msp.o"
+"galvo1\stm32f4xx_hal_dac.o"
+"galvo1\stm32f4xx_hal_dac_ex.o"
+"galvo1\stm32f4xx_hal_tim.o"
+"galvo1\stm32f4xx_hal_tim_ex.o"
+"galvo1\stm32f4xx_hal_uart.o"
+"galvo1\stm32f4xx_hal_rcc.o"
+"galvo1\stm32f4xx_hal_rcc_ex.o"
+"galvo1\stm32f4xx_hal_flash.o"
+"galvo1\stm32f4xx_hal_flash_ex.o"
+"galvo1\stm32f4xx_hal_flash_ramfunc.o"
+"galvo1\stm32f4xx_hal_gpio.o"
+"galvo1\stm32f4xx_hal_dma_ex.o"
+"galvo1\stm32f4xx_hal_dma.o"
+"galvo1\stm32f4xx_hal_pwr.o"
+"galvo1\stm32f4xx_hal_pwr_ex.o"
+"galvo1\stm32f4xx_hal_cortex.o"
+"galvo1\stm32f4xx_hal.o"
+"galvo1\stm32f4xx_hal_exti.o"
+"galvo1\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "galvo1\galvo1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "galvo1.map" -o galvo1\galvo1.axf
