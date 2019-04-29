@@ -36,8 +36,8 @@ MainWindow::~MainWindow()
 
 QList<Job> MainWindow::sqere(float size)
 {
-    float CentX = 5.0;
-    float CentY = 5.0;
+    double CentX = 5.0;
+    double CentY = 5.0;
 
     QPointF leftTop;
 //# Fix me
@@ -287,11 +287,10 @@ void MainWindow::recoaterSeq()
     rocControl.command="F";
     pGeneral->addJob(rocControl);
 
-
     //Motor2 run to the right end
     long distance = 13000;
     long speed = 1600;
-    Job motControl(Enums::SendTo::toLaser, "R", iDelay, iTimeout);
+    Job motControl(Enums::SendTo::toLaser, "", iDelay, iTimeout);
     motControl.command = pLaserObj->moveMotors(Enums::Right, distance, speed);
     motControl.delay=9000;
     // timeout shall be more than delay
@@ -305,9 +304,11 @@ void MainWindow::recoaterSeq()
     rocControl.command="L";
     pGeneral->addJob(rocControl);
 
+    pGeneral->runAllJob();
+
     //Motor2 run to the push position
     // MoveMotor2("8300", "y", "2");
-    distance = 8300;
+    /*distance = 8300;
     motControl.command = pLaserObj->moveMotors(Enums::Left, distance, speed);
     motControl.delay=6000;
     motControl.timeout = motControl.delay + iDelay;
@@ -348,7 +349,7 @@ void MainWindow::recoaterSeq()
     QStringList jobs = pGeneral->printJobList();
     updateJobList(jobs);
     qDebug() << "Now we start to run all jobs! ";
-    pGeneral->runAllJob();
+    pGeneral->runAllJob();*/
 
     /*qint64 timeout = 500; //milliseconds
 
@@ -825,7 +826,7 @@ void MainWindow::on_pushButton_ProC_SentLaserSettings_clicked()
 
 void MainWindow::on_pushButton_Cub_Line_clicked()
 {
-    command = "#line=1,1,5,5";
+    command = "#line=0,0,10,10";
     qDebug() << "We will send to laser this row:" << command;
     _logger->info("We will send to laser this row: {}", qPrintable(command));
     pComLaserObj->SendCommand(command);
@@ -883,3 +884,21 @@ void MainWindow::on_pushButton_Cub_AutoStart_clicked()
     //pComLaserObj->SendCommand(command);
 }
 
+
+void MainWindow::on_pushButton_Main_Start_clicked()
+{
+    QString LineG_code = ui->plainTextEdit_GCode->toPlainText();
+    qDebug() << "We will send to laser this row:" << LineG_code;
+    _logger->info("We will send to laser this row: {}", qPrintable(LineG_code));
+    pComLaserObj->SendCommand(LineG_code);
+}
+
+void MainWindow::on_pushButton_Cub_Stop_clicked()
+{
+
+}
+
+void MainWindow::on_pushButton_Main_Stop_clicked()
+{
+   pGeneral->clearJobList();
+}

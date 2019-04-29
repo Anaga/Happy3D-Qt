@@ -47,6 +47,7 @@ public slots:
 
     void runAllJob();
     void getResponce(QString resp);
+    void clearJobList();
 
 private slots:
     void delayTimeout();

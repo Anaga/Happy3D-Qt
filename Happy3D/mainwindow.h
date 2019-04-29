@@ -110,6 +110,12 @@ private slots:
     void on_pushButton_Cub_AutoStart_clicked();
 
 
+    void on_pushButton_Main_Start_clicked();
+
+    void on_pushButton_Cub_Stop_clicked();
+
+    void on_pushButton_Main_Stop_clicked();
+
 private:
     Ui::MainWindow *ui;
 

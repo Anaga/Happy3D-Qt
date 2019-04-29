@@ -91,6 +91,14 @@ void Commander::getResponce(QString resp)
 
 }
 
+void Commander::clearJobList()
+{
+        qDebug()  << __PRETTY_FUNCTION__   << "commandList size " << m_jobList.size();
+        delay_timer->stop();
+        m_jobList.clear();
+        emit taskFinished(Enums::CommandStatus::finishByCorrectResponce);
+}
+
 void Commander::delayTimeout()
 {
     qDebug()  << __PRETTY_FUNCTION__   << "commandList size " << m_jobList.size();
